@@ -327,19 +327,7 @@
                     </property>
                 </item>
             </widget>
-            <widget class="QWidget" name="widget" native="true">
-                <property name="geometry">
-                    <rect>
-                        <x>100</x>
-                        <y>230</y>
-                        <width>921</width>
-                        <height>461</height>
-                    </rect>
-                </property>
-                <property name="styleSheet">
-                    <string notr="true">background-image: url(/home/yerik/Desktop/Tank_Attack/Imagenes/Background.png);</string>
-                </property>
-            </widget>
+
             <widget class="QWidget" name="TRojo" native="true">
                 <property name="geometry">
                     <rect>

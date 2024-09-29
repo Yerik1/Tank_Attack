@@ -141,10 +141,7 @@ public:
         Tablero->horizontalHeader()->setHighlightSections(true);
         Tablero->verticalHeader()->setVisible(false);
         Tablero->verticalHeader()->setDefaultSectionSize(23);
-        widget = new QWidget(centralwidget);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(100, 230, 920, 460));
-        widget->setStyleSheet(QString::fromUtf8("background-image: url(../Imagenes/Background.png);"));
+
         TRojo = new QWidget(centralwidget);
         TRojo->setObjectName(QString::fromUtf8("TRojo"));
         TRojo->setGeometry(QRect(100+23*7, 230+23*7, 23, 23));
@@ -215,7 +212,7 @@ public:
 "background-position: center;\n"
 "background-size: cover;"));
         MainWindow->setCentralWidget(centralwidget);
-        widget->raise();
+
         Tablero->raise();
         Titulo->raise();
         widget_2->raise();
