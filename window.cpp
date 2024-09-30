@@ -6,6 +6,9 @@
 #include <QTableWidget>
 #include <QMouseEvent>
 #include <QDebug>
+#include <QIcon>
+#include <QPixmap>
+#include <QRandomGenerator>
 
 Window::Window(QWidget *parent) :
     QMainWindow(parent), ui(new Ui::MainWindow), dragging(false), lastSelectedRow(-1), lastSelectedColumn(-1) {
@@ -35,6 +38,10 @@ Window::Window(QWidget *parent) :
 
     // Habilitar la transparencia para el mouse
     ui->Tablero->setAttribute(Qt::WA_TransparentForMouseEvents);
+    generateMapBorder();
+    generateRandomObstacles();
+
+
 }
 
 Window::~Window() {
@@ -86,4 +93,65 @@ void Window::mouseMoveEvent(QMouseEvent *event) {
 
     // Llama a la implementación base
     QMainWindow::mouseMoveEvent(event);
+}
+
+void Window::generateMapBorder() {
+    for (int row = 0; row < 20; ++row) {
+        for (int column = 0; column < 40; ++column) {
+            QTableWidgetItem *item = new QTableWidgetItem();
+
+            // Solo agregar imágenes a las celdas que no sean la central
+            if (row != 0 && column != 0 && row!=19 && column!=39) {
+                // Dejar la celda central vacía
+                item->setBackground(Qt::transparent); // o no establecer ninguna imagen
+            } else {
+                // Establecer la imagen para las otras celdas
+                QLabel *label = new QLabel();
+                QPixmap pixmap("../Imagenes/Obstaculo.png"); // Cargar la imagen como QPixmap
+                label->setPixmap(pixmap.scaled(30, 30, Qt::KeepAspectRatio, Qt::SmoothTransformation)); // Escalar la imagen
+                label->setFixedSize(23, 23); // Asegúrate de que el QLabel tenga el mismo tamaño que la celda
+                label->setAlignment(Qt::AlignCenter); // Centrar la imagen dentro del QLabel
+
+                // Eliminar cualquier borde
+                label->setStyleSheet("border: none; background-color: transparent;");
+
+                // Colocar el QLabel en la celda
+                ui->Tablero->setCellWidget(row, column, label);
+            }
+
+        }
+    }
+}
+
+void Window::generateRandomObstacles() {
+    // Generar obstáculos solo en la mitad izquierda del tablero (columnas 0 a 19)
+    for (int row = 1; row < 20; ++row) {
+        for (int column = 1; column < 19; ++column) {
+            // Evitar las celdas especificadas
+            if ((row == 7 && (column == 7 || column == 12)) ||
+                (row == 12 && (column == 7 || column == 12))) {
+                continue; // Saltar estas celdas
+                }
+
+            // Decidir aleatoriamente si colocar un obstáculo
+            if (QRandomGenerator::global()->bounded(5) == 1) { // 20% de probabilidad
+                // Colocar obstáculo en la celda actual
+                QLabel *label = new QLabel();
+                QPixmap pixmap("../Imagenes/Obstaculo.png");
+                label->setPixmap(pixmap.scaled(30, 30, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+                label->setFixedSize(23, 23);
+                label->setAlignment(Qt::AlignCenter);
+                label->setStyleSheet("border: none; background-color: transparent;");
+                ui->Tablero->setCellWidget(row, column, label);
+
+                // Colocar el obstáculo en la celda reflejada (espejo)
+                QLabel *mirrorLabel = new QLabel();
+                mirrorLabel->setPixmap(pixmap.scaled(30, 30, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+                mirrorLabel->setFixedSize(23, 23);
+                mirrorLabel->setAlignment(Qt::AlignCenter);
+                mirrorLabel->setStyleSheet("border: none; background-color: transparent;");
+                ui->Tablero->setCellWidget(row, 39 - column, mirrorLabel); // Columna espejo
+            }
+        }
+    }
 }

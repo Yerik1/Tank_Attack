@@ -24,6 +24,10 @@ public:
     void mouseReleaseEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
 
+    void generateMapBorder();
+
+    void generateRandomObstacles();
+
 private:
     Ui::MainWindow *ui;
     bool dragging;  // Variable para controlar si se está arrastrando el mouse
