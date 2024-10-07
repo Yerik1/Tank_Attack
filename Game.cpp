@@ -1,7 +1,7 @@
 //
 // Created by yerik on 9/29/24.
 //
-#include "window.h"
+#include "Game.h"
 #include "ui_gameui.h"
 #include <QTableWidget>
 #include <QMouseEvent>
@@ -34,7 +34,15 @@ Window::Window(QWidget *parent) :
     }
 
     // Conectar el evento cellPressed
-    connect(ui->Tablero, &QTableWidget::cellPressed, this, &Window::cellPressed);
+    connect(ui->Tablero, &QTableWidget::cellPressed, this, [this](int row, int column) {
+    QString action;
+    if (QApplication::mouseButtons() & Qt::LeftButton) {
+        action = "Move to:";
+    } else if (QApplication::mouseButtons() & Qt::RightButton) {
+        action = "Shoot at:";
+    }
+    this->cellPressed(row, column, action);
+});
 
     // Habilitar la transparencia para el mouse
     ui->Tablero->setAttribute(Qt::WA_TransparentForMouseEvents);
@@ -49,8 +57,8 @@ Window::~Window() {
 }
 
 // Método para manejar la selección de la celda
-void Window::cellPressed(int row, int column) {
-    qDebug() << "Cell pressed:" << row << column; // Mensaje de depuración
+void Window::cellPressed(int row, int column, const QString& action) {
+    qDebug() << action << row << column; // Mensaje de depuración
     QTableWidgetItem* item = ui->Tablero->item(row, column);
     if (item) {
         ui->Tablero->clearSelection();
@@ -66,7 +74,13 @@ void Window::mousePressEvent(QMouseEvent *event) {
         QPoint pos = ui->Tablero->mapFromGlobal(event->globalPos());
         QTableWidgetItem* item = ui->Tablero->itemAt(pos);
         if (item) {
-            cellPressed(item->row(), item->column());
+            QString action;
+            if (event->button() == Qt::LeftButton) {
+                action = "Move to:";
+            } else if (event->button() == Qt::RightButton) {
+                action = "Shoot at:";
+            }
+            cellPressed(item->row(), item->column(), action);
             dragging = true;  // Iniciar el arrastre
         }
     }

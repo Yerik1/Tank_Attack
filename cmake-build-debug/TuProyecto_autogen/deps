@@ -1,12 +1,12 @@
 TuProyecto_autogen/timestamp: \
 	/home/yerik/Desktop/Tank_Attack/CMakeLists.txt \
+	/home/yerik/Desktop/Tank_Attack/Game.cpp \
+	/home/yerik/Desktop/Tank_Attack/Game.h \
 	/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake \
 	/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake \
 	/home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/moc_predefs.h \
 	/home/yerik/Desktop/Tank_Attack/main.cpp \
 	/home/yerik/Desktop/Tank_Attack/ui_gameui.h \
-	/home/yerik/Desktop/Tank_Attack/window.cpp \
-	/home/yerik/Desktop/Tank_Attack/window.h \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake \

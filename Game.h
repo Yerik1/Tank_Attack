@@ -18,7 +18,7 @@ public:
     explicit Window(QWidget *parent = nullptr);
     ~Window() override;
 
-    void cellPressed(int row, int column);
+    void cellPressed(int row, int column, const QString& action);
 
     void mousePressEvent(QMouseEvent *event) override;
     void mouseReleaseEvent(QMouseEvent *event) override;
