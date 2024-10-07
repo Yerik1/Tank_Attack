@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/yerik/Desktop/Tank_Attack/cmake-build-debug"
+			"value" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -104,6 +104,22 @@
 			],
 			"type" : "BOOL",
 			"value" : "ON"
+		},
+		{
+			"name" : "CMAKE_COLOR_MAKEFILE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_COMMAND",
@@ -415,7 +431,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -427,7 +443,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "Ninja"
+			"value" : "Unix Makefiles"
 		},
 		{
 			"name" : "CMAKE_GENERATOR_INSTANCE",
@@ -475,7 +491,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/yerik/Desktop/Tank_Attack"
+			"value" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -778,12 +794,16 @@
 			"properties" : 
 			[
 				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "Path to a program."
 				}
 			],
-			"type" : "UNINITIALIZED",
-			"value" : "/snap/clion/296/bin/ninja/linux/x64/ninja"
+			"type" : "FILEPATH",
+			"value" : "/usr/bin/gmake"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -1411,7 +1431,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/yerik/Desktop/Tank_Attack/cmake-build-debug"
+			"value" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug"
 		},
 		{
 			"name" : "TuProyecto_IS_TOP_LEVEL",
@@ -1435,7 +1455,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/yerik/Desktop/Tank_Attack"
+			"value" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

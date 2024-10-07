@@ -1,12 +1,15 @@
 TuProyecto_autogen/timestamp: \
-	/home/yerik/Desktop/Tank_Attack/CMakeLists.txt \
-	/home/yerik/Desktop/Tank_Attack/Game.cpp \
-	/home/yerik/Desktop/Tank_Attack/Game.h \
-	/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake \
-	/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake \
-	/home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/moc_predefs.h \
-	/home/yerik/Desktop/Tank_Attack/main.cpp \
-	/home/yerik/Desktop/Tank_Attack/ui_gameui.h \
+	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/CMakeLists.txt \
+	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Game.cpp \
+	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Game.h \
+	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake \
+	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake \
+	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/cmake-build-debug/TuProyecto_autogen/moc_predefs.h \
+	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/main.cpp \
+	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/menu.cpp \
+	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/menu.h \
+	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/ui_gameui.h \
+	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/ui_menuui.h \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake \
@@ -269,6 +272,7 @@ TuProyecto_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
 	/usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
 	/usr/include/x86_64-linux-gnu/gnu/stubs.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h \
@@ -281,8 +285,10 @@ TuProyecto_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h \
@@ -295,6 +301,7 @@ TuProyecto_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h \
@@ -340,8 +347,10 @@ TuProyecto_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h \
@@ -358,9 +367,25 @@ TuProyecto_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
