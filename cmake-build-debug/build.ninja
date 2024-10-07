@@ -57,17 +57,17 @@ build CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o: CXX_C
   OBJECT_DIR = CMakeFiles/TuProyecto.dir
   OBJECT_FILE_DIR = CMakeFiles/TuProyecto.dir/TuProyecto_autogen
 
-build CMakeFiles/TuProyecto.dir/main.cpp.o: CXX_COMPILER__TuProyecto_unscanned_Debug /home/yerik/Desktop/Tank_Attack/main.cpp || cmake_object_order_depends_target_TuProyecto
+build CMakeFiles/TuProyecto.dir/Game.cpp.o: CXX_COMPILER__TuProyecto_unscanned_Debug /home/yerik/Desktop/Tank_Attack/Game.cpp || cmake_object_order_depends_target_TuProyecto
   DEFINES = -DQT_CHARTS_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/TuProyecto.dir/main.cpp.o.d
+  DEP_FILE = CMakeFiles/TuProyecto.dir/Game.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -fPIC
   INCLUDES = -I/home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtCharts
   OBJECT_DIR = CMakeFiles/TuProyecto.dir
   OBJECT_FILE_DIR = CMakeFiles/TuProyecto.dir
 
-build CMakeFiles/TuProyecto.dir/window.cpp.o: CXX_COMPILER__TuProyecto_unscanned_Debug /home/yerik/Desktop/Tank_Attack/window.cpp || cmake_object_order_depends_target_TuProyecto
+build CMakeFiles/TuProyecto.dir/main.cpp.o: CXX_COMPILER__TuProyecto_unscanned_Debug /home/yerik/Desktop/Tank_Attack/main.cpp || cmake_object_order_depends_target_TuProyecto
   DEFINES = -DQT_CHARTS_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/TuProyecto.dir/window.cpp.o.d
+  DEP_FILE = CMakeFiles/TuProyecto.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -fPIC
   INCLUDES = -I/home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtCharts
   OBJECT_DIR = CMakeFiles/TuProyecto.dir
@@ -81,7 +81,7 @@ build CMakeFiles/TuProyecto.dir/window.cpp.o: CXX_COMPILER__TuProyecto_unscanned
 #############################################
 # Link the executable TuProyecto
 
-build TuProyecto: CXX_EXECUTABLE_LINKER__TuProyecto_Debug CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o CMakeFiles/TuProyecto.dir/main.cpp.o CMakeFiles/TuProyecto.dir/window.cpp.o | /usr/lib/x86_64-linux-gnu/libQt5Charts.so.5.15.13 /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13 || TuProyecto_autogen TuProyecto_autogen_timestamp_deps
+build TuProyecto: CXX_EXECUTABLE_LINKER__TuProyecto_Debug CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o CMakeFiles/TuProyecto.dir/Game.cpp.o CMakeFiles/TuProyecto.dir/main.cpp.o | /usr/lib/x86_64-linux-gnu/libQt5Charts.so.5.15.13 /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13 || TuProyecto_autogen TuProyecto_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt5Charts.so.5.15.13  /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13  /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13  /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
   OBJECT_DIR = CMakeFiles/TuProyecto.dir

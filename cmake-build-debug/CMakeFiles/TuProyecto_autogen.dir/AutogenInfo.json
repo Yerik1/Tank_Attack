@@ -78,15 +78,15 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/yerik/Desktop/Tank_Attack/ui_gameui.h",
+			"/home/yerik/Desktop/Tank_Attack/Game.h",
 			"Mu",
-			"EWIEGA46WW/moc_ui_gameui.cpp",
+			"EWIEGA46WW/moc_Game.cpp",
 			null
 		],
 		[
-			"/home/yerik/Desktop/Tank_Attack/window.h",
+			"/home/yerik/Desktop/Tank_Attack/ui_gameui.h",
 			"Mu",
-			"EWIEGA46WW/moc_window.cpp",
+			"EWIEGA46WW/moc_ui_gameui.cpp",
 			null
 		]
 	],
@@ -142,8 +142,8 @@
 	"SETTINGS_FILE" : "/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/yerik/Desktop/Tank_Attack/main.cpp", "Mu", null ],
-		[ "/home/yerik/Desktop/Tank_Attack/window.cpp", "Mu", null ]
+		[ "/home/yerik/Desktop/Tank_Attack/Game.cpp", "Mu", null ],
+		[ "/home/yerik/Desktop/Tank_Attack/main.cpp", "Mu", null ]
 	],
 	"USE_BETTER_GRAPH" : false,
 	"VERBOSITY" : 0

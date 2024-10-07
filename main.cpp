@@ -1,7 +1,7 @@
 //
 // Created by yerik on 9/29/24.
 //
-#include "window.h"
+#include "Game.h"
 
 #include <QApplication>
 
