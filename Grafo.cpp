@@ -69,11 +69,11 @@ void Grafo::actualizarMatriz(int fila, int col) {
     if (fila > 0) {
         int pos_arriba = (fila - 1) * M + col;
         // Arriba a la izquierda: verificar si la casilla de la izquierda (fila-1, col-1) debe mantenerse
-        if (col > 0 && obstaculos[fila-1][col-1] && obstaculos[fila][col]) {
+        if (col > 0 ) {
             matriz[pos_arriba][(fila) * M + (col - 1)] = matriz[(fila) * M + (col - 1)][pos_arriba] = 0;
         }
         // Arriba a la derecha: verificar si la casilla de la derecha (fila-1, col+1) debe mantenerse
-        if (col < M - 1 && obstaculos[fila-1][col+1] && obstaculos[fila][col]) {
+        if (col < M - 1 ) {
             matriz[pos_arriba][(fila) * M + (col + 1)] = matriz[(fila) * M + (col + 1)][pos_arriba] = 0;
         }
     }
@@ -82,11 +82,11 @@ void Grafo::actualizarMatriz(int fila, int col) {
     if (fila < N - 1) {
         int pos_abajo = (fila + 1) * M + col;
         // Abajo a la izquierda: verificar si la casilla de la izquierda (fila+1, col-1) debe mantenerse
-        if (col > 0 && obstaculos[fila+1][col-1] && obstaculos[fila][col]) {
+        if (col > 0 ) {
             matriz[pos_abajo][(fila) * M + (col - 1)] = matriz[(fila) * M + (col - 1)][pos_abajo] = 0;
         }
         // Abajo a la derecha: verificar si la casilla de la derecha (fila+1, col+1) debe mantenerse
-        if (col < M - 1 && obstaculos[fila+1][col+1] && obstaculos[fila][col]) {
+        if (col < M - 1 ) {
             matriz[pos_abajo][(fila) * M + (col + 1)] = matriz[(fila) * M + (col + 1)][pos_abajo] = 0;
         }
     }
@@ -95,11 +95,11 @@ void Grafo::actualizarMatriz(int fila, int col) {
     if (col > 0) {
         int pos_izquierda = fila * M + (col - 1);
         // Arriba a la izquierda: verificar si la casilla de arriba (fila-1, col-1) debe mantenerse
-        if (fila > 0 && obstaculos[fila-1][col-1] && obstaculos[fila][col]) {
+        if (fila > 0 ) {
             matriz[pos_izquierda][(fila - 1) * M + (col)] = matriz[(fila - 1) * M + (col)][pos_izquierda] = 0;
         }
         // Abajo a la izquierda: verificar si la casilla de abajo (fila+1, col-1) debe mantenerse
-        if (fila < N - 1 && obstaculos[fila+1][col-1] && obstaculos[fila][col]) {
+        if (fila < N - 1 ) {
             matriz[pos_izquierda][(fila + 1) * M + (col)] = matriz[(fila + 1) * M + (col)][pos_izquierda] = 0;
         }
     }
@@ -108,11 +108,11 @@ void Grafo::actualizarMatriz(int fila, int col) {
     if (col < M - 1) {
         int pos_derecha = fila * M + (col + 1);
         // Arriba a la derecha: verificar si la casilla de arriba (fila-1, col+1) debe mantenerse
-        if (fila > 0 && obstaculos[fila-1][col+1] && obstaculos[fila][col]) {
+        if (fila > 0 ) {
             matriz[pos_derecha][(fila - 1) * M + (col )] = matriz[(fila ) * M + (col + 1)][pos_derecha] = 0;
         }
         // Abajo a la derecha: verificar si la casilla de abajo (fila+1, col+1) debe mantenerse
-        if (fila < N - 1 && obstaculos[fila+1][col+1] && obstaculos[fila][col]) {
+        if (fila < N - 1 ) {
             matriz[pos_derecha][(fila + 1) * M + (col )] = matriz[(fila ) * M + (col + 1)][pos_derecha] = 0;
         }
     }
@@ -123,11 +123,19 @@ void Grafo::actualizarMatriz(int fila, int col) {
 // Mostrar la matriz de adyacencia
 void Grafo::mostrarMatriz() {
     for (int i = 0; i < N * M; ++i) {
-        std::cout << "La casilla " << i << " está conectada con: ";
+        // Obtener las coordenadas (fila, columna) de la casilla i
+        int fila_i = i / M;
+        int col_i = i % M;
+
+        std::cout << "La casilla (" << fila_i << "," << col_i << ") está conectada con: ";
         bool tieneConexion = false;
+
         for (int j = 0; j < N * M; ++j) {
             if (matriz[i][j] == 1) {
-                std::cout << j << " "; // Mostrar las casillas con las que está conectada
+                // Obtener las coordenadas (fila, columna) de la casilla j
+                int fila_j = j / M;
+                int col_j = j % M;
+                std::cout << "(" << fila_j << "," << col_j << ") "; // Mostrar las coordenadas de la casilla conectada
                 tieneConexion = true;
             }
         }
