@@ -1,7 +1,6 @@
 CMakeFiles/TuProyecto.dir/Game.cpp.o: \
- /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Game.cpp \
- /usr/include/stdc-predef.h \
- /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Game.h \
+ /home/yerik/Desktop/Tank_Attack/Game.cpp /usr/include/stdc-predef.h \
+ /home/yerik/Desktop/Tank_Attack/Game.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -298,7 +297,18 @@ CMakeFiles/TuProyecto.dir/Game.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
- /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/ui_gameui.h \
+ /home/yerik/Desktop/Tank_Attack/Grafo.h /usr/include/c++/13/iostream \
+ /usr/include/c++/13/ostream /usr/include/c++/13/ios \
+ /usr/include/c++/13/bits/basic_ios.h \
+ /usr/include/c++/13/bits/locale_facets.h /usr/include/c++/13/cwctype \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h \
+ /usr/include/c++/13/bits/locale_facets.tcc \
+ /usr/include/c++/13/bits/basic_ios.tcc \
+ /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
+ /usr/include/c++/13/bits/istream.tcc \
+ /home/yerik/Desktop/Tank_Attack/ui_gameui.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \

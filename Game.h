@@ -6,6 +6,7 @@
 
 #include <QMainWindow>
 #include <QMouseEvent>
+#include "Grafo.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,9 +16,10 @@ class Window : public QMainWindow {
     Q_OBJECT
 
 public:
+    Grafo grafo=Grafo(20,40);
+
     explicit Window(QWidget *parent = nullptr);
     ~Window() override;
-
     void cellPressed(int row, int column, const QString& action);
 
     void mousePressEvent(QMouseEvent *event) override;

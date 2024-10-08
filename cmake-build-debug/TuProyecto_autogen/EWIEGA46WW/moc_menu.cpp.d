@@ -1,6 +1,6 @@
-/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/cmake-build-debug/TuProyecto_autogen/EWIEGA46WW/moc_menu.cpp: /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/menu.h \
-  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/cmake-build-debug/TuProyecto_autogen/moc_predefs.h \
-  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/ui_menuui.h \
+/home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/EWIEGA46WW/moc_menu.cpp: /home/yerik/Desktop/Tank_Attack/menu.h \
+  /home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/moc_predefs.h \
+  /home/yerik/Desktop/Tank_Attack/ui_menuui.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \
