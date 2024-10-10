@@ -67,6 +67,9 @@ void Window::cellPressed(int row, int column, const QString& action) {
         lastSelectedRow = row;
         lastSelectedColumn = column;
     }
+    if(action=="Move to:") {
+        objDijkstra.dijkstra(grafo.getMatriz(), 7*40+7, row*40+column, 40);
+    }
 }
 
 // Manejar el evento de presión del mouse

@@ -310,6 +310,10 @@ CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
+ /home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/EWIEGA46WW/../../../Dijkstra.h \
+ /usr/include/c++/13/queue /usr/include/c++/13/deque \
+ /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
+ /usr/include/c++/13/bits/stl_queue.h \
  /home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/EWIEGA46WW/moc_menu.cpp \
  /home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/EWIEGA46WW/../../../menu.h \
  /home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/EWIEGA46WW/../../../ui_menuui.h \

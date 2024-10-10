@@ -78,6 +78,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/yerik/Desktop/Tank_Attack/Dijkstra.h",
+			"Mu",
+			"EWIEGA46WW/moc_Dijkstra.cpp",
+			null
+		],
+		[
 			"/home/yerik/Desktop/Tank_Attack/Game.h",
 			"Mu",
 			"EWIEGA46WW/moc_Game.cpp",
@@ -160,6 +166,7 @@
 	"SETTINGS_FILE" : "/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/home/yerik/Desktop/Tank_Attack/Dijkstra.cpp", "Mu", null ],
 		[ "/home/yerik/Desktop/Tank_Attack/Game.cpp", "Mu", null ],
 		[ "/home/yerik/Desktop/Tank_Attack/Grafo.cpp", "Mu", null ],
 		[ "/home/yerik/Desktop/Tank_Attack/main.cpp", "Mu", null ],

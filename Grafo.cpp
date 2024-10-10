@@ -145,3 +145,7 @@ void Grafo::mostrarMatriz() {
         std::cout << std::endl;
     }
 }
+
+std::vector<std::vector<int>> Grafo::getMatriz() const {
+    return matriz;
+}

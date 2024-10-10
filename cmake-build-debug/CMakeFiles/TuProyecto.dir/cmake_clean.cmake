@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/TuProyecto_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/TuProyecto_autogen.dir/ParseCache.txt"
   "TuProyecto_autogen"
+  "CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o"
+  "CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o.d"
   "CMakeFiles/TuProyecto.dir/Game.cpp.o"
   "CMakeFiles/TuProyecto.dir/Game.cpp.o.d"
   "CMakeFiles/TuProyecto.dir/Grafo.cpp.o"

@@ -7,7 +7,7 @@
 #include <QMainWindow>
 #include <QMouseEvent>
 #include "Grafo.h"
-
+#include "Dijkstra.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -17,6 +17,7 @@ class Window : public QMainWindow {
 
 public:
     Grafo grafo=Grafo(20,40);
+    Dijkstra objDijkstra=Dijkstra();
 
     explicit Window(QWidget *parent = nullptr);
     ~Window() override;

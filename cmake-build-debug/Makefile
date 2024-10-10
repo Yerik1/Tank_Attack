@@ -200,6 +200,30 @@ TuProyecto_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto_autogen.dir/build.make CMakeFiles/TuProyecto_autogen.dir/build
 .PHONY : TuProyecto_autogen/fast
 
+Dijkstra.o: Dijkstra.cpp.o
+.PHONY : Dijkstra.o
+
+# target to build an object file
+Dijkstra.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o
+.PHONY : Dijkstra.cpp.o
+
+Dijkstra.i: Dijkstra.cpp.i
+.PHONY : Dijkstra.i
+
+# target to preprocess a source file
+Dijkstra.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Dijkstra.cpp.i
+.PHONY : Dijkstra.cpp.i
+
+Dijkstra.s: Dijkstra.cpp.s
+.PHONY : Dijkstra.s
+
+# target to generate assembly for a file
+Dijkstra.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Dijkstra.cpp.s
+.PHONY : Dijkstra.cpp.s
+
 Game.o: Game.cpp.o
 .PHONY : Game.o
 
@@ -335,6 +359,9 @@ help:
 	@echo "... TuProyecto_autogen"
 	@echo "... TuProyecto_autogen_timestamp_deps"
 	@echo "... TuProyecto"
+	@echo "... Dijkstra.o"
+	@echo "... Dijkstra.i"
+	@echo "... Dijkstra.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"

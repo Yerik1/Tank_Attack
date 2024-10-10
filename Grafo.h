@@ -19,6 +19,8 @@ public:
 
     void mostrarMatriz();
 
+    std::vector<std::vector<int>> getMatriz() const;
+
 private:
     int N, M;
     std::vector<std::vector<int>> matriz;
