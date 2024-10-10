@@ -145,7 +145,9 @@ void Window::generateRandomObstacles() {
         for (int column = 1; column < 19; ++column) {
             // Evitar las celdas especificadas
             if ((row == 7 && (column == 7 || column == 12)) ||
-                (row == 12 && (column == 7 || column == 12))) {
+                (row == 12 && (column == 7 || column == 12))||
+                (row == 9 && (column == 7 || column == 12)) ||
+                (row == 14 && (column == 7 || column == 12))) {
                 continue; // Saltar estas celdas
                 }
 
