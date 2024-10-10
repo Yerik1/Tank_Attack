@@ -1,7 +1,6 @@
 CMakeFiles/TuProyecto.dir/main.cpp.o: \
- /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/main.cpp \
- /usr/include/stdc-predef.h \
- /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/menu.h \
+ /home/yerik/Desktop/Tank_Attack/main.cpp /usr/include/stdc-predef.h \
+ /home/yerik/Desktop/Tank_Attack/menu.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -286,7 +285,7 @@ CMakeFiles/TuProyecto.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
- /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/ui_menuui.h \
+ /home/yerik/Desktop/Tank_Attack/ui_menuui.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \

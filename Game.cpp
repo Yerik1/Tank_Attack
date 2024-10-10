@@ -48,6 +48,7 @@ Window::Window(QWidget *parent) :
     ui->Tablero->setAttribute(Qt::WA_TransparentForMouseEvents);
     generateMapBorder();
     generateRandomObstacles();
+    grafo.mostrarMatriz();
 
 
 }
@@ -131,6 +132,7 @@ void Window::generateMapBorder() {
 
                 // Colocar el QLabel en la celda
                 ui->Tablero->setCellWidget(row, column, label);
+                grafo.agregarObstaculo(row,column);
             }
 
         }
@@ -157,6 +159,7 @@ void Window::generateRandomObstacles() {
                 label->setAlignment(Qt::AlignCenter);
                 label->setStyleSheet("border: none; background-color: transparent;");
                 ui->Tablero->setCellWidget(row, column, label);
+                grafo.agregarObstaculo(row,column);
 
                 // Colocar el obstáculo en la celda reflejada (espejo)
                 QLabel *mirrorLabel = new QLabel();
@@ -165,6 +168,7 @@ void Window::generateRandomObstacles() {
                 mirrorLabel->setAlignment(Qt::AlignCenter);
                 mirrorLabel->setStyleSheet("border: none; background-color: transparent;");
                 ui->Tablero->setCellWidget(row, 39 - column, mirrorLabel); // Columna espejo
+                grafo.agregarObstaculo(row,39-column);
             }
         }
     }

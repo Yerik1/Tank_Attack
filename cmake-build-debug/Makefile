@@ -57,10 +57,10 @@ RM = /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack"
+CMAKE_SOURCE_DIR = /home/yerik/Desktop/Tank_Attack
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/yerik/Desktop/Tank_Attack/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/CMakeFiles" "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles /home/yerik/Desktop/Tank_Attack/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -223,6 +223,30 @@ Game.s: Game.cpp.s
 Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Game.cpp.s
 .PHONY : Game.cpp.s
+
+Grafo.o: Grafo.cpp.o
+.PHONY : Grafo.o
+
+# target to build an object file
+Grafo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Grafo.cpp.o
+.PHONY : Grafo.cpp.o
+
+Grafo.i: Grafo.cpp.i
+.PHONY : Grafo.i
+
+# target to preprocess a source file
+Grafo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Grafo.cpp.i
+.PHONY : Grafo.cpp.i
+
+Grafo.s: Grafo.cpp.s
+.PHONY : Grafo.s
+
+# target to generate assembly for a file
+Grafo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Grafo.cpp.s
+.PHONY : Grafo.cpp.s
 
 TuProyecto_autogen/mocs_compilation.o: TuProyecto_autogen/mocs_compilation.cpp.o
 .PHONY : TuProyecto_autogen/mocs_compilation.o
@@ -314,6 +338,9 @@ help:
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
+	@echo "... Grafo.o"
+	@echo "... Grafo.i"
+	@echo "... Grafo.s"
 	@echo "... TuProyecto_autogen/mocs_compilation.o"
 	@echo "... TuProyecto_autogen/mocs_compilation.i"
 	@echo "... TuProyecto_autogen/mocs_compilation.s"

@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "TuProyecto_autogen"
   "CMakeFiles/TuProyecto.dir/Game.cpp.o"
   "CMakeFiles/TuProyecto.dir/Game.cpp.o.d"
+  "CMakeFiles/TuProyecto.dir/Grafo.cpp.o"
+  "CMakeFiles/TuProyecto.dir/Grafo.cpp.o.d"
   "CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/TuProyecto.dir/main.cpp.o"
