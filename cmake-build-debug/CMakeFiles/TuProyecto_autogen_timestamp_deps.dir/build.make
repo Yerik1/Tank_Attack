@@ -53,10 +53,10 @@ RM = /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yerik/Desktop/Tank_Attack
+CMAKE_SOURCE_DIR = "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yerik/Desktop/Tank_Attack/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug"
 
 # Utility rule file for TuProyecto_autogen_timestamp_deps.
 
@@ -78,6 +78,6 @@ CMakeFiles/TuProyecto_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/TuProyecto_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/TuProyecto_autogen_timestamp_deps.dir/depend:
-	cd /home/yerik/Desktop/Tank_Attack/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yerik/Desktop/Tank_Attack /home/yerik/Desktop/Tank_Attack /home/yerik/Desktop/Tank_Attack/cmake-build-debug /home/yerik/Desktop/Tank_Attack/cmake-build-debug /home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack" "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack" "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug" "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug" "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen_timestamp_deps.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/TuProyecto_autogen_timestamp_deps.dir/depend
 
