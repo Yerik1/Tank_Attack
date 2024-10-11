@@ -19,11 +19,11 @@ public:
 
     void mostrarMatriz();
 
-    std::vector<std::vector<int>> getMatriz() const;
+    std::vector<std::vector<double>> getMatriz() const;
 
 private:
     int N, M;
-    std::vector<std::vector<int>> matriz;
+    std::vector<std::vector<double>> matriz;
     std::vector<std::vector<bool>> obstaculos;
 };
 

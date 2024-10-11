@@ -23,7 +23,7 @@ void Dijkstra::printPath(const std::vector<int>& parent, int j) {
     std::cout << j << " ";  // Imprimimos el nodo en el camino
 }
 
-void Dijkstra::dijkstra(const std::vector<std::vector<int>>& matriz, int src, int dest, int numColumnas) {
+void Dijkstra::dijkstra(const std::vector<std::vector<double>>& matriz, int src, int dest, int numColumnas) {
     int numNodos = matriz.size();
 
     // Inicialización
