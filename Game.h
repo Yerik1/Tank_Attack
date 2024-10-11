@@ -6,6 +6,7 @@
 
 #include <QMainWindow>
 #include <QMouseEvent>
+#include <QTimer>
 #include "Grafo.h"
 #include "Dijkstra.h"
 QT_BEGIN_NAMESPACE
@@ -30,6 +31,8 @@ public:
     void generateMapBorder();
 
     void generateRandomObstacles();
+
+    void iniciarMovimiento(const std::vector<std::pair<int, int>> &movimientos);
 
 private:
     Ui::MainWindow *ui;

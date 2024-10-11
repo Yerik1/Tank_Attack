@@ -18,7 +18,7 @@ public:
 
     void printPath(const std::vector<int> &parent, int j);
 
-    void dijkstra(const std::vector<std::vector<double>> &matriz, int src, int dest, int numColumnas);
+    std::vector<std::pair<int, int>> dijkstra(const std::vector<std::vector<double>> &matriz, int src, int dest, int numColumnas);
 };
 
 
