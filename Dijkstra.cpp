@@ -27,14 +27,14 @@ void Dijkstra::dijkstra(const std::vector<std::vector<double>>& matriz, int src,
     int numNodos = matriz.size();
 
     // Inicialización
-    std::vector<int> dist(numNodos, INT_MAX);
+    std::vector<double> dist(numNodos, INT_MAX); // Usar infinito para distancias no alcanzables
     std::vector<int> parent(numNodos, -1);
     std::vector<bool> visited(numNodos, false);
-    dist[src] = 0;
+    dist[src] = 0.0;
 
-    // Cola de prioridad (min-heap)
-    std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::greater<std::pair<int, int>>> pq;
-    pq.push({0, src});
+    // Cola de prioridad (min-heap), ahora usando double para las distancias
+    std::priority_queue<std::pair<double, int>, std::vector<std::pair<double, int>>, std::greater<std::pair<double, int>>> pq;
+    pq.push({0.0, src});
 
     while (!pq.empty()) {
         int u = pq.top().second;
@@ -45,11 +45,11 @@ void Dijkstra::dijkstra(const std::vector<std::vector<double>>& matriz, int src,
 
         for (int v = 0; v < numNodos; ++v) {
             if (matriz[u][v] > 0 && !visited[v]) {
-                int nuevaDist = dist[u] + matriz[u][v];
+                double nuevaDist = dist[u] + matriz[u][v];
                 if (nuevaDist < dist[v]) {
                     dist[v] = nuevaDist;
                     parent[v] = u;
-                    pq.push({dist[v], v});
+                    pq.push({dist[v], v}); // Usar la nueva distancia como clave en la cola de prioridad
                 }
             }
         }
@@ -70,12 +70,20 @@ void Dijkstra::dijkstra(const std::vector<std::vector<double>>& matriz, int src,
                   << " a la casilla (" << destX << ", " << destY << ") es " << dist[dest] << std::endl;
         std::cout << "Camino (coordenadas): ";
 
+        // Reconstruir el camino desde el destino al origen
+        std::vector<std::pair<int, int>> camino;
         for (int v = dest; v != -1; v = parent[v]) {
             int x = v / numColumnas;
             int y = v % numColumnas;
-            std::cout << "(" << x << ", " << y << ") ";
+            camino.push_back({x, y});
+        }
+
+        // Imprimir el camino en orden correcto (desde origen a destino)
+        for (auto it = camino.rbegin(); it != camino.rend(); ++it) {
+            std::cout << "(" << it->first << ", " << it->second << ") ";
         }
         std::cout << std::endl;
     }
 }
+
 
