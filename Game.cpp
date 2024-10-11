@@ -67,6 +67,12 @@ void Window::cellPressed(int row, int column, const QString& action) {
         lastSelectedRow = row;
         lastSelectedColumn = column;
     }
+    if(action=="Move to:") {
+        iniciarMovimiento(objDijkstra.dijkstra(grafo.getMatriz(), 7 * 40 + 7, row * 40 + column, 40)) ;
+
+
+
+    }
 }
 
 // Manejar el evento de presión del mouse
@@ -174,4 +180,28 @@ void Window::generateRandomObstacles() {
             }
         }
     }
+}
+
+void Window::iniciarMovimiento(const std::vector<std::pair<int, int>>& movimientos) {
+    if (movimientos.empty()) return;
+
+    int index = movimientos.size() - 1;  // Comenzamos desde el último movimiento
+    QTimer* timer = new QTimer(this);
+
+    connect(timer, &QTimer::timeout, [=]() mutable {
+        if (index >= 0) {
+            int x = movimientos[index].first;
+            int y = movimientos[index].second;
+
+            // Mover el widget
+            ui->TRojo1->move(100 + 23 * y, 230 + 23 * x);
+
+            --index;  // Retroceder al siguiente movimiento
+        } else {
+            timer->stop();  // Detener el temporizador cuando llegamos al inicio
+            timer->deleteLater();  // Liberar el temporizador después de detenerse
+        }
+    });
+
+    timer->start(200);  // Inicia el temporizador con un intervalo de 500 ms (ajustable)
 }

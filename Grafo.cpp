@@ -6,7 +6,7 @@
 
 Grafo::Grafo(int n, int m) : N(n), M(m) {
     // Inicializar matriz de adyacencia
-    matriz.resize(N * M, std::vector<int>(N * M, 0));
+    matriz.resize(N * M, std::vector<double>(N * M, 0));
     obstaculos.resize(N, std::vector<bool>(M, false)); // No hay obstáculos inicialmente
 
     // Crear conexiones entre posiciones adyacentes y diagonales
@@ -25,16 +25,16 @@ Grafo::Grafo(int n, int m) : N(n), M(m) {
             // Conectar con las posiciones diagonales
             // Arriba a la izquierda
             if (i > 0 && j > 0 && !obstaculos[i-1][j] && !obstaculos[i][j-1])
-                matriz[pos][(i - 1) * M + (j - 1)] = 1;
+                matriz[pos][(i - 1) * M + (j - 1)] = 1.5;
             // Arriba a la derecha
             if (i > 0 && j < M - 1 && !obstaculos[i-1][j] && !obstaculos[i][j+1])
-                matriz[pos][(i - 1) * M + (j + 1)] = 1;
+                matriz[pos][(i - 1) * M + (j + 1)] = 1.5;
             // Abajo a la izquierda
             if (i < N - 1 && j > 0 && !obstaculos[i+1][j] && !obstaculos[i][j-1])
-                matriz[pos][(i + 1) * M + (j - 1)] = 1;
+                matriz[pos][(i + 1) * M + (j - 1)] = 1.5;
             // Abajo a la derecha
             if (i < N - 1 && j < M - 1 && !obstaculos[i+1][j] && !obstaculos[i][j+1])
-                matriz[pos][(i + 1) * M + (j + 1)] = 1;
+                matriz[pos][(i + 1) * M + (j + 1)] = 1.5;
         }
     }
 }
@@ -131,7 +131,7 @@ void Grafo::mostrarMatriz() {
         bool tieneConexion = false;
 
         for (int j = 0; j < N * M; ++j) {
-            if (matriz[i][j] == 1) {
+            if (matriz[i][j] >= 1) {
                 // Obtener las coordenadas (fila, columna) de la casilla j
                 int fila_j = j / M;
                 int col_j = j % M;
@@ -144,4 +144,8 @@ void Grafo::mostrarMatriz() {
         }
         std::cout << std::endl;
     }
+}
+
+std::vector<std::vector<double>> Grafo::getMatriz() const {
+    return matriz;
 }
