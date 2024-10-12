@@ -4,11 +4,18 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
-#include <QMainWindow>
+
+#include "ui_gameui.h"
+#include "Tanque.h"
 #include <QMouseEvent>
-#include <QTimer>
 #include "Grafo.h"
 #include "Dijkstra.h"
+#include <QDebug>
+#include <QPixmap>
+#include <QRandomGenerator>
+#include <QMainWindow>
+#include <QTimer>
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -19,6 +26,18 @@ class Window : public QMainWindow {
 public:
     Grafo grafo=Grafo(20,40);
     Dijkstra objDijkstra=Dijkstra();
+    Tanque Rojo1=Tanque(1,2,4,7,7);
+    Tanque Rojo2=Tanque(2,2,4,9,7);
+    Tanque Azul1=Tanque(3,1,2,12,7);
+    Tanque Azul2=Tanque(4,1,2,14,17);
+    Tanque Amarillo1=Tanque(5,2,4,7,32);
+    Tanque Amarillo2=Tanque(6,2,4,9,32);
+    Tanque Celeste1=Tanque(7,1,2,12,32);
+    Tanque Celeste2=Tanque(8,1,2,14,32);
+    Tanque Defecto=Tanque(0,0,0,0,0);
+    Tanque* SelectedTank= &Defecto;
+
+
 
     explicit Window(QWidget *parent = nullptr);
     ~Window() override;
@@ -28,11 +47,15 @@ public:
     void mouseReleaseEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
 
+    void setupEventFilter();
+
+    bool eventFilter(QObject *obj, QEvent *event);
+
     void generateMapBorder();
 
     void generateRandomObstacles();
 
-    void iniciarMovimiento(const std::vector<std::pair<int, int>> &movimientos);
+    int iniciarMovimiento(const std::vector<std::pair<int, int>> &movimientos);
 
 private:
     Ui::MainWindow *ui;

@@ -14,11 +14,17 @@ int Tanque::getColor() const { return color; }
 float Tanque::getVida() const { return vida; }
 int Tanque::getX() const { return x; }
 int Tanque::getY() const { return y; }
+QWidget *Tanque::getImagen() const { return Imagen; }
+QLabel *Tanque::getLabel() const { return Vida; }
+
 
 // Setters
 void Tanque::setVida(float vida) { this->vida = vida; }
 void Tanque::setX(int x) { this->x = x; }
 void Tanque::setY(int y) { this->y = y; }
+void Tanque::setImagen(QWidget *imagen) {this->Imagen = imagen; }
+void Tanque::setLabel(QLabel *label) { this->Vida = label; }
+
 
 // Otros métodos
 void Tanque::mover(int nuevoX, int nuevoY) {

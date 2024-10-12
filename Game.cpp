@@ -2,17 +2,15 @@
 // Created by yerik on 9/29/24.
 //
 #include "Game.h"
-#include "ui_gameui.h"
-#include <QTableWidget>
-#include <QMouseEvent>
-#include <QDebug>
-#include <QIcon>
-#include <QPixmap>
-#include <QRandomGenerator>
 
 Window::Window(QWidget *parent) :
     QMainWindow(parent), ui(new Ui::MainWindow), dragging(false), lastSelectedRow(-1), lastSelectedColumn(-1) {
     ui->setupUi(this);
+    Rojo1.setImagen(ui->TRojo1);
+    Rojo2.setImagen(ui->TRojo2);
+    Amarillo1.setImagen(ui->TAmarillo1);
+    Amarillo2.setImagen(ui->TAmarillo2);
+    setupEventFilter();
 
     ui->Tablero->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->Tablero->setSelectionMode(QAbstractItemView::SingleSelection);
@@ -46,6 +44,7 @@ Window::Window(QWidget *parent) :
 
     // Habilitar la transparencia para el mouse
     ui->Tablero->setAttribute(Qt::WA_TransparentForMouseEvents);
+    //ui->TRojo1->setAttribute(Qt::WA_TransparentForMouseEvents);
     generateMapBorder();
     generateRandomObstacles();
     grafo.mostrarMatriz();
@@ -68,14 +67,22 @@ void Window::cellPressed(int row, int column, const QString& action) {
         lastSelectedColumn = column;
     }
     if(action=="Move to:") {
-        iniciarMovimiento(objDijkstra.dijkstra(grafo.getMatriz(), 7 * 40 + 7, row * 40 + column, 40)) ;
+        if((*SelectedTank).getColor()==1) {
+
+        }else if((*SelectedTank).getColor()==2) {
+            if(iniciarMovimiento(objDijkstra.dijkstra(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
+                (*SelectedTank).setX(row);
+                (*SelectedTank).setY(column);
+            } ;
+
+        }
+
 
 
 
     }
 }
 
-// Manejar el evento de presión del mouse
 void Window::mousePressEvent(QMouseEvent *event) {
     if (event->button() == Qt::LeftButton || event->button() == Qt::RightButton) {
         QPoint pos = ui->Tablero->mapFromGlobal(event->globalPos());
@@ -115,6 +122,43 @@ void Window::mouseMoveEvent(QMouseEvent *event) {
     // Llama a la implementación base
     QMainWindow::mouseMoveEvent(event);
 }
+
+void Window::setupEventFilter() {
+    ui->TRojo1->installEventFilter(this);
+    ui->TRojo2->installEventFilter(this);
+    ui->TAmarillo1->installEventFilter(this);
+    ui->TAmarillo2->installEventFilter(this);
+}
+
+bool Window::eventFilter(QObject *obj, QEvent *event) {
+    if (event->type() == QEvent::MouseButtonPress) {
+        QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
+        if (mouseEvent->button() == Qt::LeftButton) {
+            if (obj == ui->TRojo1) {
+                SelectedTank = &Rojo1; // Asigna la dirección de Rojo1
+                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                return true; // Indica que el evento fue manejado
+            }
+            else if (obj == ui->TRojo2) {
+                SelectedTank = &Rojo2; // Asigna la dirección de Rojo2
+                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                return true; // Indica que el evento fue manejado
+            }
+            else if (obj == ui->TAmarillo1) {
+                SelectedTank = &Amarillo1; // Asigna la dirección de Rojo1
+                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                return true; // Indica que el evento fue manejado
+            }
+            else if (obj == ui->TAmarillo2) {
+                SelectedTank = &Amarillo2; // Asigna la dirección de Rojo2
+                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                return true; // Indica que el evento fue manejado
+            }
+        }
+    }
+    return QMainWindow::eventFilter(obj, event); // Pasa el evento al manejador base
+}
+
 
 void Window::generateMapBorder() {
     for (int row = 0; row < 20; ++row) {
@@ -182,26 +226,32 @@ void Window::generateRandomObstacles() {
     }
 }
 
-void Window::iniciarMovimiento(const std::vector<std::pair<int, int>>& movimientos) {
-    if (movimientos.empty()) return;
+int Window::iniciarMovimiento(const std::vector<std::pair<int, int> > &movimientos) {
+    if (movimientos.empty()) {
+        return 0;
+    }else {
 
-    int index = movimientos.size() - 1;  // Comenzamos desde el último movimiento
-    QTimer* timer = new QTimer(this);
+        int index = movimientos.size() - 1;  // Comenzamos desde el último movimiento
+        QTimer* timer = new QTimer(this);
 
-    connect(timer, &QTimer::timeout, [=]() mutable {
-        if (index >= 0) {
-            int x = movimientos[index].first;
-            int y = movimientos[index].second;
+        connect(timer, &QTimer::timeout, [=]() mutable {
+            if (index >= 0) {
+                int x = movimientos[index].first;
+                int y = movimientos[index].second;
 
-            // Mover el widget
-            ui->TRojo1->move(100 + 23 * y, 230 + 23 * x);
+                // Mover el widget
+                (*SelectedTank).getImagen()->move(100 + 23 * y, 230 + 23 * x);
 
-            --index;  // Retroceder al siguiente movimiento
-        } else {
-            timer->stop();  // Detener el temporizador cuando llegamos al inicio
-            timer->deleteLater();  // Liberar el temporizador después de detenerse
-        }
-    });
+                --index;  // Retroceder al siguiente movimiento
+            } else {
+                timer->stop();  // Detener el temporizador cuando llegamos al inicio
+                timer->deleteLater();  // Liberar el temporizador después de detenerse
+                SelectedTank=&Defecto;
+            }
+        });
 
-    timer->start(200);  // Inicia el temporizador con un intervalo de 500 ms (ajustable)
+        timer->start(200);  // Inicia el temporizador con un intervalo de 500 ms (ajustable)
+
+    }
+    return 1;
 }
