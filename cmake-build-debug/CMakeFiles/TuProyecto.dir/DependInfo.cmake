@@ -9,8 +9,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "TuProyecto_autogen/timestamp" "custom" "TuProyecto_autogen/deps"
+  "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Bala.cpp" "CMakeFiles/TuProyecto.dir/Bala.cpp.o" "gcc" "CMakeFiles/TuProyecto.dir/Bala.cpp.o.d"
+  "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Dijkstra.cpp" "CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o" "gcc" "CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o.d"
   "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Game.cpp" "CMakeFiles/TuProyecto.dir/Game.cpp.o" "gcc" "CMakeFiles/TuProyecto.dir/Game.cpp.o.d"
   "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Grafo.cpp" "CMakeFiles/TuProyecto.dir/Grafo.cpp.o" "gcc" "CMakeFiles/TuProyecto.dir/Grafo.cpp.o.d"
+  "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Tanque.cpp" "CMakeFiles/TuProyecto.dir/Tanque.cpp.o" "gcc" "CMakeFiles/TuProyecto.dir/Tanque.cpp.o.d"
+  "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Timer.cpp" "CMakeFiles/TuProyecto.dir/Timer.cpp.o" "gcc" "CMakeFiles/TuProyecto.dir/Timer.cpp.o.d"
   "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/TuProyecto_autogen/mocs_compilation.cpp" "CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o.d"
   "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/main.cpp" "CMakeFiles/TuProyecto.dir/main.cpp.o" "gcc" "CMakeFiles/TuProyecto.dir/main.cpp.o.d"
   "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/menu.cpp" "CMakeFiles/TuProyecto.dir/menu.cpp.o" "gcc" "CMakeFiles/TuProyecto.dir/menu.cpp.o.d"

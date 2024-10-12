@@ -200,6 +200,54 @@ TuProyecto_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto_autogen.dir/build.make CMakeFiles/TuProyecto_autogen.dir/build
 .PHONY : TuProyecto_autogen/fast
 
+Bala.o: Bala.cpp.o
+.PHONY : Bala.o
+
+# target to build an object file
+Bala.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Bala.cpp.o
+.PHONY : Bala.cpp.o
+
+Bala.i: Bala.cpp.i
+.PHONY : Bala.i
+
+# target to preprocess a source file
+Bala.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Bala.cpp.i
+.PHONY : Bala.cpp.i
+
+Bala.s: Bala.cpp.s
+.PHONY : Bala.s
+
+# target to generate assembly for a file
+Bala.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Bala.cpp.s
+.PHONY : Bala.cpp.s
+
+Dijkstra.o: Dijkstra.cpp.o
+.PHONY : Dijkstra.o
+
+# target to build an object file
+Dijkstra.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o
+.PHONY : Dijkstra.cpp.o
+
+Dijkstra.i: Dijkstra.cpp.i
+.PHONY : Dijkstra.i
+
+# target to preprocess a source file
+Dijkstra.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Dijkstra.cpp.i
+.PHONY : Dijkstra.cpp.i
+
+Dijkstra.s: Dijkstra.cpp.s
+.PHONY : Dijkstra.s
+
+# target to generate assembly for a file
+Dijkstra.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Dijkstra.cpp.s
+.PHONY : Dijkstra.cpp.s
+
 Game.o: Game.cpp.o
 .PHONY : Game.o
 
@@ -247,6 +295,54 @@ Grafo.s: Grafo.cpp.s
 Grafo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Grafo.cpp.s
 .PHONY : Grafo.cpp.s
+
+Tanque.o: Tanque.cpp.o
+.PHONY : Tanque.o
+
+# target to build an object file
+Tanque.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Tanque.cpp.o
+.PHONY : Tanque.cpp.o
+
+Tanque.i: Tanque.cpp.i
+.PHONY : Tanque.i
+
+# target to preprocess a source file
+Tanque.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Tanque.cpp.i
+.PHONY : Tanque.cpp.i
+
+Tanque.s: Tanque.cpp.s
+.PHONY : Tanque.s
+
+# target to generate assembly for a file
+Tanque.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Tanque.cpp.s
+.PHONY : Tanque.cpp.s
+
+Timer.o: Timer.cpp.o
+.PHONY : Timer.o
+
+# target to build an object file
+Timer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Timer.cpp.o
+.PHONY : Timer.cpp.o
+
+Timer.i: Timer.cpp.i
+.PHONY : Timer.i
+
+# target to preprocess a source file
+Timer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Timer.cpp.i
+.PHONY : Timer.cpp.i
+
+Timer.s: Timer.cpp.s
+.PHONY : Timer.s
+
+# target to generate assembly for a file
+Timer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Timer.cpp.s
+.PHONY : Timer.cpp.s
 
 TuProyecto_autogen/mocs_compilation.o: TuProyecto_autogen/mocs_compilation.cpp.o
 .PHONY : TuProyecto_autogen/mocs_compilation.o
@@ -335,12 +431,24 @@ help:
 	@echo "... TuProyecto_autogen"
 	@echo "... TuProyecto_autogen_timestamp_deps"
 	@echo "... TuProyecto"
+	@echo "... Bala.o"
+	@echo "... Bala.i"
+	@echo "... Bala.s"
+	@echo "... Dijkstra.o"
+	@echo "... Dijkstra.i"
+	@echo "... Dijkstra.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
 	@echo "... Grafo.o"
 	@echo "... Grafo.i"
 	@echo "... Grafo.s"
+	@echo "... Tanque.o"
+	@echo "... Tanque.i"
+	@echo "... Tanque.s"
+	@echo "... Timer.o"
+	@echo "... Timer.i"
+	@echo "... Timer.s"
 	@echo "... TuProyecto_autogen/mocs_compilation.o"
 	@echo "... TuProyecto_autogen/mocs_compilation.i"
 	@echo "... TuProyecto_autogen/mocs_compilation.s"

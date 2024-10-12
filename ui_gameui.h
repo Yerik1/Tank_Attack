@@ -14,11 +14,13 @@
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QWidget>
+#include "Timer.h"
 
 QT_BEGIN_NAMESPACE
 
 class Ui_MainWindow
 {
+
 public:
     QWidget *centralwidget;
     QLabel *Titulo;
@@ -55,6 +57,8 @@ public:
     QWidget *TCeleste1;
     QWidget *TCeleste2;
     QStatusBar *statusbar;
+
+    Timer *timer;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -352,6 +356,13 @@ public:
         statusbar->setContextMenuPolicy(Qt::DefaultContextMenu);
         MainWindow->setStatusBar(statusbar);
 
+        timer = new Timer(Contador);
+
+        // Iniciar el temporizador con 5 minutos (300 segundos)
+        timer->start(300);
+
+
+
         retranslateUi(MainWindow);
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -378,6 +389,7 @@ public:
         label_7->setText(QCoreApplication::translate("MainWindow", "Siguiente Power-Up", nullptr));
         Contador->setText(QCoreApplication::translate("MainWindow", "0:00", nullptr));
         Turno->setText(QCoreApplication::translate("MainWindow", "Turno jugador X", nullptr));
+        Contador->setText(QCoreApplication::translate("MainWindow", "5:00", nullptr));
     } // retranslateUi
 
 };
