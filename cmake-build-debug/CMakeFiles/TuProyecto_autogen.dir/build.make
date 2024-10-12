@@ -53,10 +53,10 @@ RM = /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack"
+CMAKE_SOURCE_DIR = /home/yerik/Desktop/Tank_Attack
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/yerik/Desktop/Tank_Attack/cmake-build-debug
 
 # Utility rule file for TuProyecto_autogen.
 
@@ -70,9 +70,9 @@ CMakeFiles/TuProyecto_autogen: TuProyecto_autogen/timestamp
 
 TuProyecto_autogen/timestamp: /usr/lib/qt5/bin/moc
 TuProyecto_autogen/timestamp: CMakeFiles/TuProyecto_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target TuProyecto"
-	/snap/clion/296/bin/cmake/linux/x64/bin/cmake -E cmake_autogen "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen.dir/AutogenInfo.json" Debug
-	/snap/clion/296/bin/cmake/linux/x64/bin/cmake -E touch "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/TuProyecto_autogen/timestamp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target TuProyecto"
+	/snap/clion/296/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen.dir/AutogenInfo.json Debug
+	/snap/clion/296/bin/cmake/linux/x64/bin/cmake -E touch /home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/timestamp
 
 TuProyecto_autogen: CMakeFiles/TuProyecto_autogen
 TuProyecto_autogen: TuProyecto_autogen/timestamp
@@ -88,6 +88,6 @@ CMakeFiles/TuProyecto_autogen.dir/clean:
 .PHONY : CMakeFiles/TuProyecto_autogen.dir/clean
 
 CMakeFiles/TuProyecto_autogen.dir/depend:
-	cd "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack" "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack" "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug" "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug" "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen.dir/DependInfo.cmake" "--color=$(COLOR)"
+	cd /home/yerik/Desktop/Tank_Attack/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yerik/Desktop/Tank_Attack /home/yerik/Desktop/Tank_Attack /home/yerik/Desktop/Tank_Attack/cmake-build-debug /home/yerik/Desktop/Tank_Attack/cmake-build-debug /home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/TuProyecto_autogen.dir/depend
 

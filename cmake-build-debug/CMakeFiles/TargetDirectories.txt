@@ -1,9 +1,9 @@
-/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto.dir
-/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles/list_install_components.dir
-/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles/install.dir
-/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles/install/local.dir
-/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles/install/strip.dir
-/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen_timestamp_deps.dir
-/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen.dir
+/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto.dir
+/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/list_install_components.dir
+/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/install.dir
+/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/install/local.dir
+/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/install/strip.dir
+/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen_timestamp_deps.dir
+/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen.dir

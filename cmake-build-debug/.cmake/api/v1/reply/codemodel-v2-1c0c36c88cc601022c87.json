@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "TuProyecto::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-TuProyecto-Debug-766646f7ff486e14fdec.json",
+					"jsonFile" : "target-TuProyecto-Debug-3e857824e1623b8b9874.json",
 					"name" : "TuProyecto",
 					"projectIndex" : 0
 				},
@@ -68,8 +68,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug",
-		"source" : "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack"
+		"build" : "/home/yerik/Desktop/Tank_Attack/cmake-build-debug",
+		"source" : "/home/yerik/Desktop/Tank_Attack"
 	},
 	"version" : 
 	{

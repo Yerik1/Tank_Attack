@@ -53,10 +53,10 @@ RM = /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack"
+CMAKE_SOURCE_DIR = /home/yerik/Desktop/Tank_Attack
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/yerik/Desktop/Tank_Attack/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/TuProyecto.dir/depend.make
@@ -71,121 +71,121 @@ include CMakeFiles/TuProyecto.dir/flags.make
 
 TuProyecto_autogen/timestamp: /usr/lib/qt5/bin/moc
 TuProyecto_autogen/timestamp: CMakeFiles/TuProyecto.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target TuProyecto"
-	/snap/clion/296/bin/cmake/linux/x64/bin/cmake -E cmake_autogen "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen.dir/AutogenInfo.json" Debug
-	/snap/clion/296/bin/cmake/linux/x64/bin/cmake -E touch "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/TuProyecto_autogen/timestamp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target TuProyecto"
+	/snap/clion/296/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen.dir/AutogenInfo.json Debug
+	/snap/clion/296/bin/cmake/linux/x64/bin/cmake -E touch /home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/timestamp
 
 CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o: CMakeFiles/TuProyecto.dir/flags.make
 CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o: TuProyecto_autogen/mocs_compilation.cpp
 CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o: CMakeFiles/TuProyecto.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o -MF CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o -c "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/TuProyecto_autogen/mocs_compilation.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o -MF CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o -c /home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/mocs_compilation.cpp
 
 CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/TuProyecto_autogen/mocs_compilation.cpp" > CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/mocs_compilation.cpp > CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/TuProyecto_autogen/mocs_compilation.cpp" -o CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/mocs_compilation.cpp -o CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/TuProyecto.dir/Bala.cpp.o: CMakeFiles/TuProyecto.dir/flags.make
-CMakeFiles/TuProyecto.dir/Bala.cpp.o: /home/gabonm7/CLionProjects/proyecto\ salvado/Tank_Attack/Bala.cpp
+CMakeFiles/TuProyecto.dir/Bala.cpp.o: /home/yerik/Desktop/Tank_Attack/Bala.cpp
 CMakeFiles/TuProyecto.dir/Bala.cpp.o: CMakeFiles/TuProyecto.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TuProyecto.dir/Bala.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TuProyecto.dir/Bala.cpp.o -MF CMakeFiles/TuProyecto.dir/Bala.cpp.o.d -o CMakeFiles/TuProyecto.dir/Bala.cpp.o -c "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/Bala.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TuProyecto.dir/Bala.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TuProyecto.dir/Bala.cpp.o -MF CMakeFiles/TuProyecto.dir/Bala.cpp.o.d -o CMakeFiles/TuProyecto.dir/Bala.cpp.o -c /home/yerik/Desktop/Tank_Attack/Bala.cpp
 
 CMakeFiles/TuProyecto.dir/Bala.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TuProyecto.dir/Bala.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/Bala.cpp" > CMakeFiles/TuProyecto.dir/Bala.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yerik/Desktop/Tank_Attack/Bala.cpp > CMakeFiles/TuProyecto.dir/Bala.cpp.i
 
 CMakeFiles/TuProyecto.dir/Bala.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TuProyecto.dir/Bala.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/Bala.cpp" -o CMakeFiles/TuProyecto.dir/Bala.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yerik/Desktop/Tank_Attack/Bala.cpp -o CMakeFiles/TuProyecto.dir/Bala.cpp.s
 
 CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o: CMakeFiles/TuProyecto.dir/flags.make
-CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o: /home/gabonm7/CLionProjects/proyecto\ salvado/Tank_Attack/Dijkstra.cpp
+CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o: /home/yerik/Desktop/Tank_Attack/Dijkstra.cpp
 CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o: CMakeFiles/TuProyecto.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o -MF CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o.d -o CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o -c "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/Dijkstra.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o -MF CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o.d -o CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o -c /home/yerik/Desktop/Tank_Attack/Dijkstra.cpp
 
 CMakeFiles/TuProyecto.dir/Dijkstra.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TuProyecto.dir/Dijkstra.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/Dijkstra.cpp" > CMakeFiles/TuProyecto.dir/Dijkstra.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yerik/Desktop/Tank_Attack/Dijkstra.cpp > CMakeFiles/TuProyecto.dir/Dijkstra.cpp.i
 
 CMakeFiles/TuProyecto.dir/Dijkstra.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TuProyecto.dir/Dijkstra.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/Dijkstra.cpp" -o CMakeFiles/TuProyecto.dir/Dijkstra.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yerik/Desktop/Tank_Attack/Dijkstra.cpp -o CMakeFiles/TuProyecto.dir/Dijkstra.cpp.s
 
 CMakeFiles/TuProyecto.dir/Game.cpp.o: CMakeFiles/TuProyecto.dir/flags.make
-CMakeFiles/TuProyecto.dir/Game.cpp.o: /home/gabonm7/CLionProjects/proyecto\ salvado/Tank_Attack/Game.cpp
+CMakeFiles/TuProyecto.dir/Game.cpp.o: /home/yerik/Desktop/Tank_Attack/Game.cpp
 CMakeFiles/TuProyecto.dir/Game.cpp.o: CMakeFiles/TuProyecto.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TuProyecto.dir/Game.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TuProyecto.dir/Game.cpp.o -MF CMakeFiles/TuProyecto.dir/Game.cpp.o.d -o CMakeFiles/TuProyecto.dir/Game.cpp.o -c "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/Game.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TuProyecto.dir/Game.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TuProyecto.dir/Game.cpp.o -MF CMakeFiles/TuProyecto.dir/Game.cpp.o.d -o CMakeFiles/TuProyecto.dir/Game.cpp.o -c /home/yerik/Desktop/Tank_Attack/Game.cpp
 
 CMakeFiles/TuProyecto.dir/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TuProyecto.dir/Game.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/Game.cpp" > CMakeFiles/TuProyecto.dir/Game.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yerik/Desktop/Tank_Attack/Game.cpp > CMakeFiles/TuProyecto.dir/Game.cpp.i
 
 CMakeFiles/TuProyecto.dir/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TuProyecto.dir/Game.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/Game.cpp" -o CMakeFiles/TuProyecto.dir/Game.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yerik/Desktop/Tank_Attack/Game.cpp -o CMakeFiles/TuProyecto.dir/Game.cpp.s
 
 CMakeFiles/TuProyecto.dir/Grafo.cpp.o: CMakeFiles/TuProyecto.dir/flags.make
-CMakeFiles/TuProyecto.dir/Grafo.cpp.o: /home/gabonm7/CLionProjects/proyecto\ salvado/Tank_Attack/Grafo.cpp
+CMakeFiles/TuProyecto.dir/Grafo.cpp.o: /home/yerik/Desktop/Tank_Attack/Grafo.cpp
 CMakeFiles/TuProyecto.dir/Grafo.cpp.o: CMakeFiles/TuProyecto.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TuProyecto.dir/Grafo.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TuProyecto.dir/Grafo.cpp.o -MF CMakeFiles/TuProyecto.dir/Grafo.cpp.o.d -o CMakeFiles/TuProyecto.dir/Grafo.cpp.o -c "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/Grafo.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TuProyecto.dir/Grafo.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TuProyecto.dir/Grafo.cpp.o -MF CMakeFiles/TuProyecto.dir/Grafo.cpp.o.d -o CMakeFiles/TuProyecto.dir/Grafo.cpp.o -c /home/yerik/Desktop/Tank_Attack/Grafo.cpp
 
 CMakeFiles/TuProyecto.dir/Grafo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TuProyecto.dir/Grafo.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/Grafo.cpp" > CMakeFiles/TuProyecto.dir/Grafo.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yerik/Desktop/Tank_Attack/Grafo.cpp > CMakeFiles/TuProyecto.dir/Grafo.cpp.i
 
 CMakeFiles/TuProyecto.dir/Grafo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TuProyecto.dir/Grafo.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/Grafo.cpp" -o CMakeFiles/TuProyecto.dir/Grafo.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yerik/Desktop/Tank_Attack/Grafo.cpp -o CMakeFiles/TuProyecto.dir/Grafo.cpp.s
 
 CMakeFiles/TuProyecto.dir/Tanque.cpp.o: CMakeFiles/TuProyecto.dir/flags.make
-CMakeFiles/TuProyecto.dir/Tanque.cpp.o: /home/gabonm7/CLionProjects/proyecto\ salvado/Tank_Attack/Tanque.cpp
+CMakeFiles/TuProyecto.dir/Tanque.cpp.o: /home/yerik/Desktop/Tank_Attack/Tanque.cpp
 CMakeFiles/TuProyecto.dir/Tanque.cpp.o: CMakeFiles/TuProyecto.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TuProyecto.dir/Tanque.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TuProyecto.dir/Tanque.cpp.o -MF CMakeFiles/TuProyecto.dir/Tanque.cpp.o.d -o CMakeFiles/TuProyecto.dir/Tanque.cpp.o -c "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/Tanque.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TuProyecto.dir/Tanque.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TuProyecto.dir/Tanque.cpp.o -MF CMakeFiles/TuProyecto.dir/Tanque.cpp.o.d -o CMakeFiles/TuProyecto.dir/Tanque.cpp.o -c /home/yerik/Desktop/Tank_Attack/Tanque.cpp
 
 CMakeFiles/TuProyecto.dir/Tanque.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TuProyecto.dir/Tanque.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/Tanque.cpp" > CMakeFiles/TuProyecto.dir/Tanque.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yerik/Desktop/Tank_Attack/Tanque.cpp > CMakeFiles/TuProyecto.dir/Tanque.cpp.i
 
 CMakeFiles/TuProyecto.dir/Tanque.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TuProyecto.dir/Tanque.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/Tanque.cpp" -o CMakeFiles/TuProyecto.dir/Tanque.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yerik/Desktop/Tank_Attack/Tanque.cpp -o CMakeFiles/TuProyecto.dir/Tanque.cpp.s
 
 CMakeFiles/TuProyecto.dir/main.cpp.o: CMakeFiles/TuProyecto.dir/flags.make
-CMakeFiles/TuProyecto.dir/main.cpp.o: /home/gabonm7/CLionProjects/proyecto\ salvado/Tank_Attack/main.cpp
+CMakeFiles/TuProyecto.dir/main.cpp.o: /home/yerik/Desktop/Tank_Attack/main.cpp
 CMakeFiles/TuProyecto.dir/main.cpp.o: CMakeFiles/TuProyecto.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TuProyecto.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TuProyecto.dir/main.cpp.o -MF CMakeFiles/TuProyecto.dir/main.cpp.o.d -o CMakeFiles/TuProyecto.dir/main.cpp.o -c "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TuProyecto.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TuProyecto.dir/main.cpp.o -MF CMakeFiles/TuProyecto.dir/main.cpp.o.d -o CMakeFiles/TuProyecto.dir/main.cpp.o -c /home/yerik/Desktop/Tank_Attack/main.cpp
 
 CMakeFiles/TuProyecto.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TuProyecto.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/main.cpp" > CMakeFiles/TuProyecto.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yerik/Desktop/Tank_Attack/main.cpp > CMakeFiles/TuProyecto.dir/main.cpp.i
 
 CMakeFiles/TuProyecto.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TuProyecto.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/main.cpp" -o CMakeFiles/TuProyecto.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yerik/Desktop/Tank_Attack/main.cpp -o CMakeFiles/TuProyecto.dir/main.cpp.s
 
 CMakeFiles/TuProyecto.dir/menu.cpp.o: CMakeFiles/TuProyecto.dir/flags.make
-CMakeFiles/TuProyecto.dir/menu.cpp.o: /home/gabonm7/CLionProjects/proyecto\ salvado/Tank_Attack/menu.cpp
+CMakeFiles/TuProyecto.dir/menu.cpp.o: /home/yerik/Desktop/Tank_Attack/menu.cpp
 CMakeFiles/TuProyecto.dir/menu.cpp.o: CMakeFiles/TuProyecto.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TuProyecto.dir/menu.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TuProyecto.dir/menu.cpp.o -MF CMakeFiles/TuProyecto.dir/menu.cpp.o.d -o CMakeFiles/TuProyecto.dir/menu.cpp.o -c "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/menu.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TuProyecto.dir/menu.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TuProyecto.dir/menu.cpp.o -MF CMakeFiles/TuProyecto.dir/menu.cpp.o.d -o CMakeFiles/TuProyecto.dir/menu.cpp.o -c /home/yerik/Desktop/Tank_Attack/menu.cpp
 
 CMakeFiles/TuProyecto.dir/menu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TuProyecto.dir/menu.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/menu.cpp" > CMakeFiles/TuProyecto.dir/menu.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yerik/Desktop/Tank_Attack/menu.cpp > CMakeFiles/TuProyecto.dir/menu.cpp.i
 
 CMakeFiles/TuProyecto.dir/menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TuProyecto.dir/menu.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/menu.cpp" -o CMakeFiles/TuProyecto.dir/menu.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yerik/Desktop/Tank_Attack/menu.cpp -o CMakeFiles/TuProyecto.dir/menu.cpp.s
 
 # Object files for target TuProyecto
 TuProyecto_OBJECTS = \
@@ -215,7 +215,7 @@ TuProyecto: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 TuProyecto: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 TuProyecto: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 TuProyecto: CMakeFiles/TuProyecto.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable TuProyecto"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable TuProyecto"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TuProyecto.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -227,6 +227,6 @@ CMakeFiles/TuProyecto.dir/clean:
 .PHONY : CMakeFiles/TuProyecto.dir/clean
 
 CMakeFiles/TuProyecto.dir/depend: TuProyecto_autogen/timestamp
-	cd "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack" "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack" "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug" "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug" "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto.dir/DependInfo.cmake" "--color=$(COLOR)"
+	cd /home/yerik/Desktop/Tank_Attack/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yerik/Desktop/Tank_Attack /home/yerik/Desktop/Tank_Attack /home/yerik/Desktop/Tank_Attack/cmake-build-debug /home/yerik/Desktop/Tank_Attack/cmake-build-debug /home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/TuProyecto.dir/depend
 
