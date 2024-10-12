@@ -12,8 +12,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/TuProyecto.dir/Grafo.cpp.o.d"
   "CMakeFiles/TuProyecto.dir/Tanque.cpp.o"
   "CMakeFiles/TuProyecto.dir/Tanque.cpp.o.d"
-  "CMakeFiles/TuProyecto.dir/Timer.cpp.o"
-  "CMakeFiles/TuProyecto.dir/Timer.cpp.o.d"
   "CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/TuProyecto.dir/TuProyecto_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/TuProyecto.dir/main.cpp.o"

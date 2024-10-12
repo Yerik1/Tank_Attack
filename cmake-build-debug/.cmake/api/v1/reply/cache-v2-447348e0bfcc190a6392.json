@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug"
+			"value" : "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -431,7 +431,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -491,7 +491,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack"
+			"value" : "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -1431,7 +1431,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug"
+			"value" : "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug"
 		},
 		{
 			"name" : "TuProyecto_IS_TOP_LEVEL",
@@ -1455,7 +1455,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack"
+			"value" : "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

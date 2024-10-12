@@ -57,10 +57,10 @@ RM = /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack"
+CMAKE_SOURCE_DIR = "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/CMakeFiles" "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles" "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gabonm7/CLionProjects/proyecto salvado/Tank_Attack/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -320,30 +320,6 @@ Tanque.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Tanque.cpp.s
 .PHONY : Tanque.cpp.s
 
-Timer.o: Timer.cpp.o
-.PHONY : Timer.o
-
-# target to build an object file
-Timer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Timer.cpp.o
-.PHONY : Timer.cpp.o
-
-Timer.i: Timer.cpp.i
-.PHONY : Timer.i
-
-# target to preprocess a source file
-Timer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Timer.cpp.i
-.PHONY : Timer.cpp.i
-
-Timer.s: Timer.cpp.s
-.PHONY : Timer.s
-
-# target to generate assembly for a file
-Timer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Timer.cpp.s
-.PHONY : Timer.cpp.s
-
 TuProyecto_autogen/mocs_compilation.o: TuProyecto_autogen/mocs_compilation.cpp.o
 .PHONY : TuProyecto_autogen/mocs_compilation.o
 
@@ -446,9 +422,6 @@ help:
 	@echo "... Tanque.o"
 	@echo "... Tanque.i"
 	@echo "... Tanque.s"
-	@echo "... Timer.o"
-	@echo "... Timer.i"
-	@echo "... Timer.s"
 	@echo "... TuProyecto_autogen/mocs_compilation.o"
 	@echo "... TuProyecto_autogen/mocs_compilation.i"
 	@echo "... TuProyecto_autogen/mocs_compilation.s"
