@@ -57,10 +57,10 @@ RM = /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack"
+CMAKE_SOURCE_DIR = /home/yerik/Desktop/Tank_Attack
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/yerik/Desktop/Tank_Attack/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/CMakeFiles" "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles /home/yerik/Desktop/Tank_Attack/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -200,6 +200,54 @@ TuProyecto_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto_autogen.dir/build.make CMakeFiles/TuProyecto_autogen.dir/build
 .PHONY : TuProyecto_autogen/fast
 
+Bala.o: Bala.cpp.o
+.PHONY : Bala.o
+
+# target to build an object file
+Bala.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Bala.cpp.o
+.PHONY : Bala.cpp.o
+
+Bala.i: Bala.cpp.i
+.PHONY : Bala.i
+
+# target to preprocess a source file
+Bala.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Bala.cpp.i
+.PHONY : Bala.cpp.i
+
+Bala.s: Bala.cpp.s
+.PHONY : Bala.s
+
+# target to generate assembly for a file
+Bala.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Bala.cpp.s
+.PHONY : Bala.cpp.s
+
+Dijkstra.o: Dijkstra.cpp.o
+.PHONY : Dijkstra.o
+
+# target to build an object file
+Dijkstra.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Dijkstra.cpp.o
+.PHONY : Dijkstra.cpp.o
+
+Dijkstra.i: Dijkstra.cpp.i
+.PHONY : Dijkstra.i
+
+# target to preprocess a source file
+Dijkstra.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Dijkstra.cpp.i
+.PHONY : Dijkstra.cpp.i
+
+Dijkstra.s: Dijkstra.cpp.s
+.PHONY : Dijkstra.s
+
+# target to generate assembly for a file
+Dijkstra.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Dijkstra.cpp.s
+.PHONY : Dijkstra.cpp.s
+
 Game.o: Game.cpp.o
 .PHONY : Game.o
 
@@ -247,6 +295,30 @@ Grafo.s: Grafo.cpp.s
 Grafo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Grafo.cpp.s
 .PHONY : Grafo.cpp.s
+
+Tanque.o: Tanque.cpp.o
+.PHONY : Tanque.o
+
+# target to build an object file
+Tanque.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Tanque.cpp.o
+.PHONY : Tanque.cpp.o
+
+Tanque.i: Tanque.cpp.i
+.PHONY : Tanque.i
+
+# target to preprocess a source file
+Tanque.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Tanque.cpp.i
+.PHONY : Tanque.cpp.i
+
+Tanque.s: Tanque.cpp.s
+.PHONY : Tanque.s
+
+# target to generate assembly for a file
+Tanque.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Tanque.cpp.s
+.PHONY : Tanque.cpp.s
 
 TuProyecto_autogen/mocs_compilation.o: TuProyecto_autogen/mocs_compilation.cpp.o
 .PHONY : TuProyecto_autogen/mocs_compilation.o
@@ -335,12 +407,21 @@ help:
 	@echo "... TuProyecto_autogen"
 	@echo "... TuProyecto_autogen_timestamp_deps"
 	@echo "... TuProyecto"
+	@echo "... Bala.o"
+	@echo "... Bala.i"
+	@echo "... Bala.s"
+	@echo "... Dijkstra.o"
+	@echo "... Dijkstra.i"
+	@echo "... Dijkstra.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
 	@echo "... Grafo.o"
 	@echo "... Grafo.i"
 	@echo "... Grafo.s"
+	@echo "... Tanque.o"
+	@echo "... Tanque.i"
+	@echo "... Tanque.s"
 	@echo "... TuProyecto_autogen/mocs_compilation.o"
 	@echo "... TuProyecto_autogen/mocs_compilation.i"
 	@echo "... TuProyecto_autogen/mocs_compilation.s"

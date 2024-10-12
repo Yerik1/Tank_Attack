@@ -60,6 +60,7 @@ std::vector<std::pair<int, int>> Dijkstra::dijkstra(const std::vector<std::vecto
     int srcY = src % numColumnas;
     int destX = dest / numColumnas;
     int destY = dest % numColumnas;
+    std::vector<std::pair<int, int>> camino;
 
     // Imprimir la distancia y el camino
     if (dist[dest] == INT_MAX) {
@@ -71,7 +72,7 @@ std::vector<std::pair<int, int>> Dijkstra::dijkstra(const std::vector<std::vecto
         std::cout << "Camino (coordenadas): ";
 
         // Reconstruir el camino desde el destino al origen
-        std::vector<std::pair<int, int>> camino;
+
         for (int v = dest; v != -1; v = parent[v]) {
             int x = v / numColumnas;
             int y = v % numColumnas;
@@ -83,9 +84,9 @@ std::vector<std::pair<int, int>> Dijkstra::dijkstra(const std::vector<std::vecto
             std::cout << "(" << it->first << ", " << it->second << ") ";
         }
         std::cout << std::endl;
-        return camino;
-    }
 
+    }
+    return camino;
 }
 
 
