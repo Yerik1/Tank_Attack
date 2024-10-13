@@ -200,6 +200,30 @@ TuProyecto_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto_autogen.dir/build.make CMakeFiles/TuProyecto_autogen.dir/build
 .PHONY : TuProyecto_autogen/fast
 
+BFS.o: BFS.cpp.o
+.PHONY : BFS.o
+
+# target to build an object file
+BFS.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/BFS.cpp.o
+.PHONY : BFS.cpp.o
+
+BFS.i: BFS.cpp.i
+.PHONY : BFS.i
+
+# target to preprocess a source file
+BFS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/BFS.cpp.i
+.PHONY : BFS.cpp.i
+
+BFS.s: BFS.cpp.s
+.PHONY : BFS.s
+
+# target to generate assembly for a file
+BFS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/BFS.cpp.s
+.PHONY : BFS.cpp.s
+
 Bala.o: Bala.cpp.o
 .PHONY : Bala.o
 
@@ -295,6 +319,30 @@ Grafo.s: Grafo.cpp.s
 Grafo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Grafo.cpp.s
 .PHONY : Grafo.cpp.s
+
+MovimientoAleatorio.o: MovimientoAleatorio.cpp.o
+.PHONY : MovimientoAleatorio.o
+
+# target to build an object file
+MovimientoAleatorio.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/MovimientoAleatorio.cpp.o
+.PHONY : MovimientoAleatorio.cpp.o
+
+MovimientoAleatorio.i: MovimientoAleatorio.cpp.i
+.PHONY : MovimientoAleatorio.i
+
+# target to preprocess a source file
+MovimientoAleatorio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/MovimientoAleatorio.cpp.i
+.PHONY : MovimientoAleatorio.cpp.i
+
+MovimientoAleatorio.s: MovimientoAleatorio.cpp.s
+.PHONY : MovimientoAleatorio.s
+
+# target to generate assembly for a file
+MovimientoAleatorio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/MovimientoAleatorio.cpp.s
+.PHONY : MovimientoAleatorio.cpp.s
 
 Tanque.o: Tanque.cpp.o
 .PHONY : Tanque.o
@@ -407,6 +455,9 @@ help:
 	@echo "... TuProyecto_autogen"
 	@echo "... TuProyecto_autogen_timestamp_deps"
 	@echo "... TuProyecto"
+	@echo "... BFS.o"
+	@echo "... BFS.i"
+	@echo "... BFS.s"
 	@echo "... Bala.o"
 	@echo "... Bala.i"
 	@echo "... Bala.s"
@@ -419,6 +470,9 @@ help:
 	@echo "... Grafo.o"
 	@echo "... Grafo.i"
 	@echo "... Grafo.s"
+	@echo "... MovimientoAleatorio.o"
+	@echo "... MovimientoAleatorio.i"
+	@echo "... MovimientoAleatorio.s"
 	@echo "... Tanque.o"
 	@echo "... Tanque.i"
 	@echo "... Tanque.s"

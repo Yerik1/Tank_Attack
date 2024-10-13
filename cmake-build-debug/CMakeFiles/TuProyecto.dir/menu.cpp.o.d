@@ -359,15 +359,9 @@ CMakeFiles/TuProyecto.dir/menu.cpp.o: \
  /home/yerik/Desktop/Tank_Attack/Dijkstra.h /usr/include/c++/13/queue \
  /usr/include/c++/13/deque /usr/include/c++/13/bits/stl_deque.h \
  /usr/include/c++/13/bits/deque.tcc /usr/include/c++/13/bits/stl_queue.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QRandomGenerator \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qrandom.h \
- /usr/include/c++/13/random /usr/include/c++/13/cmath /usr/include/math.h \
+ /home/yerik/Desktop/Tank_Attack/BFS.h /usr/include/c++/13/climits \
+ /home/yerik/Desktop/Tank_Attack/MovimientoAleatorio.h \
+ /usr/include/c++/13/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
@@ -389,7 +383,15 @@ CMakeFiles/TuProyecto.dir/menu.cpp.o: \
  /usr/include/c++/13/tr1/poly_hermite.tcc \
  /usr/include/c++/13/tr1/poly_laguerre.tcc \
  /usr/include/c++/13/tr1/riemann_zeta.tcc \
- /usr/include/c++/13/bits/random.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QRandomGenerator \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrandom.h \
+ /usr/include/c++/13/random /usr/include/c++/13/bits/random.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h \
  /usr/include/c++/13/bits/random.tcc \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \

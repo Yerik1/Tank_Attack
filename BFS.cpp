@@ -1,53 +1,46 @@
 //
-// Created by yerik on 10/10/24.
+// Created by yerik on 10/12/24.
 //
 
-#include "Dijkstra.h"
-#define INF INT_MAX
-
-#include "Dijkstra.h"
-#include <iostream>
-#include <vector>
-#include <queue>
-#include <climits>
-
-#define INF INT_MAX
+#include "BFS.h"
 
 
 
-std::vector<std::pair<int, int>> Dijkstra::dijkstra(const std::vector<std::vector<double>>& matriz, int src, int dest, int numColumnas) {
+// Implementación de BFS para encontrar el camino más corto en una matriz de adyacencia
+std::vector<std::pair<int, int>> BFS::bfs(const std::vector<std::vector<double>>& matriz, int src, int dest, int numColumnas) {
     int numNodos = matriz.size();
 
     // Inicialización
-    std::vector<double> dist(numNodos, INT_MAX); // Usar infinito para distancias no alcanzables
-    std::vector<int> parent(numNodos, -1);
-    std::vector<bool> visited(numNodos, false);
-    dist[src] = 0.0;
+    std::vector<int> dist(numNodos, INT_MAX);  // Usar infinito como distancia inicial
+    std::vector<int> parent(numNodos, -1);  // Para reconstruir el camino
+    std::vector<bool> visited(numNodos, false);  // Para marcar los nodos visitados
 
-    // Cola de prioridad (min-heap), ahora usando double para las distancias
-    std::priority_queue<std::pair<double, int>, std::vector<std::pair<double, int>>, std::greater<std::pair<double, int>>> pq;
-    pq.push({0.0, src});
+    std::queue<int> q;  // Cola para BFS
+    q.push(src);
+    visited[src] = true;
+    dist[src] = 0;
 
-    while (!pq.empty()) {
-        int u = pq.top().second;
-        pq.pop();
+    // Bucle principal de BFS
+    while (!q.empty()) {
+        int u = q.front();
+        q.pop();
 
-        if (visited[u]) continue;
-        visited[u] = true;
-
+        // Explorar los nodos vecinos
         for (int v = 0; v < numNodos; ++v) {
             if (matriz[u][v] > 0 && !visited[v]) {
-                double nuevaDist = dist[u] + matriz[u][v];
-                if (nuevaDist < dist[v]) {
-                    dist[v] = nuevaDist;
-                    parent[v] = u;
-                    pq.push({dist[v], v}); // Usar la nueva distancia como clave en la cola de prioridad
+                visited[v] = true;
+                dist[v] = dist[u] + 1;
+                parent[v] = u;
+                q.push(v);  // Agregar nodo a la cola
+
+                if (v == dest) {
+                    break;  // Salir si encontramos el destino
                 }
             }
         }
     }
 
-    // Convertir nodos de origen y destino a coordenadas
+    // Convertir nodos a coordenadas
     int srcX = src / numColumnas;
     int srcY = src % numColumnas;
     int destX = dest / numColumnas;
@@ -64,7 +57,6 @@ std::vector<std::pair<int, int>> Dijkstra::dijkstra(const std::vector<std::vecto
         std::cout << "Camino (coordenadas): ";
 
         // Reconstruir el camino desde el destino al origen
-
         for (int v = dest; v != -1; v = parent[v]) {
             int x = v / numColumnas;
             int y = v % numColumnas;
@@ -76,9 +68,6 @@ std::vector<std::pair<int, int>> Dijkstra::dijkstra(const std::vector<std::vecto
             std::cout << "(" << it->first << ", " << it->second << ") ";
         }
         std::cout << std::endl;
-
     }
     return camino;
 }
-
-
