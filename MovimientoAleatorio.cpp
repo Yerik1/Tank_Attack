@@ -76,42 +76,44 @@ std::vector<std::pair<int, int>> MovimientoAleatorio::moverTanque(
     int destX, int destY, int radio) {
 
     std::vector<std::pair<int, int>> camino;
+    if(matriz[destX][destY] == false) {
+        // Primer intento de línea de vista desde la posición inicial
+        auto primerIntento = lineaVista(matriz, srcX, srcY, destX, destY);
+        camino.insert(camino.end(), primerIntento.begin(), primerIntento.end());
 
-    // Primer intento de línea de vista desde la posición inicial
-    auto primerIntento = lineaVista(matriz, srcX, srcY, destX, destY);
-    camino.insert(camino.end(), primerIntento.begin(), primerIntento.end());
+        // Si no se llegó al destino, generar posición aleatoria
+        if (primerIntento.empty() || (primerIntento.back() != std::make_pair(destX, destY))) {
+            // Obtener la última posición del primer intento
+            auto [ultimoX, ultimoY] = primerIntento.back();
 
-    // Si no se llegó al destino, generar posición aleatoria
-    if (primerIntento.empty() || (primerIntento.back() != std::make_pair(destX, destY))) {
-        // Obtener la última posición del primer intento
-        auto [ultimoX, ultimoY] = primerIntento.back();
+            std::pair<int, int> nuevaPos;
 
-        std::pair<int, int> nuevaPos;
+            // Generar posiciones aleatorias hasta encontrar una válida
+            do {
+                nuevaPos = generarPosicionAleatoria(ultimoX, ultimoY, radio, matriz);
+            } while (matriz[nuevaPos.first][nuevaPos.second] || nuevaPos == std::make_pair(srcX, srcY));
 
-        // Generar posiciones aleatorias hasta encontrar una válida
-        do {
-            nuevaPos = generarPosicionAleatoria(ultimoX, ultimoY, radio, matriz);
-        } while (matriz[nuevaPos.first][nuevaPos.second] || nuevaPos == std::make_pair(srcX, srcY));
+            camino.push_back(nuevaPos);  // Agregar la posición aleatoria válida
 
-        camino.push_back(nuevaPos);  // Agregar la posición aleatoria válida
+            // Imprimir la posición aleatoria generada
+            std::cout << "Posición aleatoria generada: (" << nuevaPos.first << ", " << nuevaPos.second << ")" << std::endl;
 
-        // Imprimir la posición aleatoria generada
-        std::cout << "Posición aleatoria generada: (" << nuevaPos.first << ", " << nuevaPos.second << ")" << std::endl;
+            // Segundo intento desde la nueva posición aleatoria
+            auto segundoIntento = lineaVista(matriz, nuevaPos.first, nuevaPos.second, destX, destY);
+            camino.insert(camino.end(), segundoIntento.begin(), segundoIntento.end());
+        }
 
-        // Segundo intento desde la nueva posición aleatoria
-        auto segundoIntento = lineaVista(matriz, nuevaPos.first, nuevaPos.second, destX, destY);
-        camino.insert(camino.end(), segundoIntento.begin(), segundoIntento.end());
+        // Invertir el camino para que esté en orden correcto (inicio a fin)
+        std::reverse(camino.begin(), camino.end());
+
+        // Imprimir el camino después de invertirlo
+        std::cout << "Camino: ";
+        for (auto it = camino.rbegin(); it != camino.rend(); ++it) {
+            std::cout << "(" << it->first << ", " << it->second << ") ";
+        }
+        std::cout << std::endl;
+
     }
-
-    // Invertir el camino para que esté en orden correcto (inicio a fin)
-    std::reverse(camino.begin(), camino.end());
-
-    // Imprimir el camino después de invertirlo
-    std::cout << "Camino: ";
-    for (auto it = camino.rbegin(); it != camino.rend(); ++it) {
-        std::cout << "(" << it->first << ", " << it->second << ") ";
-    }
-    std::cout << std::endl;
 
     return camino;
 }

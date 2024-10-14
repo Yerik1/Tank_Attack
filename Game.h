@@ -12,11 +12,14 @@
 #include "Dijkstra.h"
 #include "BFS.h"
 #include "MovimientoAleatorio.h"
+#include "AStar.h"
 #include <QDebug>
 #include <QPixmap>
 #include <QRandomGenerator>
 #include <QMainWindow>
 #include <QTimer>
+
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -29,6 +32,7 @@ public:
     Grafo grafo=Grafo(20,40);
     Dijkstra objDijkstra=Dijkstra();
     BFS objBFS=BFS();
+    AStar objAStar=AStar();
     MovimientoAleatorio mAleatorio = MovimientoAleatorio();
     Tanque Rojo1=Tanque(1,2,4,7,7);
     Tanque Rojo2=Tanque(2,2,4,9,7);

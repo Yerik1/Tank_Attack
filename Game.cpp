@@ -278,18 +278,26 @@ void Window::cellPressed(int row, int column, const QString& action) {
     }
     if(action=="Move to:") {
         if((*SelectedTank).getColor()==1) {
-            //Utilzar BFS
-            if(iniciarMovimiento(objBFS.bfs(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
+            if(iniciarMovimiento(objAStar.aStar(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
                 (*SelectedTank).setX(row);
                 (*SelectedTank).setY(column);
             };
+            //Utilzar BFS
+            /**if(iniciarMovimiento(objBFS.bfs(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
+                (*SelectedTank).setX(row);
+                (*SelectedTank).setY(column);
+            };*/
         }else if((*SelectedTank).getColor()==2) {
             //Utilizar Djikstra
             std::vector<std::pair<int, int>> movimentos = mAleatorio.moverTanque(grafo.getObstaculos(),(*SelectedTank).getX(),(*SelectedTank).getY(),row,column,1);
-            iniciarMovimiento(movimentos);
-            auto [row, column] = movimentos.front();
-            (*SelectedTank).setX(row);
-            (*SelectedTank).setY(column);
+            if(iniciarMovimiento(movimentos)==1) {
+                auto [row, column] = movimentos.front();
+                (*SelectedTank).setX(row);
+                (*SelectedTank).setY(column);
+            }
+
+
+            //Utilizar Djikstra
             /**if(iniciarMovimiento(objDijkstra.dijkstra(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
                 (*SelectedTank).setX(row);
                 (*SelectedTank).setY(column);
