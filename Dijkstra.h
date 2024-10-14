@@ -14,7 +14,6 @@
 
 class Dijkstra {
 public:
-    int minDistance(const std::vector<int> &dist, const std::vector<bool> &processed, int V);
 
     void printPath(const std::vector<int> &parent, int j);
 

@@ -21,6 +21,8 @@ public:
 
     std::vector<std::vector<double>> getMatriz() const;
 
+    std::vector<std::vector<bool>> getObstaculos() const;
+
 private:
     int N, M;
     std::vector<std::vector<double>> matriz;

@@ -10,6 +10,8 @@
 #include <QMouseEvent>
 #include "Grafo.h"
 #include "Dijkstra.h"
+#include "BFS.h"
+#include "MovimientoAleatorio.h"
 #include <QDebug>
 #include <QPixmap>
 #include <QRandomGenerator>
@@ -26,10 +28,12 @@ class Window : public QMainWindow {
 public:
     Grafo grafo=Grafo(20,40);
     Dijkstra objDijkstra=Dijkstra();
+    BFS objBFS=BFS();
+    MovimientoAleatorio mAleatorio = MovimientoAleatorio();
     Tanque Rojo1=Tanque(1,2,4,7,7);
     Tanque Rojo2=Tanque(2,2,4,9,7);
     Tanque Azul1=Tanque(3,1,2,12,7);
-    Tanque Azul2=Tanque(4,1,2,14,17);
+    Tanque Azul2=Tanque(4,1,2,14,7);
     Tanque Amarillo1=Tanque(5,2,4,7,32);
     Tanque Amarillo2=Tanque(6,2,4,9,32);
     Tanque Celeste1=Tanque(7,1,2,12,32);

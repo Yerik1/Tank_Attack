@@ -149,3 +149,6 @@ void Grafo::mostrarMatriz() {
 std::vector<std::vector<double>> Grafo::getMatriz() const {
     return matriz;
 }
+std::vector<std::vector<bool>> Grafo::getObstaculos() const {
+    return obstaculos;
+}

@@ -3,18 +3,33 @@
 //
 #include "Game.h"
 
+/** INICIO ADMINISTRACION DE VENTANA Y JUEGO */
+
+/**
+ * Metodo Principal del juego, aqui se administran los objetos y propiedades principales del juego
+ * @param parent
+ */
 Window::Window(QWidget *parent) :
+    //Iniciar la ventana
     QMainWindow(parent), ui(new Ui::MainWindow), dragging(false), lastSelectedRow(-1), lastSelectedColumn(-1) {
     ui->setupUi(this);
+
+    //Asignar Widget a cada tanque
     Rojo1.setImagen(ui->TRojo1);
     Rojo2.setImagen(ui->TRojo2);
+    Azul1.setImagen(ui->TAzul1);
+    Azul2.setImagen(ui->TAzul2);
     Amarillo1.setImagen(ui->TAmarillo1);
     Amarillo2.setImagen(ui->TAmarillo2);
+    Celeste1.setImagen(ui->TCeleste1);
+    Celeste2.setImagen(ui->TCeleste2);
     setupEventFilter();
 
+    //Propiedades para eventos de Mouse en el tablero
     ui->Tablero->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->Tablero->setSelectionMode(QAbstractItemView::SingleSelection);
     ui->Tablero->setSelectionBehavior(QAbstractItemView::SelectItems);
+    ui->Tablero->setAttribute(Qt::WA_TransparentForMouseEvents);
 
     // Establecer la geometría y propiedades del tablero
     ui->Tablero->setRowCount(20);
@@ -42,139 +57,44 @@ Window::Window(QWidget *parent) :
     this->cellPressed(row, column, action);
 });
 
-    // Habilitar la transparencia para el mouse
-    ui->Tablero->setAttribute(Qt::WA_TransparentForMouseEvents);
-    //ui->TRojo1->setAttribute(Qt::WA_TransparentForMouseEvents);
+
+    //Se genera el mapa a nivel interno y se hace un debug para observarlo
     generateMapBorder();
     generateRandomObstacles();
     grafo.mostrarMatriz();
 
-
 }
 
+/**
+ * Destructor de la ventana
+ */
 Window::~Window() {
     delete ui;
 }
 
-// Método para manejar la selección de la celda
-void Window::cellPressed(int row, int column, const QString& action) {
-    qDebug() << action << row << column; // Mensaje de depuración
-    QTableWidgetItem* item = ui->Tablero->item(row, column);
-    if (item) {
-        ui->Tablero->clearSelection();
-        item->setSelected(true);
-        lastSelectedRow = row;
-        lastSelectedColumn = column;
-    }
-    if(action=="Move to:") {
-        if((*SelectedTank).getColor()==1) {
+/** FIN ADMINISTRACION DE VENTANA Y JUEGO */
 
-        }else if((*SelectedTank).getColor()==2) {
-            if(iniciarMovimiento(objDijkstra.dijkstra(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
-                (*SelectedTank).setX(row);
-                (*SelectedTank).setY(column);
-            } ;
+/** INICIO GENERACION DE MAPA */
 
-        }
-
-
-
-
-    }
-}
-
-void Window::mousePressEvent(QMouseEvent *event) {
-    if (event->button() == Qt::LeftButton || event->button() == Qt::RightButton) {
-        QPoint pos = ui->Tablero->mapFromGlobal(event->globalPos());
-        QTableWidgetItem* item = ui->Tablero->itemAt(pos);
-        if (item) {
-            QString action;
-            if (event->button() == Qt::LeftButton) {
-                action = "Move to:";
-            } else if (event->button() == Qt::RightButton) {
-                action = "Shoot at:";
-            }
-            cellPressed(item->row(), item->column(), action);
-            dragging = true;  // Iniciar el arrastre
-        }
-    }
-
-    // Llama a la implementación base
-    QMainWindow::mousePressEvent(event);
-}
-
-// Manejar el evento de liberación del mouse
-void Window::mouseReleaseEvent(QMouseEvent *event) {
-    if (event->button() == Qt::LeftButton || event->button() == Qt::RightButton) {
-        dragging = false;  // Finalizar el arrastre
-    }
-
-    // Llama a la implementación base
-    QMainWindow::mouseReleaseEvent(event);
-}
-
-// Manejar el evento de movimiento del mouse
-void Window::mouseMoveEvent(QMouseEvent *event) {
-    if (dragging) {
-        return;  // Evita cambiar la selección
-    }
-
-    // Llama a la implementación base
-    QMainWindow::mouseMoveEvent(event);
-}
-
-void Window::setupEventFilter() {
-    ui->TRojo1->installEventFilter(this);
-    ui->TRojo2->installEventFilter(this);
-    ui->TAmarillo1->installEventFilter(this);
-    ui->TAmarillo2->installEventFilter(this);
-}
-
-bool Window::eventFilter(QObject *obj, QEvent *event) {
-    if (event->type() == QEvent::MouseButtonPress) {
-        QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
-        if (mouseEvent->button() == Qt::LeftButton) {
-            if (obj == ui->TRojo1) {
-                SelectedTank = &Rojo1; // Asigna la dirección de Rojo1
-                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
-                return true; // Indica que el evento fue manejado
-            }
-            else if (obj == ui->TRojo2) {
-                SelectedTank = &Rojo2; // Asigna la dirección de Rojo2
-                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
-                return true; // Indica que el evento fue manejado
-            }
-            else if (obj == ui->TAmarillo1) {
-                SelectedTank = &Amarillo1; // Asigna la dirección de Rojo1
-                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
-                return true; // Indica que el evento fue manejado
-            }
-            else if (obj == ui->TAmarillo2) {
-                SelectedTank = &Amarillo2; // Asigna la dirección de Rojo2
-                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
-                return true; // Indica que el evento fue manejado
-            }
-        }
-    }
-    return QMainWindow::eventFilter(obj, event); // Pasa el evento al manejador base
-}
-
-
+/**
+ * Generador del Borde del Mapa
+ */
 void Window::generateMapBorder() {
+    //Recorre el mapa
     for (int row = 0; row < 20; ++row) {
         for (int column = 0; column < 40; ++column) {
             QTableWidgetItem *item = new QTableWidgetItem();
 
-            // Solo agregar imágenes a las celdas que no sean la central
+            // Solo agregar imágenes a las celdas del borde
             if (row != 0 && column != 0 && row!=19 && column!=39) {
-                // Dejar la celda central vacía
+                // Dejar la celdas centrales vacías
                 item->setBackground(Qt::transparent); // o no establecer ninguna imagen
             } else {
                 // Establecer la imagen para las otras celdas
                 QLabel *label = new QLabel();
                 QPixmap pixmap("../Imagenes/Obstaculo.png"); // Cargar la imagen como QPixmap
                 label->setPixmap(pixmap.scaled(30, 30, Qt::KeepAspectRatio, Qt::SmoothTransformation)); // Escalar la imagen
-                label->setFixedSize(23, 23); // Asegúrate de que el QLabel tenga el mismo tamaño que la celda
+                label->setFixedSize(23, 23); //  QLabel con mismo tamaño que la celda
                 label->setAlignment(Qt::AlignCenter); // Centrar la imagen dentro del QLabel
 
                 // Eliminar cualquier borde
@@ -184,16 +104,18 @@ void Window::generateMapBorder() {
                 ui->Tablero->setCellWidget(row, column, label);
                 grafo.agregarObstaculo(row,column);
             }
-
         }
     }
 }
 
+/**
+ * Generador del resto de obstaculos en el mapa de manera aleatoria
+ */
 void Window::generateRandomObstacles() {
     // Generar obstáculos solo en la mitad izquierda del tablero (columnas 0 a 19)
     for (int row = 1; row < 20; ++row) {
         for (int column = 1; column < 19; ++column) {
-            // Evitar las celdas especificadas
+            // Evitar las celdas especificadas (Donde se generan los tanques)
             if ((row == 7 && (column == 7 || column == 12)) ||
                 (row == 12 && (column == 7 || column == 12))||
                 (row == 9 && (column == 7 || column == 12)) ||
@@ -226,6 +148,15 @@ void Window::generateRandomObstacles() {
     }
 }
 
+/** FIN GENERACION DE MAPA */
+
+/** INICIO ANIIMACIONES */
+
+/**
+ * Animacion de Movimiento del tanque por las posiciones
+ * @param movimientos Lista de Movimientos a Realizar
+ * @return 1 si hay que realizar movimientos, 0 si no hay movimientos en la lista
+ */
 int Window::iniciarMovimiento(const std::vector<std::pair<int, int> > &movimientos) {
     if (movimientos.empty()) {
         return 0;
@@ -255,3 +186,169 @@ int Window::iniciarMovimiento(const std::vector<std::pair<int, int> > &movimient
     }
     return 1;
 }
+
+/** FIN ANIIMACIONES */
+
+/** INICIO GESTOR DE EVENTOS DE MOUSE */
+
+/**
+ * Metodo para asignar el evento de click a los tanques
+ */
+void Window::setupEventFilter() {
+    ui->TRojo1->installEventFilter(this);
+    ui->TRojo2->installEventFilter(this);
+    ui->TAzul1->installEventFilter(this);
+    ui->TAzul2->installEventFilter(this);
+    ui->TAmarillo1->installEventFilter(this);
+    ui->TAmarillo2->installEventFilter(this);
+    ui->TCeleste1->installEventFilter(this);
+    ui->TCeleste2->installEventFilter(this);
+}
+
+
+/**
+ * Metodo para Cambiar el tanque Seleccionado en el juego
+ * @param obj Widget clickeado
+ * @param event Click Realizado
+ * @return True si fue presionado con el click izquierdo, False si fue presionado con cualquier otro boton
+ */
+bool Window::eventFilter(QObject *obj, QEvent *event) {
+    if (event->type() == QEvent::MouseButtonPress) {
+        QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
+        if (mouseEvent->button() == Qt::LeftButton) {
+            if (obj == ui->TRojo1) {
+                SelectedTank = &Rojo1; // Asigna la dirección de Rojo1
+                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                return true;
+            }
+            else if (obj == ui->TRojo2) {
+                SelectedTank = &Rojo2; // Asigna la dirección de Rojo2
+                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                return true;
+            }
+            else if (obj == ui->TAzul1) {
+                SelectedTank = &Azul1; // Asigna la dirección de Azul1
+                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                return true;
+            }
+            else if (obj == ui->TAzul2) {
+                SelectedTank = &Azul2; // Asigna la dirección de Azul2
+                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                return true;
+            }
+            else if (obj == ui->TAmarillo1) {
+                SelectedTank = &Amarillo1; // Asigna la dirección de Amarillo1
+                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                return true;
+            }
+            else if (obj == ui->TAmarillo2) {
+                SelectedTank = &Amarillo2; // Asigna la dirección de Amarillo2
+                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                return true;
+            }
+            else if (obj == ui->TCeleste1) {
+                SelectedTank = &Celeste1; // Asigna la dirección de Celeste1
+                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                return true;
+            }
+            else if (obj == ui->TCeleste2) {
+                SelectedTank = &Celeste2; // Asigna la dirección de Celeste2
+                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                return true;
+            }
+        }
+    }
+    return QMainWindow::eventFilter(obj, event); // Pasa el evento al manejador base
+}
+
+/**
+ * Metodo para detectar que una celda se presiono y realizar su debida accion
+ * @param row fila presionada
+ * @param column columna realizada
+ * @param action accion a realizar (Disparar o moverse)
+ */
+void Window::cellPressed(int row, int column, const QString& action) {
+    qDebug() << action << row << column; // Mensaje de depuración
+    QTableWidgetItem* item = ui->Tablero->item(row, column);
+    if (item) {
+        ui->Tablero->clearSelection();
+        item->setSelected(true);
+        lastSelectedRow = row;
+        lastSelectedColumn = column;
+    }
+    if(action=="Move to:") {
+        if((*SelectedTank).getColor()==1) {
+            //Utilzar BFS
+            if(iniciarMovimiento(objBFS.bfs(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
+                (*SelectedTank).setX(row);
+                (*SelectedTank).setY(column);
+            };
+        }else if((*SelectedTank).getColor()==2) {
+            //Utilizar Djikstra
+            std::vector<std::pair<int, int>> movimentos = mAleatorio.moverTanque(grafo.getObstaculos(),(*SelectedTank).getX(),(*SelectedTank).getY(),row,column,1);
+            iniciarMovimiento(movimentos);
+            auto [row, column] = movimentos.front();
+            (*SelectedTank).setX(row);
+            (*SelectedTank).setY(column);
+            /**if(iniciarMovimiento(objDijkstra.dijkstra(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
+                (*SelectedTank).setX(row);
+                (*SelectedTank).setY(column);
+            };*/
+        }
+    }
+}
+
+/** FIN GESTOR DE EVENTOS DE MOUSE */
+
+/** INICIO DETECCION DE EVENTOS DE MOUSE TABLERO */
+
+/**
+ * Metodo para distinguir si hubo un click derecho o izquierdo
+ * @param event Click realizado
+ */
+void Window::mousePressEvent(QMouseEvent *event) {
+    if (event->button() == Qt::LeftButton || event->button() == Qt::RightButton) {
+        QPoint pos = ui->Tablero->mapFromGlobal(event->globalPos());
+        QTableWidgetItem* item = ui->Tablero->itemAt(pos);
+        if (item) {
+            QString action;
+            if (event->button() == Qt::LeftButton) {
+                action = "Move to:";
+            } else if (event->button() == Qt::RightButton) {
+                action = "Shoot at:";
+            }
+            cellPressed(item->row(), item->column(), action);
+            dragging = true;  // Iniciar el arrastre
+        }
+    }
+    // Llama a la implementación base
+    QMainWindow::mousePressEvent(event);
+}
+
+/**
+ * Metodo para evitar el arrastre entre las casillas del tablero
+ * @param event Click Realizado
+ */
+void Window::mouseReleaseEvent(QMouseEvent *event) {
+    if (event->button() == Qt::LeftButton || event->button() == Qt::RightButton) {
+        dragging = false;  // Finalizar el arrastre
+    }
+
+    // Llama a la implementación base
+    QMainWindow::mouseReleaseEvent(event);
+}
+
+/**
+ * Metodo auxiiar para evitar el arrastre entre las casillas del tablero
+ * @param event Click Realziado
+ */
+void Window::mouseMoveEvent(QMouseEvent *event) {
+    if (dragging) {
+        return;  // Evita cambiar la selección
+    }
+
+    // Llama a la implementación base
+    QMainWindow::mouseMoveEvent(event);
+}
+
+/** FIN DETECCION DE EVENTOS DE MOUSE TABLERO */
