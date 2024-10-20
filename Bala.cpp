@@ -1,31 +1,55 @@
 //
 // Created by gabonm7 on 11/10/24.
 //
-
 #include "Bala.h"
 
+#include <iostream>
+
 // Constructor
-Bala::Bala(int id, float danio, int x, int y, int objetivoX, int objetivoY)
-    : id(id), damage(damage), x(x), y(y), objetivoX(objetivoX), objetivoY(objetivoY), enMovimiento(true) {}
+Bala::Bala(int id, float damage, int x, int y, QWidget* parent)
+    : QWidget(parent), id(id), damage(damage), x(x), y(y) {
+    setFixedSize(15, 15);  // Tamaño del widget 15x15
+    move(x, y);  // Mueve el widget a la posición inicial
+    // Fuerza un redibujado inmediato del widget
+    show();
+    repaint();
+}
 
 // Getters
 int Bala::getId() const { return id; }
 float Bala::getDamage() const { return damage; }
 int Bala::getX() const { return x; }
 int Bala::getY() const { return y; }
-bool Bala::isEnMovimiento() const { return enMovimiento; }
 
 // Setters
-void Bala::setX(int x) { this->x = x; }
-void Bala::setY(int y) { this->y = y; }
-void Bala::setEnMovimiento(bool enMovimiento) { this->enMovimiento = enMovimiento; }
+void Bala::setX(int x) {
+    this->x = x;
+    move(x, y);  // Actualiza la posición del widget
+}
 
-// Otros métodos
+void Bala::setY(int y) {
+    this->y = y;
+    move(x, y);  // Actualiza la posición del widget
+}
+
+
+// Método para mover la bala
 void Bala::mover(int nuevoX, int nuevoY) {
-    this->x = nuevoX;
-    this->y = nuevoY;
+    setX(nuevoX);
+    setY(nuevoY);
+    repaint();  // Redibuja el widget después de moverlo
 }
 
-bool Bala::haAlcanzadoObjetivo() const {
-    return x == objetivoX && y == objetivoY;
+
+// Método que dibuja la bala como un cuadrado de color azul
+void Bala::paintEvent(QPaintEvent* event) {
+    Q_UNUSED(event);  // No necesitamos usar este parámetro
+
+    QPainter painter(this);
+    painter.setBrush(Qt::yellow);  // Color azul para la bala
+    painter.setPen(Qt::NoPen);   // Sin borde
+
+    // Dibuja un cuadrado que ocupe todo el widget (15x15)
+    painter.drawRect(0, 0, width(), height());
 }
+

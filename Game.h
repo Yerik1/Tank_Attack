@@ -7,6 +7,7 @@
 
 #include "ui_gameui.h"
 #include "Tanque.h"
+#include "Bala.h"
 #include <QMouseEvent>
 #include "Grafo.h"
 #include "Dijkstra.h"
@@ -64,6 +65,8 @@ public:
     void generateRandomObstacles();
 
     int iniciarMovimiento(const std::vector<std::pair<int, int>> &movimientos);
+
+    int movimientoBala(const std::vector<std::pair<int, int>> &movimientos);
 
 private:
     Ui::MainWindow *ui;

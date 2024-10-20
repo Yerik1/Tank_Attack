@@ -186,6 +186,40 @@ int Window::iniciarMovimiento(const std::vector<std::pair<int, int> > &movimient
     }
     return 1;
 }
+int Window::movimientoBala(const std::vector<std::pair<int, int> > &movimientos) {
+    Bala* bala = new Bala(1, 1, 104+23*SelectedTank->getY(), 234+23*SelectedTank->getX(), ui->centralwidget);
+
+    if (movimientos.empty()) {
+        bala->hide();
+        return 0;
+    }else {
+
+        int index = movimientos.size() - 1;  // Comenzamos desde el último movimiento
+        QTimer* timer = new QTimer(this);
+
+        connect(timer, &QTimer::timeout, [=]() mutable {
+            if (index >= 0) {
+                int x = movimientos[index].first;
+                int y = movimientos[index].second;
+
+                // Mover el widget
+                bala->mover(104 + 23 * y, 234 + 23 * x);
+
+                --index;  // Retroceder al siguiente movimiento
+            } else {
+                timer->stop();  // Detener el temporizador cuando llegamos al inicio
+                timer->deleteLater();  // Liberar el temporizador después de detenerse
+                bala->hide();
+                bala->deleteLater();
+                SelectedTank=&Defecto;
+            }
+        });
+
+        timer->start(200);  // Inicia el temporizador con un intervalo de 500 ms (ajustable)
+
+    }
+    return 1;
+}
 
 /** FIN ANIIMACIONES */
 
@@ -288,13 +322,12 @@ void Window::cellPressed(int row, int column, const QString& action) {
                 (*SelectedTank).setY(column);
             };*/
         }else if((*SelectedTank).getColor()==2) {
-            //Utilizar Djikstra
+            //Utilizar Linea Vista
             std::vector<std::pair<int, int>> movimentos = mAleatorio.moverTanque(grafo.getObstaculos(),(*SelectedTank).getX(),(*SelectedTank).getY(),row,column,1);
-            if(iniciarMovimiento(movimentos)==1) {
-                auto [row, column] = movimentos.front();
-                (*SelectedTank).setX(row);
-                (*SelectedTank).setY(column);
-            }
+            iniciarMovimiento(movimentos);
+            auto [row, column] = movimentos.front();
+            (*SelectedTank).setX(row);
+            (*SelectedTank).setY(column);
 
 
             //Utilizar Djikstra
@@ -303,6 +336,11 @@ void Window::cellPressed(int row, int column, const QString& action) {
                 (*SelectedTank).setY(column);
             };*/
         }
+    }else if (action=="Shoot at:") {
+        std::vector<std::pair<int, int>> movimentos = mAleatorio.moverBala(grafo.getMatriz(),40,(*SelectedTank).getX(),(*SelectedTank).getY(),row,column);
+        movimientoBala(movimentos);
+
+
     }
 }
 
