@@ -11,7 +11,7 @@ class Tanque {
 private:
     int id;
     int color;  // 1 = azul/celeste, 2 = rojo/amarillo
-    float vida; // vida del tanque
+    int vida; // vida del tanque
     int x, y;   // posición del tanque en el mapa
     QWidget *Imagen;
     QLabel *Vida;
@@ -23,7 +23,7 @@ public:
     // Getters
     int getId() const;
     int getColor() const;
-    float getVida() const;
+    int getVida() const;
     int getX() const;
     int getY() const;
     QWidget *getImagen() const;

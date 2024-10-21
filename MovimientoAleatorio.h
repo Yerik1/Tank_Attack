@@ -21,6 +21,10 @@ public:
         const std::vector<std::vector<bool>>& matriz,
         int srcX, int srcY, int destX, int destY, int radio);
 
+    std::vector<std::pair<int, int>> moverBala(const std::vector<std::vector<double>> &matriz, int ancho, int srcX, int srcY,
+                                               int destX,
+                                               int destY);
+
 private:
     std::vector<std::pair<int, int>> lineaVista(const std::vector<std::vector<bool>>& matriz,
                     int srcX, int srcY, int destX, int destY);
