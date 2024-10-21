@@ -46,7 +46,13 @@ void Bala::paintEvent(QPaintEvent* event) {
     Q_UNUSED(event);  // No necesitamos usar este parámetro
 
     QPainter painter(this);
-    painter.setBrush(Qt::yellow);  // Color azul para la bala
+    if(id==1) {
+        painter.setBrush(Qt::yellow);
+    }else if (id==2) {
+        painter.setBrush(Qt::green);
+    }else if (id==3) {
+        painter.setBrush(Qt::red);
+    }
     painter.setPen(Qt::NoPen);   // Sin borde
 
     // Dibuja un cuadrado que ocupe todo el widget (15x15)

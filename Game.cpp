@@ -23,6 +23,14 @@ Window::Window(QWidget *parent) :
     Amarillo2.setImagen(ui->TAmarillo2);
     Celeste1.setImagen(ui->TCeleste1);
     Celeste2.setImagen(ui->TCeleste2);
+    Rojo1.setLabel(ui->VidaRojo1L);
+    Rojo2.setLabel(ui->VidaRojo2L);
+    Azul1.setLabel(ui->VidaAzul1L);
+    Azul2.setLabel(ui->VidaAzul2L);
+    Amarillo1.setLabel(ui->VidaAmarillo1L);
+    Amarillo2.setLabel(ui->VidaAmarillo2L);
+    Celeste1.setLabel(ui->VidaCeleste1L);
+    Celeste2.setLabel(ui->VidaCeleste2L);
     setupEventFilter();
 
     //Propiedades para eventos de Mouse en el tablero
@@ -187,7 +195,7 @@ int Window::iniciarMovimiento(const std::vector<std::pair<int, int> > &movimient
     return 1;
 }
 int Window::movimientoBala(const std::vector<std::pair<int, int> > &movimientos) {
-    Bala* bala = new Bala(1, 1, 104+23*SelectedTank->getY(), 234+23*SelectedTank->getX(), ui->centralwidget);
+    Bala* bala = new Bala(2, 1, 104+23*SelectedTank->getY(), 234+23*SelectedTank->getX(), ui->centralwidget);
 
     if (movimientos.empty()) {
         bala->hide();
@@ -212,6 +220,31 @@ int Window::movimientoBala(const std::vector<std::pair<int, int> > &movimientos)
                 bala->hide();
                 bala->deleteLater();
                 SelectedTank=&Defecto;
+                auto [row, column] = movimientos.front();
+                if(Rojo1.getX()==row && Rojo1.getY()==column) {
+                    Rojo1.recieveDamage(1);
+                }
+                if(Rojo2.getX()==row && Rojo2.getY()==column) {
+                    Rojo2.recieveDamage(1);
+                }
+                if(Azul1.getX()==row && Azul1.getY()==column) {
+                    Azul1.recieveDamage(1);
+                }
+                if(Azul2.getX()==row && Azul2.getY()==column) {
+                    Azul2.recieveDamage(1);
+                }
+                if(Amarillo1.getX()==row && Amarillo1.getY()==column) {
+                    Amarillo1.recieveDamage(1);
+                }
+                if(Amarillo2.getX()==row && Amarillo2.getY()==column) {
+                    Amarillo2.recieveDamage(1);
+                }
+                if(Celeste1.getX()==row && Celeste1.getY()==column) {
+                    Celeste1.recieveDamage(1);
+                }
+                if(Celeste2.getX()==row && Celeste2.getY()==column) {
+                    Celeste2.recieveDamage(1);
+                }
             }
         });
 
@@ -323,9 +356,9 @@ void Window::cellPressed(int row, int column, const QString& action) {
             };*/
         }else if((*SelectedTank).getColor()==2) {
             //Utilizar Linea Vista
-            std::vector<std::pair<int, int>> movimentos = mAleatorio.moverTanque(grafo.getObstaculos(),(*SelectedTank).getX(),(*SelectedTank).getY(),row,column,1);
-            iniciarMovimiento(movimentos);
-            auto [row, column] = movimentos.front();
+            std::vector<std::pair<int, int>> movimientos = mAleatorio.moverTanque(grafo.getObstaculos(),(*SelectedTank).getX(),(*SelectedTank).getY(),row,column,1);
+            iniciarMovimiento(movimientos);
+            auto [row, column] = movimientos.front();
             (*SelectedTank).setX(row);
             (*SelectedTank).setY(column);
 
@@ -337,8 +370,9 @@ void Window::cellPressed(int row, int column, const QString& action) {
             };*/
         }
     }else if (action=="Shoot at:") {
-        std::vector<std::pair<int, int>> movimentos = mAleatorio.moverBala(grafo.getMatriz(),40,(*SelectedTank).getX(),(*SelectedTank).getY(),row,column);
-        movimientoBala(movimentos);
+        std::vector<std::pair<int, int>> movimientos=objAStar.aStar(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40);
+        //std::vector<std::pair<int, int>> movimentos = mAleatorio.moverBala(grafo.getMatriz(),40,(*SelectedTank).getX(),(*SelectedTank).getY(),row,column);
+        movimientoBala(movimientos);
 
 
     }

@@ -11,7 +11,7 @@ Tanque::Tanque(int id, int color, float vida, int x, int y)
 // Getters
 int Tanque::getId() const { return id; }
 int Tanque::getColor() const { return color; }
-float Tanque::getVida() const { return vida; }
+int Tanque::getVida() const { return vida; }
 int Tanque::getX() const { return x; }
 int Tanque::getY() const { return y; }
 QWidget *Tanque::getImagen() const { return Imagen; }
@@ -34,6 +34,10 @@ void Tanque::mover(int nuevoX, int nuevoY) {
 
 void Tanque::recieveDamage(float cantidad) {
     vida -= cantidad;
-    if (vida < 0) vida = 0;
+    if (vida <= 0) {
+        vida = 0;
+        this->Imagen->hide();
+    }
+    this->Vida->setText(QString::number(vida));
 }
 

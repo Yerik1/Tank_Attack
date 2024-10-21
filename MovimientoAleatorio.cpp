@@ -134,7 +134,7 @@ std::vector<std::pair<int, int>> MovimientoAleatorio::moverBala(
 
     int rebotes = 0;  // Contador de rebotes
 
-    while (rebotes <= 1) {
+    while (rebotes <= 3) {
         // Agregamos la posición actual al camino
         camino.push_back({srcX, srcY});
         int nextX=srcX;
@@ -170,7 +170,7 @@ std::vector<std::pair<int, int>> MovimientoAleatorio::moverBala(
                 sy *= -1;  // Cambiamos dirección vertical
             }else {
                 std::cout << "entro aqui"<< std::endl;
-                if (matrizAdyacencia[(nextX) * ancho + nextY][(nextX+sx*-1) * ancho + nextY+sy] == 0) {
+                if (matrizAdyacencia[(srcX) * ancho + srcY][(srcX+sx*-1) * ancho + srcY+sy] == 0) {
                     sy*=-1;
                 }else{
                     sx*=-1;
