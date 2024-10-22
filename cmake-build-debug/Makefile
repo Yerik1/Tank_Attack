@@ -344,6 +344,30 @@ Grafo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Grafo.cpp.s
 .PHONY : Grafo.cpp.s
 
+Jugador.o: Jugador.cpp.o
+.PHONY : Jugador.o
+
+# target to build an object file
+Jugador.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Jugador.cpp.o
+.PHONY : Jugador.cpp.o
+
+Jugador.i: Jugador.cpp.i
+.PHONY : Jugador.i
+
+# target to preprocess a source file
+Jugador.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Jugador.cpp.i
+.PHONY : Jugador.cpp.i
+
+Jugador.s: Jugador.cpp.s
+.PHONY : Jugador.s
+
+# target to generate assembly for a file
+Jugador.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Jugador.cpp.s
+.PHONY : Jugador.cpp.s
+
 MovimientoAleatorio.o: MovimientoAleatorio.cpp.o
 .PHONY : MovimientoAleatorio.o
 
@@ -521,6 +545,9 @@ help:
 	@echo "... Grafo.o"
 	@echo "... Grafo.i"
 	@echo "... Grafo.s"
+	@echo "... Jugador.o"
+	@echo "... Jugador.i"
+	@echo "... Jugador.s"
 	@echo "... MovimientoAleatorio.o"
 	@echo "... MovimientoAleatorio.i"
 	@echo "... MovimientoAleatorio.s"

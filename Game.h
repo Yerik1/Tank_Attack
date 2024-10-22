@@ -19,7 +19,7 @@
 #include <QRandomGenerator>
 #include <QMainWindow>
 #include <QTimer>
-
+#include "Jugador.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -45,6 +45,8 @@ public:
     Tanque Celeste2=Tanque(8,1,2,14,32);
     Tanque Defecto=Tanque(0,0,0,0,0);
     Tanque* SelectedTank= &Defecto;
+    Jugador Jugador1 = Jugador();
+    Jugador Jugador2 = Jugador();
 
 
 

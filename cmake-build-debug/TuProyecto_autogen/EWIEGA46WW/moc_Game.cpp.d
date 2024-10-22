@@ -5,6 +5,7 @@
   /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Bala.h \
   /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Dijkstra.h \
   /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Grafo.h \
+  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Jugador.h \
   /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/MovimientoAleatorio.h \
   /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Tanque.h \
   /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Timer.h \
