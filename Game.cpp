@@ -14,6 +14,17 @@ Window::Window(QWidget *parent) :
     QMainWindow(parent), ui(new Ui::MainWindow), dragging(false), lastSelectedRow(-1), lastSelectedColumn(-1) {
     ui->setupUi(this);
 
+    Jugador1.agregarTanque(&Rojo1);
+    Jugador1.agregarTanque(&Rojo2);
+    Jugador1.agregarTanque(&Azul1);
+    Jugador1.agregarTanque(&Azul2);
+
+    Jugador2.agregarTanque(&Amarillo1);
+    Jugador2.agregarTanque(&Amarillo2);
+    Jugador2.agregarTanque(&Celeste1);
+    Jugador2.agregarTanque(&Celeste2);
+
+
     //Asignar Widget a cada tanque
     Rojo1.setImagen(ui->TRojo1);
     Rojo2.setImagen(ui->TRojo2);
