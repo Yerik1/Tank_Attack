@@ -7,6 +7,7 @@
   /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Grafo.h \
   /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Jugador.h \
   /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/MovimientoAleatorio.h \
+  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/PowerUps.h \
   /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Tanque.h \
   /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Timer.h \
   /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/ui_gameui.h \
@@ -122,6 +123,7 @@
   /usr/include/c++/13/bits/vector.tcc \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/climits \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
@@ -171,6 +173,7 @@
   /usr/include/c++/13/streambuf \
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tr1/bessel_function.tcc \
   /usr/include/c++/13/tr1/beta_function.tcc \
   /usr/include/c++/13/tr1/ell_integral.tcc \

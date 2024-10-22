@@ -3,6 +3,8 @@
 //
 #include "Game.h"
 
+
+
 /** INICIO ADMINISTRACION DE VENTANA Y JUEGO */
 
 /**
@@ -18,11 +20,15 @@ Window::Window(QWidget *parent) :
     Jugador1.agregarTanque(&Rojo2);
     Jugador1.agregarTanque(&Azul1);
     Jugador1.agregarTanque(&Azul2);
+    Jugador1.setImagen(ui->PowerUPP1);
 
     Jugador2.agregarTanque(&Amarillo1);
     Jugador2.agregarTanque(&Amarillo2);
     Jugador2.agregarTanque(&Celeste1);
     Jugador2.agregarTanque(&Celeste2);
+    Jugador2.setImagen(ui->PowerUpP2);
+
+    generarPowerUps(&Jugador1,&Jugador2);
 
 
     //Asignar Widget a cada tanque
@@ -443,3 +449,80 @@ void Window::mouseMoveEvent(QMouseEvent *event) {
 }
 
 /** FIN DETECCION DE EVENTOS DE MOUSE TABLERO */
+
+// Metodo para generar power-ups en un hilo separado
+
+void Window::generarPowerUps(Jugador* jugador1, Jugador* jugador2) {
+    std::thread([this, jugador1, jugador2]() {
+        while (true) {
+            // Pausar 10 segundos entre la generación de power-ups
+            std::this_thread::sleep_for(std::chrono::seconds(10));
+
+            // Crear power-ups aleatorios para ambos jugadores
+            PowerUps powerUp1 = generarPowerUpAleatorio();
+            PowerUps powerUp2 = generarPowerUpAleatorio();
+
+            // Asignar power-ups a los jugadores
+            jugador1->agregarPowerUp(powerUp1);
+            jugador2->agregarPowerUp(powerUp2);
+
+            if (jugador1->hayPowerUps()) {
+                PowerUps primerPowerUpJugador1 = jugador1->usarPowerUp();  // Obtener el primer power-up
+                actualizarPowerUpWidget(jugador1, primerPowerUpJugador1);  // Actualizar el widget en la interfaz
+            }
+
+            if (jugador2->hayPowerUps()) {
+                PowerUps primerPowerUpJugador2 = jugador2->usarPowerUp();  // Obtener el primer power-up
+                actualizarPowerUpWidget(jugador2, primerPowerUpJugador2);  // Actualizar el widget en la interfaz
+            }
+
+            // Aquí puedes agregar lógica para notificar a los jugadores que recibieron un power-up
+            // o actualizar la interfaz gráfica, si es necesario.
+        }
+    }).detach();  // El hilo se ejecutará de forma independiente
+}
+// Metodo  para generar un power-up aleatorio
+PowerUps Window::generarPowerUpAleatorio() {
+    int randomNum = rand() % 4;  // Generar un número aleatorio entre 0 y 3
+    std::string nombrePowerUp;
+
+    switch (randomNum) {
+        case 0:
+            nombrePowerUp = "Doble Turno";
+        break;
+        case 1:
+            nombrePowerUp = "Precisión Movimiento";
+        break;
+        case 2:
+            nombrePowerUp = "Precisión Ataque";
+        break;
+        case 3:
+            nombrePowerUp = "Poder Ataque";
+        break;
+    }
+
+    return PowerUps(nombrePowerUp);
+}
+
+void Window::actualizarPowerUpWidget(Jugador* jugador, const PowerUps& powerUp) {
+    QString rutaImagen;
+
+    // Asignar la ruta de la imagen según el nombre del power-up
+    if (powerUp.getNombre() == "Doble Turno") {
+        rutaImagen = ":/imagenes/doble_turno.png";
+    } else if (powerUp.getNombre() == "Precisión Movimiento") {
+        rutaImagen = ":/imagenes/precision_movimiento.png";
+    } else if (powerUp.getNombre() == "Precisión Ataque") {
+        rutaImagen = ":/imagenes/precision_ataque.png";
+    } else if (powerUp.getNombre() == "Poder Ataque") {
+        rutaImagen = ":/imagenes/poder_ataque.png";
+    }
+
+    // Suponiendo que tienes un QLabel asociado al jugador para mostrar el power-up
+    QWidget* ImgPowerUp = jugador->getImagen();  // Obtener el QLabel correspondiente al jugador
+
+    // Cambiar la imagen en el QLabel
+    QPixmap pixmap(rutaImagen);
+    ImgPowerUp->setPixmap(pixmap.scaled(ImgPowerUp->size(), Qt::KeepAspectRatio));
+}
+

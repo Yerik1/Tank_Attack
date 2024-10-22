@@ -20,6 +20,10 @@
 #include <QMainWindow>
 #include <QTimer>
 #include "Jugador.h"
+#include "PowerUps.h"
+#include <chrono>
+#include <cstdlib>
+#include <thread>
 
 
 QT_BEGIN_NAMESPACE
@@ -57,6 +61,12 @@ public:
     void mousePressEvent(QMouseEvent *event) override;
     void mouseReleaseEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
+
+    void generarPowerUps(Jugador *jugador1, Jugador *jugador2);
+
+    PowerUps generarPowerUpAleatorio();
+
+    void actualizarPowerUpWidget(Jugador *jugador, const PowerUps &powerUp);
 
     void setupEventFilter();
 

@@ -14,6 +14,8 @@ int Jugador::getNumeroTanques() const {
     return numeroTanques;
 }
 
+QWidget *Tanque::getImagen() const { return Imagen; }
+
 bool Jugador::isPowerUpDobleTurnoActivo() const {
     return powerUpDobleTurno;
 }
@@ -38,6 +40,9 @@ bool Jugador::isTurnoActivo() const {
 void Jugador::setTurnoActivo(bool activo) {
     turnoActivo = activo;
 }
+
+void Tanque::setImagen(QWidget *imagen) {this->Imagen = imagen; }
+
 
 void Jugador::activarPowerUpDobleTurno() {
     powerUpDobleTurno = true;
@@ -89,5 +94,41 @@ bool Jugador::verificarFinPartida() {
         turnoActivo = false;  // Finalizar el turno si no hay tanques vivos
     }
     return !turnoActivo;
+}
+
+// Métodos para power-ups
+void Jugador::agregarPowerUp(const PowerUps& powerUp) {
+    colaPowerUps.push(powerUp);
+}
+
+PowerUps Jugador::usarPowerUp() {
+    if (!colaPowerUps.empty()) {
+        PowerUps powerUpActual = colaPowerUps.front();
+        colaPowerUps.pop();  // Elimina el power-up de la cola
+
+        // Activar el power-up correspondiente según su nombre
+        std::string nombrePowerUp = powerUpActual.getNombre();
+
+        if (nombrePowerUp == "Doble Turno") {
+            powerUpDobleTurno = true;  // Activar doble turno
+        }
+        else if (nombrePowerUp == "Precisión Movimiento") {
+            powerUpPrecisionMov = true;  // Activar precisión de movimiento
+        }
+        else if (nombrePowerUp == "Precisión Ataque") {
+            powerUpPrecisionAtaque = true;  // Activar precisión de ataque
+        }
+        else if (nombrePowerUp == "Poder Ataque") {
+            powerUpPoderAtaque = true;  // Activar poder de ataque
+        }
+
+        return powerUpActual;
+    }
+
+    return PowerUps();  // Retorna un power-up vacío si la cola está vacía
+}
+
+bool Jugador::hayPowerUps() const {
+    return !colaPowerUps.empty();
 }
 

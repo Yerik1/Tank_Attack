@@ -6,16 +6,20 @@
 
 #include <vector>
 #include "Tanque.h"
+#include "PowerUps.h"
+#include <queue>
 
 class Jugador {
 private:
     int numeroTanques;          // Número de tanques activos
     std::vector<Tanque*> tanques;  // Vector de punteros a tanques
+    std::queue<PowerUps> colaPowerUps;
     bool powerUpDobleTurno;     // PowerUp de doble turno activo
     bool powerUpPrecisionMov;   // PowerUp de precisión de movimiento activo
     bool powerUpPrecisionAtaque;// PowerUp de precisión de ataque activo
     bool powerUpPoderAtaque;    // PowerUp de poder de ataque activo
     bool turnoActivo;           // Indica si es el turno del jugador
+    QWidget *Imagen;
 
 public:
     // Constructor
@@ -28,6 +32,7 @@ public:
     bool isPowerUpPrecisionAtaqueActivo() const;
     bool isPowerUpPoderAtaqueActivo() const;
     bool isTurnoActivo() const;
+    QWidget *getImagen() const;
 
     // Setters
     void setTurnoActivo(bool activo);
@@ -37,6 +42,7 @@ public:
     void activarPowerUpPrecisionAtaque();
     void activarPowerUpPoderAtaque();
     void desactivarPowerUps();
+    void setImagen(QWidget *imagen);
 
     // Métodos para gestionar tanques
     void agregarTanque(Tanque* tanque);
@@ -45,6 +51,11 @@ public:
 
     // Métodos para turnos
     bool verificarFinPartida();  // Verifica condiciones para finalizar turno
+
+    // Métodos para power-ups
+    void agregarPowerUp(const PowerUps& powerUp);  // Añadir un power-up a la cola
+    PowerUps usarPowerUp();                        // Usar el siguiente power-up en la cola
+    bool hayPowerUps() const;
 };
 
 #endif // JUGADOR_H
