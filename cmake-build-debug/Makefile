@@ -57,10 +57,10 @@ RM = /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yerik/Desktop/Tank_Attack
+CMAKE_SOURCE_DIR = "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yerik/Desktop/Tank_Attack/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles /home/yerik/Desktop/Tank_Attack/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/CMakeFiles" "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -199,6 +199,30 @@ TuProyecto_autogen: cmake_check_build_system
 TuProyecto_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto_autogen.dir/build.make CMakeFiles/TuProyecto_autogen.dir/build
 .PHONY : TuProyecto_autogen/fast
+
+AStar.o: AStar.cpp.o
+.PHONY : AStar.o
+
+# target to build an object file
+AStar.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/AStar.cpp.o
+.PHONY : AStar.cpp.o
+
+AStar.i: AStar.cpp.i
+.PHONY : AStar.i
+
+# target to preprocess a source file
+AStar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/AStar.cpp.i
+.PHONY : AStar.cpp.i
+
+AStar.s: AStar.cpp.s
+.PHONY : AStar.s
+
+# target to generate assembly for a file
+AStar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/AStar.cpp.s
+.PHONY : AStar.cpp.s
 
 BFS.o: BFS.cpp.o
 .PHONY : BFS.o
@@ -368,6 +392,30 @@ Tanque.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Tanque.cpp.s
 .PHONY : Tanque.cpp.s
 
+Timer.o: Timer.cpp.o
+.PHONY : Timer.o
+
+# target to build an object file
+Timer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Timer.cpp.o
+.PHONY : Timer.cpp.o
+
+Timer.i: Timer.cpp.i
+.PHONY : Timer.i
+
+# target to preprocess a source file
+Timer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Timer.cpp.i
+.PHONY : Timer.cpp.i
+
+Timer.s: Timer.cpp.s
+.PHONY : Timer.s
+
+# target to generate assembly for a file
+Timer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/Timer.cpp.s
+.PHONY : Timer.cpp.s
+
 TuProyecto_autogen/mocs_compilation.o: TuProyecto_autogen/mocs_compilation.cpp.o
 .PHONY : TuProyecto_autogen/mocs_compilation.o
 
@@ -455,6 +503,9 @@ help:
 	@echo "... TuProyecto_autogen"
 	@echo "... TuProyecto_autogen_timestamp_deps"
 	@echo "... TuProyecto"
+	@echo "... AStar.o"
+	@echo "... AStar.i"
+	@echo "... AStar.s"
 	@echo "... BFS.o"
 	@echo "... BFS.i"
 	@echo "... BFS.s"
@@ -476,6 +527,9 @@ help:
 	@echo "... Tanque.o"
 	@echo "... Tanque.i"
 	@echo "... Tanque.s"
+	@echo "... Timer.o"
+	@echo "... Timer.i"
+	@echo "... Timer.s"
 	@echo "... TuProyecto_autogen/mocs_compilation.o"
 	@echo "... TuProyecto_autogen/mocs_compilation.i"
 	@echo "... TuProyecto_autogen/mocs_compilation.s"
