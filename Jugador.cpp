@@ -14,7 +14,7 @@ int Jugador::getNumeroTanques() const {
     return numeroTanques;
 }
 
-QWidget *Tanque::getImagen() const { return Imagen; }
+QLabel *Jugador::getImagen() const { return Imagen; }
 
 bool Jugador::isPowerUpDobleTurnoActivo() const {
     return powerUpDobleTurno;
@@ -41,7 +41,7 @@ void Jugador::setTurnoActivo(bool activo) {
     turnoActivo = activo;
 }
 
-void Tanque::setImagen(QWidget *imagen) {this->Imagen = imagen; }
+void Jugador::setImagen(QLabel *imagen) {this->Imagen = imagen; }
 
 
 void Jugador::activarPowerUpDobleTurno() {
@@ -130,5 +130,9 @@ PowerUps Jugador::usarPowerUp() {
 
 bool Jugador::hayPowerUps() const {
     return !colaPowerUps.empty();
+}
+
+PowerUps Jugador::returnTop() {
+    return colaPowerUps.front();
 }
 

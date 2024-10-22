@@ -1,5 +1,5 @@
-/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/cmake-build-debug/TuProyecto_autogen/EWIEGA46WW/moc_Timer.cpp: /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Timer.h \
-  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/cmake-build-debug/TuProyecto_autogen/moc_predefs.h \
+/home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/EWIEGA46WW/moc_Timer.cpp: /home/yerik/Desktop/Tank_Attack/Timer.h \
+  /home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/moc_predefs.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \

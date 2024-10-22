@@ -1,35 +1,35 @@
 TuProyecto_autogen/timestamp: \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/AStar.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/AStar.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/BFS.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/BFS.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Bala.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Bala.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/CMakeLists.txt \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Dijkstra.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Dijkstra.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Game.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Game.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Grafo.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Grafo.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Jugador.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Jugador.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/MovimientoAleatorio.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/MovimientoAleatorio.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/PowerUps.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/PowerUps.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Tanque.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Tanque.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Timer.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Timer.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/cmake-build-debug/TuProyecto_autogen/moc_predefs.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/main.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/menu.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/menu.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/ui_gameui.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/ui_menuui.h \
+	/home/yerik/Desktop/Tank_Attack/AStar.cpp \
+	/home/yerik/Desktop/Tank_Attack/AStar.h \
+	/home/yerik/Desktop/Tank_Attack/BFS.cpp \
+	/home/yerik/Desktop/Tank_Attack/BFS.h \
+	/home/yerik/Desktop/Tank_Attack/Bala.cpp \
+	/home/yerik/Desktop/Tank_Attack/Bala.h \
+	/home/yerik/Desktop/Tank_Attack/CMakeLists.txt \
+	/home/yerik/Desktop/Tank_Attack/Dijkstra.cpp \
+	/home/yerik/Desktop/Tank_Attack/Dijkstra.h \
+	/home/yerik/Desktop/Tank_Attack/Game.cpp \
+	/home/yerik/Desktop/Tank_Attack/Game.h \
+	/home/yerik/Desktop/Tank_Attack/Grafo.cpp \
+	/home/yerik/Desktop/Tank_Attack/Grafo.h \
+	/home/yerik/Desktop/Tank_Attack/Jugador.cpp \
+	/home/yerik/Desktop/Tank_Attack/Jugador.h \
+	/home/yerik/Desktop/Tank_Attack/MovimientoAleatorio.cpp \
+	/home/yerik/Desktop/Tank_Attack/MovimientoAleatorio.h \
+	/home/yerik/Desktop/Tank_Attack/PowerUps.cpp \
+	/home/yerik/Desktop/Tank_Attack/PowerUps.h \
+	/home/yerik/Desktop/Tank_Attack/Tanque.cpp \
+	/home/yerik/Desktop/Tank_Attack/Tanque.h \
+	/home/yerik/Desktop/Tank_Attack/Timer.cpp \
+	/home/yerik/Desktop/Tank_Attack/Timer.h \
+	/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake \
+	/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake \
+	/home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/moc_predefs.h \
+	/home/yerik/Desktop/Tank_Attack/main.cpp \
+	/home/yerik/Desktop/Tank_Attack/menu.cpp \
+	/home/yerik/Desktop/Tank_Attack/menu.h \
+	/home/yerik/Desktop/Tank_Attack/ui_gameui.h \
+	/home/yerik/Desktop/Tank_Attack/ui_menuui.h \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake \

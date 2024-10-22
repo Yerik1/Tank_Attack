@@ -467,12 +467,12 @@ void Window::generarPowerUps(Jugador* jugador1, Jugador* jugador2) {
             jugador2->agregarPowerUp(powerUp2);
 
             if (jugador1->hayPowerUps()) {
-                PowerUps primerPowerUpJugador1 = jugador1->usarPowerUp();  // Obtener el primer power-up
+                PowerUps primerPowerUpJugador1 = jugador1->returnTop();  // Obtener el primer power-up
                 actualizarPowerUpWidget(jugador1, primerPowerUpJugador1);  // Actualizar el widget en la interfaz
             }
 
             if (jugador2->hayPowerUps()) {
-                PowerUps primerPowerUpJugador2 = jugador2->usarPowerUp();  // Obtener el primer power-up
+                PowerUps primerPowerUpJugador2 = jugador2->returnTop();  // Obtener el primer power-up
                 actualizarPowerUpWidget(jugador2, primerPowerUpJugador2);  // Actualizar el widget en la interfaz
             }
 
@@ -509,17 +509,17 @@ void Window::actualizarPowerUpWidget(Jugador* jugador, const PowerUps& powerUp) 
 
     // Asignar la ruta de la imagen según el nombre del power-up
     if (powerUp.getNombre() == "Doble Turno") {
-        rutaImagen = ":/imagenes/doble_turno.png";
+        rutaImagen = "../Imagenes/DobleTurno.png";
     } else if (powerUp.getNombre() == "Precisión Movimiento") {
-        rutaImagen = ":/imagenes/precision_movimiento.png";
+        rutaImagen = "../Imagenes/Movimiento.png";
     } else if (powerUp.getNombre() == "Precisión Ataque") {
-        rutaImagen = ":/imagenes/precision_ataque.png";
+        rutaImagen = "../Imagenes/Precision.png";
     } else if (powerUp.getNombre() == "Poder Ataque") {
-        rutaImagen = ":/imagenes/poder_ataque.png";
+        rutaImagen = "../Imagenes/Headshot.png";
     }
 
     // Suponiendo que tienes un QLabel asociado al jugador para mostrar el power-up
-    QWidget* ImgPowerUp = jugador->getImagen();  // Obtener el QLabel correspondiente al jugador
+    QLabel* ImgPowerUp = jugador->getImagen();  // Obtener el QLabel correspondiente al jugador
 
     // Cambiar la imagen en el QLabel
     QPixmap pixmap(rutaImagen);

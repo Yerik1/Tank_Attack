@@ -1,16 +1,16 @@
-/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/cmake-build-debug/TuProyecto_autogen/EWIEGA46WW/moc_Game.cpp: /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Game.h \
-  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/cmake-build-debug/TuProyecto_autogen/moc_predefs.h \
-  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/AStar.h \
-  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/BFS.h \
-  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Bala.h \
-  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Dijkstra.h \
-  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Grafo.h \
-  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Jugador.h \
-  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/MovimientoAleatorio.h \
-  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/PowerUps.h \
-  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Tanque.h \
-  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Timer.h \
-  /home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/ui_gameui.h \
+/home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/EWIEGA46WW/moc_Game.cpp: /home/yerik/Desktop/Tank_Attack/Game.h \
+  /home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/moc_predefs.h \
+  /home/yerik/Desktop/Tank_Attack/AStar.h \
+  /home/yerik/Desktop/Tank_Attack/BFS.h \
+  /home/yerik/Desktop/Tank_Attack/Bala.h \
+  /home/yerik/Desktop/Tank_Attack/Dijkstra.h \
+  /home/yerik/Desktop/Tank_Attack/Grafo.h \
+  /home/yerik/Desktop/Tank_Attack/Jugador.h \
+  /home/yerik/Desktop/Tank_Attack/MovimientoAleatorio.h \
+  /home/yerik/Desktop/Tank_Attack/PowerUps.h \
+  /home/yerik/Desktop/Tank_Attack/Tanque.h \
+  /home/yerik/Desktop/Tank_Attack/Timer.h \
+  /home/yerik/Desktop/Tank_Attack/ui_gameui.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \
