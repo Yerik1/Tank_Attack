@@ -90,6 +90,10 @@ Window::Window(QWidget *parent) :
     grafo.mostrarMatriz();
     Jugador1.setTurnoActivo(true);
     ui->Turno->setText( QString("Turno jugador 1"));
+    Timer* timer = new Timer(ui->Contador,ui->centralwidget,&Jugador1,&Jugador2,&JuegoActivo);
+
+    // Iniciar el temporizador con 5 minutos (300 segundos)
+    timer->start(300);
 
 
 }
@@ -215,7 +219,7 @@ int Window::iniciarMovimiento(const std::vector<std::pair<int, int> > &movimient
         if(Jugador1.isTurnoActivo()) {
             Jugador1.setEnMovimiento(true);
         }else {
-            Jugador1.setEnMovimiento(true);
+            Jugador2.setEnMovimiento(true);
 
         }
 
@@ -236,7 +240,7 @@ int Window::iniciarMovimiento(const std::vector<std::pair<int, int> > &movimient
                 timer->deleteLater();  // Liberar el temporizador después de detenerse
                 SelectedTank=&Defecto;
                 if(Jugador1.isTurnoActivo()) {
-                    Jugador1.setEnMovimiento(false);
+                    Jugador2.setEnMovimiento(false);
                 }else {
                     Jugador1.setEnMovimiento(false);
 
@@ -336,9 +340,6 @@ int Window::movimientoBala(const std::vector<std::pair<int, int> > &movimientos,
                         }
                         index=-1;
                     }
-                    if(Jugador1.getNumeroTanques()==0 || Jugador2.getNumeroTanques()==0) {
-                        JuegoActivo=false;
-                    }
                 }
             } else {
                 timer->stop();  // Detener el temporizador cuando llegamos al inicio
@@ -346,11 +347,18 @@ int Window::movimientoBala(const std::vector<std::pair<int, int> > &movimientos,
                 bala->hide();
                 bala->deleteLater();
                 SelectedTank=&Defecto;
+                if(Jugador1.isTurnoActivo()) {
+                    Jugador2.setEnMovimiento(false);
+                }else {
+                    Jugador1.setEnMovimiento(false);
+                }
                 if(JuegoActivo) {
-                    if(Jugador1.isTurnoActivo()) {
-                        Jugador1.setEnMovimiento(false);
-                    }else {
-                        Jugador2.setEnMovimiento(false);
+                    if(Jugador1.getNumeroTanques()==0) {
+                        JuegoActivo=false;
+                        qDebug()<<"Perdio Jugador 1";
+                    }else if(Jugador2.getNumeroTanques()==0) {
+                        JuegoActivo=false;
+                        qDebug()<<"Perdio Jugador 2";
                     }
                 }
             }
@@ -479,7 +487,10 @@ void Window::cellPressed(int row, int column, const QString& action) {
             lastSelectedColumn = column;
         }
         if(action=="Move to:") {
-            if (!(Rojo1.getX()==row && Rojo1.getY()==column || Rojo2.getX()==row && Rojo2.getY()==column || Azul1.getX()==row && Azul1.getY()==column || Azul2.getX()==row && Azul2.getY()==column ||Amarillo1.getX()==row && Amarillo1.getY()==column || Amarillo2.getX()==row && Amarillo2.getY()==column || Celeste1.getX()==row && Celeste1.getY()==column || Celeste2.getX()==row && Celeste2.getY()==column)) {
+            if (!(Rojo1.getX()==row && Rojo1.getY()==column && Rojo1.getVida()>0|| Rojo2.getX()==row && Rojo2.getY()==column && Rojo2.getVida()>0 ||
+                Azul1.getX()==row && Azul1.getY()==column && Azul1.getVida()>0 || Azul2.getX()==row && Azul2.getY()==column && Azul2.getVida()>0||
+                Amarillo1.getX()==row && Amarillo1.getY()==column && Amarillo1.getVida()>0 || Amarillo2.getX()==row && Amarillo2.getY()==column && Amarillo2.getVida()>0||
+                Celeste1.getX()==row && Celeste1.getY()==column && Celeste1.getVida()>0 || Celeste2.getX()==row && Celeste2.getY()==column && Celeste2.getVida()>0)) {
                 int decision;
                 if((*SelectedTank).getColor()==1) {
                     // Genera un número aleatorio entre 0 y 1
@@ -561,7 +572,7 @@ void Window::cellPressed(int row, int column, const QString& action) {
 
                         Jugador2.setTurnoActivo(true);
                     }
-                }else {
+                }else if(Jugador2.isTurnoActivo() && SelectedTank->getColor()!=0){
                     if(SelectedTank->getColor()!=0){
                         if(Jugador2.isPowerUpDobleTurnoActivo() ) {
                             Jugador2.desactivarPowerUpDobleTurno();
