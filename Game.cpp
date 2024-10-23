@@ -2,6 +2,7 @@
 // Created by yerik on 9/29/24.
 //
 #include "Game.h"
+#include <QStandardItemModel>
 
 
 std::vector<std::pair<int, int>> celdasVisitadas;
@@ -12,6 +13,7 @@ std::vector<std::pair<int, int>> celdasVisitadas;
  * @param parent
  */
 Window::Window(QWidget *parent) :
+
     //Iniciar la ventana
     QMainWindow(parent), ui(new Ui::MainWindow), dragging(false), lastSelectedRow(-1), lastSelectedColumn(-1) {
     ui->setupUi(this);
@@ -450,30 +452,76 @@ void Window::cellPressed(int row, int column, const QString& action) {
         }
         if(action=="Move to:") {
             if (!(Rojo1.getX()==row && Rojo1.getY()==column || Rojo2.getX()==row && Rojo2.getY()==column || Azul1.getX()==row && Azul1.getY()==column || Azul2.getX()==row && Azul2.getY()==column ||Amarillo1.getX()==row && Amarillo1.getY()==column || Amarillo2.getX()==row && Amarillo2.getY()==column || Celeste1.getX()==row && Celeste1.getY()==column || Celeste2.getX()==row && Celeste2.getY()==column)) {
+                int decision;
                 if((*SelectedTank).getColor()==1) {
-                    if(iniciarMovimiento(objAStar.aStar(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
+                    // Genera un número aleatorio entre 0 y 1
+                    if (Jugador1.isTurnoActivo()) {
+                        if(Jugador1.isPowerUpPrecisionMovActivo()) {
+                            decision = rand() % 11;
+                            Jugador1.desactivarPowerUpPresicionMovimiento();
+                        }else {
+                            decision = rand() % 2;
+                        }
+                    }else {
+                        if(Jugador2.isPowerUpPrecisionMovActivo()) {
+                            decision = rand() % 11;
+                            Jugador2.desactivarPowerUpPresicionMovimiento();
+                        }else {
+                            decision = rand() % 2;
+                        }
+                    }
+
+
+                    if (decision == 0) {
+                        //Utilizar Linea Vista
+                        std::vector<std::pair<int, int>> movimientos = mAleatorio.moverTanque(grafo.getObstaculos(),(*SelectedTank).getX(),(*SelectedTank).getY(),row,column,1);
+                        iniciarMovimiento(movimientos);
+                        auto [row, column] = movimientos.front();
                         (*SelectedTank).setX(row);
                         (*SelectedTank).setY(column);
-                    };
-                    //Utilzar BFS
-                    /**if(iniciarMovimiento(objBFS.bfs(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
-                        (*SelectedTank).setX(row);
-                        (*SelectedTank).setY(column);
-                    };*/
+                    } else {
+                        // Utilizar BFS
+                        if (iniciarMovimiento(objBFS.bfs(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40)) == 1) {
+                            (*SelectedTank).setX(row);
+                            (*SelectedTank).setY(column);
+                        }
+                    }
                 }else if((*SelectedTank).getColor()==2) {
-                    //Utilizar Linea Vista
-                    std::vector<std::pair<int, int>> movimientos = mAleatorio.moverTanque(grafo.getObstaculos(),(*SelectedTank).getX(),(*SelectedTank).getY(),row,column,1);
-                    iniciarMovimiento(movimientos);
-                    auto [row, column] = movimientos.front();
-                    (*SelectedTank).setX(row);
-                    (*SelectedTank).setY(column);
 
+                    int decision;
+                    if (Jugador1.isTurnoActivo()) {
+                        if(Jugador1.isPowerUpPrecisionMovActivo()) {
+                            decision = rand() % 11;
+                            Jugador1.desactivarPowerUpPresicionMovimiento();
+                        }else {
+                            decision = rand() % 2;
+                        }
+                    }else {
+                        if(Jugador2.isPowerUpPrecisionMovActivo()) {
+                            decision = rand() % 11;
+                            Jugador2.desactivarPowerUpPresicionMovimiento();
+                        }else {
+                            decision = rand() % 2;
+                        }
+                    }
 
-                    //Utilizar Djikstra
-                    /**if(iniciarMovimiento(objDijkstra.dijkstra(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
+                    if (decision == 0) {
+                        //Utilizar Linea Vista
+                        std::vector<std::pair<int, int>> movimientos = mAleatorio.moverTanque(grafo.getObstaculos(),(*SelectedTank).getX(),(*SelectedTank).getY(),row,column,1);
+                        iniciarMovimiento(movimientos);
+                        auto [row, column] = movimientos.front();
                         (*SelectedTank).setX(row);
                         (*SelectedTank).setY(column);
-                    };*/
+                    } else {
+                        //Utilizar Djikstra
+                        if(iniciarMovimiento(objDijkstra.dijkstra(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
+                            (*SelectedTank).setX(row);
+                            (*SelectedTank).setY(column);
+                        };
+                    }
+
+
+
                 }
                 if(Jugador1.isTurnoActivo() && SelectedTank->getColor()!=0) {
                     if(Jugador1.isPowerUpDobleTurnoActivo()) {

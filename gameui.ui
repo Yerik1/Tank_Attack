@@ -1,558 +1,559 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-    <class>MainWindow</class>
-    <widget class="QMainWindow" name="MainWindow">
-        <property name="geometry">
-            <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>1131</width>
-                <height>830</height>
-            </rect>
-        </property>
-        <property name="cursor">
-            <cursorShape>PointingHandCursor</cursorShape>
-        </property>
-        <property name="windowTitle">
-            <string>MainWindow</string>
-        </property>
-        <property name="styleSheet">
-            <string notr="true">background-color:rgb(0, 128, 0)</string>
-        </property>
-        <widget class="QWidget" name="centralwidget">
-            <widget class="QLabel" name="Titulo">
-                <property name="geometry">
-                    <rect>
-                        <x>410</x>
-                        <y>20</y>
-                        <width>291</width>
-                        <height>61</height>
-                    </rect>
-                </property>
-                <property name="font">
-                    <font>
-                        <family>Ubuntu Sans Mono</family>
-                        <pointsize>25</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                    </font>
-                </property>
-                <property name="layoutDirection">
-                    <enum>Qt::LeftToRight</enum>
-                </property>
-                <property name="text">
-                    <string>Tank Attack!</string>
-                </property>
-                <property name="textFormat">
-                    <enum>Qt::PlainText</enum>
-                </property>
-                <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                </property>
-            </widget>
-            <widget class="QWidget" name="widget_2" native="true">
-                <property name="geometry">
-                    <rect>
-                        <x>80</x>
-                        <y>690</y>
-                        <width>81</width>
-                        <height>80</height>
-                    </rect>
-                </property>
-                <property name="styleSheet">
-                    <string notr="true">background-image:url(/home/yerik/Desktop/Tank_Attack/Imagenes/Rojo.png);
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1131</width>
+    <height>830</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>PointingHandCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(0, 128, 0)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="Titulo">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>20</y>
+      <width>291</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Sans Mono</family>
+      <pointsize>25</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>Tank Attack!</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>690</y>
+      <width>81</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image:url(/home/yerik/Desktop/Tank_Attack/Imagenes/Rojo.png);
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;</string>
-                </property>
-            </widget>
-            <widget class="QWidget" name="widget_3" native="true">
-                <property name="geometry">
-                    <rect>
-                        <x>280</x>
-                        <y>690</y>
-                        <width>81</width>
-                        <height>80</height>
-                    </rect>
-                </property>
-                <property name="styleSheet">
-                    <string notr="true">background-image:url(/home/yerik/Desktop/Tank_Attack/Imagenes/Azul.png);
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>690</y>
+      <width>81</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image:url(/home/yerik/Desktop/Tank_Attack/Imagenes/Azul.png);
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;</string>
-                </property>
-            </widget>
-            <widget class="QWidget" name="widget_4" native="true">
-                <property name="geometry">
-                    <rect>
-                        <x>630</x>
-                        <y>690</y>
-                        <width>81</width>
-                        <height>80</height>
-                    </rect>
-                </property>
-                <property name="styleSheet">
-                    <string notr="true">background-image:url(/home/yerik/Desktop/Tank_Attack/Imagenes/Amarillo.png);
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_4" native="true">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>690</y>
+      <width>81</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image:url(/home/yerik/Desktop/Tank_Attack/Imagenes/Amarillo.png);
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;</string>
-                </property>
-            </widget>
-            <widget class="QWidget" name="widget_5" native="true">
-                <property name="geometry">
-                    <rect>
-                        <x>840</x>
-                        <y>690</y>
-                        <width>81</width>
-                        <height>80</height>
-                    </rect>
-                </property>
-                <property name="styleSheet">
-                    <string notr="true">background-image:url(/home/yerik/Desktop/Tank_Attack/Imagenes/Celeste.png);
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_5" native="true">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>690</y>
+      <width>81</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image:url(/home/yerik/Desktop/Tank_Attack/Imagenes/Celeste.png);
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;</string>
-                </property>
-            </widget>
-            <widget class="QLabel" name="VidaRojo">
-                <property name="geometry">
-                    <rect>
-                        <x>190</x>
-                        <y>700</y>
-                        <width>66</width>
-                        <height>61</height>
-                    </rect>
-                </property>
-                <property name="font">
-                    <font>
-                        <family>Ubuntu Sans Mono</family>
-                        <pointsize>20</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                    </font>
-                </property>
-                <property name="text">
-                    <string>4</string>
-                </property>
-                <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                </property>
-            </widget>
-            <widget class="QLabel" name="VidaAzul">
-                <property name="geometry">
-                    <rect>
-                        <x>380</x>
-                        <y>700</y>
-                        <width>66</width>
-                        <height>61</height>
-                    </rect>
-                </property>
-                <property name="font">
-                    <font>
-                        <family>Ubuntu Sans Mono</family>
-                        <pointsize>20</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                    </font>
-                </property>
-                <property name="text">
-                    <string>2</string>
-                </property>
-                <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                </property>
-            </widget>
-            <widget class="QLabel" name="VidaAmarillo">
-                <property name="geometry">
-                    <rect>
-                        <x>740</x>
-                        <y>700</y>
-                        <width>66</width>
-                        <height>61</height>
-                    </rect>
-                </property>
-                <property name="font">
-                    <font>
-                        <family>Ubuntu Sans Mono</family>
-                        <pointsize>20</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                    </font>
-                </property>
-                <property name="text">
-                    <string>4</string>
-                </property>
-                <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                </property>
-            </widget>
-            <widget class="QLabel" name="VidaCeleste">
-                <property name="geometry">
-                    <rect>
-                        <x>950</x>
-                        <y>700</y>
-                        <width>66</width>
-                        <height>61</height>
-                    </rect>
-                </property>
-                <property name="font">
-                    <font>
-                        <family>Ubuntu Sans Mono</family>
-                        <pointsize>20</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                    </font>
-                </property>
-                <property name="text">
-                    <string>2</string>
-                </property>
-                <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                </property>
-            </widget>
-            <widget class="QTableWidget" name="Tablero">
-                <property name="geometry">
-                    <rect>
-                        <x>100</x>
-                        <y>230</y>
-                        <width>920</width>
-                        <height>460</height>
-                    </rect>
-                </property>
-                <property name="styleSheet">
-                    <string notr="true">background-image: url(/home/yerik/Desktop/Tank_Attack/Imagenes/Background.png);</string>
-                </property>
-                <property name="frameShape">
-                    <enum>QFrame::NoFrame</enum>
-                </property>
-                <property name="frameShadow">
-                    <enum>QFrame::Plain</enum>
-                </property>
-                <property name="lineWidth">
-                    <number>0</number>
-                </property>
-                <property name="verticalScrollBarPolicy">
-                    <enum>Qt::ScrollBarAlwaysOff</enum>
-                </property>
-                <property name="horizontalScrollBarPolicy">
-                    <enum>Qt::ScrollBarAlwaysOff</enum>
-                </property>
-                <property name="showGrid">
-                    <bool>false</bool>
-                </property>
-                <property name="rowCount">
-                    <number>20</number>
-                </property>
-                <property name="columnCount">
-                    <number>40</number>
-                </property>
-                <attribute name="horizontalHeaderVisible">
-                    <bool>false</bool>
-                </attribute>
-                <attribute name="horizontalHeaderDefaultSectionSize">
-                    <number>23</number>
-                </attribute>
-                <attribute name="horizontalHeaderHighlightSections">
-                    <bool>true</bool>
-                </attribute>
-                <attribute name="verticalHeaderVisible">
-                    <bool>false</bool>
-                </attribute>
-                <attribute name="verticalHeaderDefaultSectionSize">
-                    <number>23</number>
-                </attribute>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <item row="0" column="0">
-                    <property name="text">
-                        <string/>
-                    </property>
-                </item>
-            </widget>
-
-            <widget class="QWidget" name="TRojo" native="true">
-                <property name="geometry">
-                    <rect>
-                        <x>240</x>
-                        <y>410</y>
-                        <width>23</width>
-                        <height>23</height>
-                    </rect>
-                </property>
-                <property name="styleSheet">
-                    <string notr="true">background-color: rgba(0, 0, 0, 0);
+    </property>
+   </widget>
+   <widget class="QLabel" name="VidaRojo">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>700</y>
+      <width>66</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Sans Mono</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="VidaAzul">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>700</y>
+      <width>66</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Sans Mono</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="VidaAmarillo">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>700</y>
+      <width>66</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Sans Mono</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="VidaCeleste">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>700</y>
+      <width>66</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Sans Mono</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="Tablero">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>230</y>
+      <width>920</width>
+      <height>460</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(/home/yerik/Desktop/Tank_Attack/Imagenes/Background.png);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="showGrid">
+     <bool>false</bool>
+    </property>
+    <property name="rowCount">
+     <number>20</number>
+    </property>
+    <property name="columnCount">
+     <number>40</number>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>23</number>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>23</number>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>23</number>
+    </attribute>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <item row="0" column="0">
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+   </widget>
+   <widget class="QWidget" name="TRojo" native="true">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>410</y>
+      <width>23</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0, 0);
                         background-image:url(/home/yerik/Desktop/Tank_Attack/Imagenes/Rojo.png);
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;</string>
-                </property>
-            </widget>
-            <widget class="QWidget" name="TAzul" native="true">
-                <property name="geometry">
-                    <rect>
-                        <x>240</x>
-                        <y>490</y>
-                        <width>23</width>
-                        <height>23</height>
-                    </rect>
-                </property>
-                <property name="styleSheet">
-                    <string notr="true">background-color: rgba(0, 0, 0, 0);
+    </property>
+   </widget>
+   <widget class="QWidget" name="TAzul" native="true">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>490</y>
+      <width>23</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0, 0);
                         background-image:url(/home/yerik/Desktop/Tank_Attack/Imagenes/Azul.png);
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;</string>
-                </property>
-            </widget>
-            <widget class="QLabel" name="label_6">
-                <property name="geometry">
-                    <rect>
-                        <x>170</x>
-                        <y>60</y>
-                        <width>161</width>
-                        <height>20</height>
-                    </rect>
-                </property>
-                <property name="font">
-                    <font>
-                        <family>Ubuntu Sans Mono</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                    </font>
-                </property>
-                <property name="text">
-                    <string>Siguiente Power-Up</string>
-                </property>
-            </widget>
-            <widget class="QLabel" name="label_7">
-                <property name="geometry">
-                    <rect>
-                        <x>780</x>
-                        <y>60</y>
-                        <width>151</width>
-                        <height>19</height>
-                    </rect>
-                </property>
-                <property name="font">
-                    <font>
-                        <family>Ubuntu Sans Mono</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                    </font>
-                </property>
-                <property name="text">
-                    <string>Siguiente Power-Up</string>
-                </property>
-            </widget>
-            <widget class="QWidget" name="PowerUPP1" native="true">
-                <property name="geometry">
-                    <rect>
-                        <x>220</x>
-                        <y>80</y>
-                        <width>60</width>
-                        <height>60</height>
-                    </rect>
-                </property>
-                <property name="autoFillBackground">
-                    <bool>false</bool>
-                </property>
-                <property name="styleSheet">
-                    <string notr="true">
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>60</y>
+      <width>161</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Sans Mono</family>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Siguiente Power-Up</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>60</y>
+      <width>151</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Sans Mono</family>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Siguiente Power-Up</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="PowerUPP1" native="true">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>80</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
                         background-size: contain;
                         background-repeat: no-repeat;
                         background-position: center;</string>
-                </property>
-            </widget>
-            <widget class="QWidget" name="PowerUpP2" native="true">
-                <property name="geometry">
-                    <rect>
-                        <x>830</x>
-                        <y>80</y>
-                        <width>60</width>
-                        <height>60</height>
-                    </rect>
-                </property>
-            </widget>
-            <widget class="QLabel" name="Contador">
-                <property name="geometry">
-                    <rect>
-                        <x>410</x>
-                        <y>80</y>
-                        <width>291</width>
-                        <height>61</height>
-                    </rect>
-                </property>
-                <property name="font">
-                    <font>
-                        <family>Ubuntu Sans Mono</family>
-                        <pointsize>25</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                    </font>
-                </property>
-                <property name="layoutDirection">
-                    <enum>Qt::LeftToRight</enum>
-                </property>
-                <property name="text">
-                    <string>0:00</string>
-                </property>
-                <property name="textFormat">
-                    <enum>Qt::PlainText</enum>
-                </property>
-                <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                </property>
-            </widget>
-            <widget class="QLabel" name="Turno">
-                <property name="geometry">
-                    <rect>
-                        <x>410</x>
-                        <y>160</y>
-                        <width>291</width>
-                        <height>61</height>
-                    </rect>
-                </property>
-                <property name="font">
-                    <font>
-                        <family>Ubuntu Sans Mono</family>
-                        <pointsize>25</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                    </font>
-                </property>
-                <property name="layoutDirection">
-                    <enum>Qt::LeftToRight</enum>
-                </property>
-                <property name="text">
-                    <string>Turno jugador X</string>
-                </property>
-                <property name="textFormat">
-                    <enum>Qt::PlainText</enum>
-                </property>
-                <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                </property>
-            </widget>
-            <widget class="QWidget" name="TAmarillo" native="true">
-                <property name="geometry">
-                    <rect>
-                        <x>840</x>
-                        <y>390</y>
-                        <width>23</width>
-                        <height>23</height>
-                    </rect>
-                </property>
-                <property name="styleSheet">
-                    <string notr="true">background-color: rgba(0, 0, 0, 0);
+    </property>
+   </widget>
+   <widget class="QWidget" name="PowerUpP2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>80</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Contador">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>80</y>
+      <width>291</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Sans Mono</family>
+      <pointsize>25</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>0:00</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Turno">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>160</y>
+      <width>291</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Sans Mono</family>
+      <pointsize>25</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>Turno jugador X</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="TAmarillo" native="true">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>390</y>
+      <width>23</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0, 0);
                         background-image:url(/home/yerik/Desktop/Tank_Attack/Imagenes/Amarillo.png);
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;</string>
-                </property>
-            </widget>
-            <widget class="QWidget" name="TCeleste" native="true">
-                <property name="geometry">
-                    <rect>
-                        <x>840</x>
-                        <y>480</y>
-                        <width>23</width>
-                        <height>23</height>
-                    </rect>
-                </property>
-                <property name="styleSheet">
-                    <string notr="true">background-color: rgba(0, 0, 0, 0);
+    </property>
+   </widget>
+   <widget class="QWidget" name="TCeleste" native="true">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>480</y>
+      <width>23</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0, 0);
                         background-image:url(/home/yerik/Desktop/Tank_Attack/Imagenes/Celeste.png);
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;</string>
-                </property>
-            </widget>
-            <zorder>widget</zorder>
-            <zorder>Tablero</zorder>
-            <zorder>Titulo</zorder>
-            <zorder>widget_2</zorder>
-            <zorder>widget_3</zorder>
-            <zorder>widget_4</zorder>
-            <zorder>widget_5</zorder>
-            <zorder>VidaRojo</zorder>
-            <zorder>VidaAzul</zorder>
-            <zorder>VidaAmarillo</zorder>
-            <zorder>VidaCeleste</zorder>
-            <zorder>label_6</zorder>
-            <zorder>label_7</zorder>
-            <zorder>PowerUPP1</zorder>
-            <zorder>PowerUpP2</zorder>
-            <zorder>Contador</zorder>
-            <zorder>Turno</zorder>
-            <zorder>TRojo</zorder>
-            <zorder>TAzul</zorder>
-            <zorder>TAmarillo</zorder>
-            <zorder>TCeleste</zorder>
-        </widget>
-        <widget class="QStatusBar" name="statusbar">
-            <property name="contextMenuPolicy">
-                <enum>Qt::DefaultContextMenu</enum>
-            </property>
-        </widget>
-    </widget>
-    <resources/>
-    <connections/>
+    </property>
+   </widget>
+   <zorder>Tablero</zorder>
+   <zorder>Titulo</zorder>
+   <zorder>widget_2</zorder>
+   <zorder>widget_3</zorder>
+   <zorder>widget_4</zorder>
+   <zorder>widget_5</zorder>
+   <zorder>VidaRojo</zorder>
+   <zorder>VidaAzul</zorder>
+   <zorder>VidaAmarillo</zorder>
+   <zorder>VidaCeleste</zorder>
+   <zorder>label_6</zorder>
+   <zorder>label_7</zorder>
+   <zorder>PowerUPP1</zorder>
+   <zorder>PowerUpP2</zorder>
+   <zorder>Contador</zorder>
+   <zorder>Turno</zorder>
+   <zorder>TRojo</zorder>
+   <zorder>TAzul</zorder>
+   <zorder>TAmarillo</zorder>
+   <zorder>TCeleste</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
 </ui>
