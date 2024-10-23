@@ -51,6 +51,7 @@ public:
     Tanque* SelectedTank= &Defecto;
     Jugador Jugador1 = Jugador();
     Jugador Jugador2 = Jugador();
+    bool JuegoActivo=true;
 
 
 

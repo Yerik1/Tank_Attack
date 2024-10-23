@@ -263,7 +263,7 @@ int Window::movimientoBala(const std::vector<std::pair<int, int> > &movimientos,
         if(Jugador1.isTurnoActivo()) {
             Jugador1.setEnMovimiento(true);
         }else {
-            Jugador1.setEnMovimiento(true);
+            Jugador2.setEnMovimiento(true);
 
         }
 
@@ -282,35 +282,62 @@ int Window::movimientoBala(const std::vector<std::pair<int, int> > &movimientos,
                 if(index!=movimientos.size()-2) {
                     if(Rojo1.getX()==x && Rojo1.getY()==y && Rojo1.getVida() >0 ) {
                         Rojo1.recieveDamage(dmg);
+                        if(Rojo1.getVida()==0) {
+                            Jugador1.eliminarTanque(&Rojo1);
+                        }
                         index=-1;
                     }
                     if(Rojo2.getX()==x && Rojo2.getY()==y && Rojo2.getVida() >0 ) {
                         Rojo2.recieveDamage(dmg);
+                        if(Rojo2.getVida()==0) {
+                            Jugador1.eliminarTanque(&Rojo2);
+                        }
                         index=-1;
                     }
                     if(Azul1.getX()==x && Azul1.getY()==y && Azul1.getVida() >0 ) {
                         Azul1.recieveDamage(dmg);
+                        if(Azul1.getVida()==0) {
+                            Jugador1.eliminarTanque(&Azul1);
+                        }
                         index=-1;
                     }
                     if(Azul2.getX()==x && Azul2.getY()==y && Azul2.getVida() >0 ) {
                         Azul2.recieveDamage(dmg);
+                        if(Azul2.getVida()==0) {
+                            Jugador1.eliminarTanque(&Azul2);
+                        }
                         index=-1;
                     }
                     if(Amarillo1.getX()==x && Amarillo1.getY()==y && Amarillo1.getVida() >0 ) {
                         Amarillo1.recieveDamage(dmg);
+                        if(Amarillo1.getVida()==0) {
+                            Jugador2.eliminarTanque(&Amarillo1);
+                        }
                         index=-1;
                     }
                     if(Amarillo2.getX()==x && Amarillo2.getY()==y && Amarillo2.getVida() >0 ) {
                         Amarillo2.recieveDamage(dmg);
+                        if(Amarillo2.getVida()==0) {
+                            Jugador2.eliminarTanque(&Amarillo2);
+                        }
                         index=-1;
                     }
                     if(Celeste1.getX()==x && Celeste1.getY()==y && Celeste1.getVida() >0 ) {
                         Celeste1.recieveDamage(dmg);
+                        if(Celeste1.getVida()==0) {
+                            Jugador2.eliminarTanque(&Celeste1);
+                        }
                         index=-1;
                     }
                     if(Celeste2.getX()==x && Celeste2.getY()==y && Celeste2.getVida() >0 ) {
                         Celeste2.recieveDamage(dmg);
+                        if(Celeste2.getVida()==0) {
+                            Jugador2.eliminarTanque(&Celeste2);
+                        }
                         index=-1;
+                    }
+                    if(Jugador1.getNumeroTanques()==0 || Jugador2.getNumeroTanques()==0) {
+                        JuegoActivo=false;
                     }
                 }
             } else {
@@ -319,11 +346,12 @@ int Window::movimientoBala(const std::vector<std::pair<int, int> > &movimientos,
                 bala->hide();
                 bala->deleteLater();
                 SelectedTank=&Defecto;
-
-                if(Jugador1.isTurnoActivo()) {
-                    Jugador1.setEnMovimiento(false);
-                }else {
-                    Jugador1.setEnMovimiento(false);
+                if(JuegoActivo) {
+                    if(Jugador1.isTurnoActivo()) {
+                        Jugador1.setEnMovimiento(false);
+                    }else {
+                        Jugador2.setEnMovimiento(false);
+                    }
                 }
             }
         });
@@ -383,7 +411,7 @@ bool Window::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::MouseButtonPress) {
         QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
         if (mouseEvent->button() == Qt::LeftButton) {
-            if(!Jugador1.getEnMovimiento() && !Jugador2.getEnMovimiento()) {
+            if(!Jugador1.getEnMovimiento() && !Jugador2.getEnMovimiento() && JuegoActivo) {
                 if(Jugador1.isTurnoActivo()) {
                     if (obj == ui->TRojo1) {
                         SelectedTank = &Rojo1; // Asigna la dirección de Rojo1
