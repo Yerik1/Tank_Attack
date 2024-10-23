@@ -372,14 +372,14 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         Titulo->setText(QCoreApplication::translate("MainWindow", "Tank Attack!", nullptr));
-        VidaRojo1L->setText(QCoreApplication::translate("MainWindow", "4", nullptr));
-        VidaAzul1L->setText(QCoreApplication::translate("MainWindow", "2", nullptr));
-        VidaAmarillo1L->setText(QCoreApplication::translate("MainWindow", "4", nullptr));
-        VidaCeleste1L->setText(QCoreApplication::translate("MainWindow", "2", nullptr));
-        VidaRojo2L->setText(QCoreApplication::translate("MainWindow", "4", nullptr));
-        VidaAzul2L->setText(QCoreApplication::translate("MainWindow", "2", nullptr));
-        VidaAmarillo2L->setText(QCoreApplication::translate("MainWindow", "4", nullptr));
-        VidaCeleste2L->setText(QCoreApplication::translate("MainWindow", "2", nullptr));
+        VidaRojo1L->setText(QCoreApplication::translate("MainWindow", "2", nullptr));
+        VidaAzul1L->setText(QCoreApplication::translate("MainWindow", "4", nullptr));
+        VidaAmarillo1L->setText(QCoreApplication::translate("MainWindow", "2", nullptr));
+        VidaCeleste1L->setText(QCoreApplication::translate("MainWindow", "4", nullptr));
+        VidaRojo2L->setText(QCoreApplication::translate("MainWindow", "2", nullptr));
+        VidaAzul2L->setText(QCoreApplication::translate("MainWindow", "4", nullptr));
+        VidaAmarillo2L->setText(QCoreApplication::translate("MainWindow", "2", nullptr));
+        VidaCeleste2L->setText(QCoreApplication::translate("MainWindow", "4", nullptr));
 
         const bool __sortingEnabled = Tablero->isSortingEnabled();
         Tablero->setSortingEnabled(false);

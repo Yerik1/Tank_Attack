@@ -277,37 +277,47 @@ int Window::movimientoBala(const std::vector<std::pair<int, int> > &movimientos)
                 bala->mover(104 + 23 * y, 234 + 23 * x);
 
                 --index;  // Retroceder al siguiente movimiento
+                if(index!=movimientos.size()-2) {
+                    if(Rojo1.getX()==x && Rojo1.getY()==y) {
+                        Rojo1.recieveDamage(1);
+                        index=-1;
+                    }
+                    if(Rojo2.getX()==x && Rojo2.getY()==y) {
+                        Rojo2.recieveDamage(1);
+                        index=-1;
+                    }
+                    if(Azul1.getX()==x && Azul1.getY()==y) {
+                        Azul1.recieveDamage(1);
+                        index=-1;
+                    }
+                    if(Azul2.getX()==x && Azul2.getY()==y) {
+                        Azul2.recieveDamage(1);
+                        index=-1;
+                    }
+                    if(Amarillo1.getX()==x && Amarillo1.getY()==y) {
+                        Amarillo1.recieveDamage(1);
+                        index=-1;
+                    }
+                    if(Amarillo2.getX()==x && Amarillo2.getY()==y) {
+                        Amarillo2.recieveDamage(1);
+                        index=-1;
+                    }
+                    if(Celeste1.getX()==x && Celeste1.getY()==y) {
+                        Celeste1.recieveDamage(1);
+                        index=-1;
+                    }
+                    if(Celeste2.getX()==x && Celeste2.getY()==y) {
+                        Celeste2.recieveDamage(1);
+                        index=-1;
+                    }
+                }
             } else {
                 timer->stop();  // Detener el temporizador cuando llegamos al inicio
                 timer->deleteLater();  // Liberar el temporizador después de detenerse
                 bala->hide();
                 bala->deleteLater();
                 SelectedTank=&Defecto;
-                auto [row, column] = movimientos.front();
-                if(Rojo1.getX()==row && Rojo1.getY()==column) {
-                    Rojo1.recieveDamage(1);
-                }
-                if(Rojo2.getX()==row && Rojo2.getY()==column) {
-                    Rojo2.recieveDamage(1);
-                }
-                if(Azul1.getX()==row && Azul1.getY()==column) {
-                    Azul1.recieveDamage(1);
-                }
-                if(Azul2.getX()==row && Azul2.getY()==column) {
-                    Azul2.recieveDamage(1);
-                }
-                if(Amarillo1.getX()==row && Amarillo1.getY()==column) {
-                    Amarillo1.recieveDamage(1);
-                }
-                if(Amarillo2.getX()==row && Amarillo2.getY()==column) {
-                    Amarillo2.recieveDamage(1);
-                }
-                if(Celeste1.getX()==row && Celeste1.getY()==column) {
-                    Celeste1.recieveDamage(1);
-                }
-                if(Celeste2.getX()==row && Celeste2.getY()==column) {
-                    Celeste2.recieveDamage(1);
-                }
+
                 if(Jugador1.isTurnoActivo()) {
                     Jugador1.setEnMovimiento(false);
                 }else {
