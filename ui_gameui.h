@@ -48,8 +48,8 @@ public:
     QWidget *TAzul2;
     QLabel *label_6;
     QLabel *label_7;
-    QWidget *PowerUPP1;
-    QWidget *PowerUpP2;
+    QLabel *PowerUPP1;
+    QLabel *PowerUpP2;
     QLabel *Contador;
     QLabel *Turno;
     QWidget *TAmarillo1;
@@ -260,7 +260,7 @@ public:
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setGeometry(QRect(780, 60, 151, 19));
         label_7->setFont(font2);
-        PowerUPP1 = new QWidget(centralwidget);
+        PowerUPP1 = new QLabel(centralwidget);
         PowerUPP1->setObjectName(QString::fromUtf8("PowerUPP1"));
         PowerUPP1->setGeometry(QRect(220, 80, 60, 60));
         PowerUPP1->setAutoFillBackground(false);
@@ -268,7 +268,7 @@ public:
 "background-size: contain;\n"
 "background-repeat: no-repeat;\n"
 "background-position: center;"));
-        PowerUpP2 = new QWidget(centralwidget);
+        PowerUpP2 = new QLabel(centralwidget);
         PowerUpP2->setObjectName(QString::fromUtf8("PowerUpP2"));
         PowerUpP2->setGeometry(QRect(830, 80, 60, 60));
         Contador = new QLabel(centralwidget);

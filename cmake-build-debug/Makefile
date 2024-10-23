@@ -392,6 +392,30 @@ MovimientoAleatorio.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/MovimientoAleatorio.cpp.s
 .PHONY : MovimientoAleatorio.cpp.s
 
+PowerUps.o: PowerUps.cpp.o
+.PHONY : PowerUps.o
+
+# target to build an object file
+PowerUps.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/PowerUps.cpp.o
+.PHONY : PowerUps.cpp.o
+
+PowerUps.i: PowerUps.cpp.i
+.PHONY : PowerUps.i
+
+# target to preprocess a source file
+PowerUps.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/PowerUps.cpp.i
+.PHONY : PowerUps.cpp.i
+
+PowerUps.s: PowerUps.cpp.s
+.PHONY : PowerUps.s
+
+# target to generate assembly for a file
+PowerUps.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TuProyecto.dir/build.make CMakeFiles/TuProyecto.dir/PowerUps.cpp.s
+.PHONY : PowerUps.cpp.s
+
 Tanque.o: Tanque.cpp.o
 .PHONY : Tanque.o
 
@@ -551,6 +575,9 @@ help:
 	@echo "... MovimientoAleatorio.o"
 	@echo "... MovimientoAleatorio.i"
 	@echo "... MovimientoAleatorio.s"
+	@echo "... PowerUps.o"
+	@echo "... PowerUps.i"
+	@echo "... PowerUps.s"
 	@echo "... Tanque.o"
 	@echo "... Tanque.i"
 	@echo "... Tanque.s"

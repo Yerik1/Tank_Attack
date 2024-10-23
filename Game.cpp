@@ -3,6 +3,8 @@
 //
 #include "Game.h"
 
+
+
 /** INICIO ADMINISTRACION DE VENTANA Y JUEGO */
 
 /**
@@ -18,11 +20,15 @@ Window::Window(QWidget *parent) :
     Jugador1.agregarTanque(&Rojo2);
     Jugador1.agregarTanque(&Azul1);
     Jugador1.agregarTanque(&Azul2);
+    Jugador1.setImagen(ui->PowerUPP1);
 
     Jugador2.agregarTanque(&Amarillo1);
     Jugador2.agregarTanque(&Amarillo2);
     Jugador2.agregarTanque(&Celeste1);
     Jugador2.agregarTanque(&Celeste2);
+    Jugador2.setImagen(ui->PowerUpP2);
+
+    generarPowerUps(&Jugador1,&Jugador2);
 
 
     //Asignar Widget a cada tanque
@@ -81,6 +87,9 @@ Window::Window(QWidget *parent) :
     generateMapBorder();
     generateRandomObstacles();
     grafo.mostrarMatriz();
+    Jugador1.setTurnoActivo(true);
+    ui->Turno->setText( QString("Turno jugador 1"));
+
 
 }
 
@@ -183,6 +192,12 @@ int Window::iniciarMovimiento(const std::vector<std::pair<int, int> > &movimient
 
         int index = movimientos.size() - 1;  // Comenzamos desde el último movimiento
         QTimer* timer = new QTimer(this);
+        if(Jugador1.isTurnoActivo()) {
+            Jugador1.setEnMovimiento(true);
+        }else {
+            Jugador1.setEnMovimiento(true);
+
+        }
 
         connect(timer, &QTimer::timeout, [=]() mutable {
             if (index >= 0) {
@@ -197,6 +212,12 @@ int Window::iniciarMovimiento(const std::vector<std::pair<int, int> > &movimient
                 timer->stop();  // Detener el temporizador cuando llegamos al inicio
                 timer->deleteLater();  // Liberar el temporizador después de detenerse
                 SelectedTank=&Defecto;
+                if(Jugador1.isTurnoActivo()) {
+                    Jugador1.setEnMovimiento(false);
+                }else {
+                    Jugador1.setEnMovimiento(false);
+
+                }
             }
         });
 
@@ -215,6 +236,12 @@ int Window::movimientoBala(const std::vector<std::pair<int, int> > &movimientos)
 
         int index = movimientos.size() - 1;  // Comenzamos desde el último movimiento
         QTimer* timer = new QTimer(this);
+        if(Jugador1.isTurnoActivo()) {
+            Jugador1.setEnMovimiento(true);
+        }else {
+            Jugador1.setEnMovimiento(true);
+
+        }
 
         connect(timer, &QTimer::timeout, [=]() mutable {
             if (index >= 0) {
@@ -256,6 +283,11 @@ int Window::movimientoBala(const std::vector<std::pair<int, int> > &movimientos)
                 if(Celeste2.getX()==row && Celeste2.getY()==column) {
                     Celeste2.recieveDamage(1);
                 }
+                if(Jugador1.isTurnoActivo()) {
+                    Jugador1.setEnMovimiento(false);
+                }else {
+                    Jugador1.setEnMovimiento(false);
+                }
             }
         });
 
@@ -294,45 +326,51 @@ bool Window::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::MouseButtonPress) {
         QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
         if (mouseEvent->button() == Qt::LeftButton) {
-            if (obj == ui->TRojo1) {
-                SelectedTank = &Rojo1; // Asigna la dirección de Rojo1
-                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
-                return true;
-            }
-            else if (obj == ui->TRojo2) {
-                SelectedTank = &Rojo2; // Asigna la dirección de Rojo2
-                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
-                return true;
-            }
-            else if (obj == ui->TAzul1) {
-                SelectedTank = &Azul1; // Asigna la dirección de Azul1
-                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
-                return true;
-            }
-            else if (obj == ui->TAzul2) {
-                SelectedTank = &Azul2; // Asigna la dirección de Azul2
-                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
-                return true;
-            }
-            else if (obj == ui->TAmarillo1) {
-                SelectedTank = &Amarillo1; // Asigna la dirección de Amarillo1
-                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
-                return true;
-            }
-            else if (obj == ui->TAmarillo2) {
-                SelectedTank = &Amarillo2; // Asigna la dirección de Amarillo2
-                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
-                return true;
-            }
-            else if (obj == ui->TCeleste1) {
-                SelectedTank = &Celeste1; // Asigna la dirección de Celeste1
-                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
-                return true;
-            }
-            else if (obj == ui->TCeleste2) {
-                SelectedTank = &Celeste2; // Asigna la dirección de Celeste2
-                qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
-                return true;
+            if(!Jugador1.getEnMovimiento() && !Jugador2.getEnMovimiento()) {
+                if(Jugador1.isTurnoActivo()) {
+                    if (obj == ui->TRojo1) {
+                        SelectedTank = &Rojo1; // Asigna la dirección de Rojo1
+                        qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                        return true;
+                    }
+                    else if (obj == ui->TRojo2) {
+                        SelectedTank = &Rojo2; // Asigna la dirección de Rojo2
+                        qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                        return true;
+                    }
+                    else if (obj == ui->TAzul1) {
+                        SelectedTank = &Azul1; // Asigna la dirección de Azul1
+                        qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                        return true;
+                    }
+                    else if (obj == ui->TAzul2) {
+                        SelectedTank = &Azul2; // Asigna la dirección de Azul2
+                        qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                        return true;
+                    }
+                }
+                if (Jugador2.isTurnoActivo()) {
+                    if (obj == ui->TAmarillo1) {
+                        SelectedTank = &Amarillo1; // Asigna la dirección de Amarillo1
+                        qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                        return true;
+                    }
+                    else if (obj == ui->TAmarillo2) {
+                        SelectedTank = &Amarillo2; // Asigna la dirección de Amarillo2
+                        qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                        return true;
+                    }
+                    else if (obj == ui->TCeleste1) {
+                        SelectedTank = &Celeste1; // Asigna la dirección de Celeste1
+                        qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                        return true;
+                    }
+                    else if (obj == ui->TCeleste2) {
+                        SelectedTank = &Celeste2; // Asigna la dirección de Celeste2
+                        qDebug() << "Selected tank id:" << SelectedTank->getId(); // Mensaje de depuración
+                        return true;
+                    }
+                }
             }
         }
     }
@@ -348,44 +386,92 @@ bool Window::eventFilter(QObject *obj, QEvent *event) {
 void Window::cellPressed(int row, int column, const QString& action) {
     qDebug() << action << row << column; // Mensaje de depuración
     QTableWidgetItem* item = ui->Tablero->item(row, column);
-    if (item) {
-        ui->Tablero->clearSelection();
-        item->setSelected(true);
-        lastSelectedRow = row;
-        lastSelectedColumn = column;
-    }
-    if(action=="Move to:") {
-        if((*SelectedTank).getColor()==1) {
-            if(iniciarMovimiento(objAStar.aStar(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
-                (*SelectedTank).setX(row);
-                (*SelectedTank).setY(column);
-            };
-            //Utilzar BFS
-            /**if(iniciarMovimiento(objBFS.bfs(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
-                (*SelectedTank).setX(row);
-                (*SelectedTank).setY(column);
-            };*/
-        }else if((*SelectedTank).getColor()==2) {
-            //Utilizar Linea Vista
-            std::vector<std::pair<int, int>> movimientos = mAleatorio.moverTanque(grafo.getObstaculos(),(*SelectedTank).getX(),(*SelectedTank).getY(),row,column,1);
-            iniciarMovimiento(movimientos);
-            auto [row, column] = movimientos.front();
-            (*SelectedTank).setX(row);
-            (*SelectedTank).setY(column);
-
-
-            //Utilizar Djikstra
-            /**if(iniciarMovimiento(objDijkstra.dijkstra(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
-                (*SelectedTank).setX(row);
-                (*SelectedTank).setY(column);
-            };*/
+    if(!Jugador1.getEnMovimiento() && !Jugador2.getEnMovimiento()) {
+        if (item) {
+            ui->Tablero->clearSelection();
+            item->setSelected(true);
+            lastSelectedRow = row;
+            lastSelectedColumn = column;
         }
-    }else if (action=="Shoot at:") {
-        std::vector<std::pair<int, int>> movimientos=objAStar.aStar(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40);
-        //std::vector<std::pair<int, int>> movimentos = mAleatorio.moverBala(grafo.getMatriz(),40,(*SelectedTank).getX(),(*SelectedTank).getY(),row,column);
-        movimientoBala(movimientos);
+        if(action=="Move to:") {
+            if((*SelectedTank).getColor()==1) {
+                if(iniciarMovimiento(objAStar.aStar(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
+                    (*SelectedTank).setX(row);
+                    (*SelectedTank).setY(column);
+                };
+                //Utilzar BFS
+                /**if(iniciarMovimiento(objBFS.bfs(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
+                    (*SelectedTank).setX(row);
+                    (*SelectedTank).setY(column);
+                };*/
+            }else if((*SelectedTank).getColor()==2) {
+                //Utilizar Linea Vista
+                std::vector<std::pair<int, int>> movimientos = mAleatorio.moverTanque(grafo.getObstaculos(),(*SelectedTank).getX(),(*SelectedTank).getY(),row,column,1);
+                iniciarMovimiento(movimientos);
+                auto [row, column] = movimientos.front();
+                (*SelectedTank).setX(row);
+                (*SelectedTank).setY(column);
 
 
+                //Utilizar Djikstra
+                /**if(iniciarMovimiento(objDijkstra.dijkstra(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
+                    (*SelectedTank).setX(row);
+                    (*SelectedTank).setY(column);
+                };*/
+            }
+            if(Jugador1.isTurnoActivo() && SelectedTank->getColor()!=0) {
+                if(Jugador1.isPowerUpDobleTurnoActivo()) {
+                    Jugador1.desactivarPowerUpDobleTurno();
+                }else {
+                    ui->Turno->setText( QString("Turno jugador 2"));
+                    Jugador1.setTurnoActivo(false);
+                    Jugador1.desactivarPowerUpPresicionMovimiento();
+
+                    Jugador2.setTurnoActivo(true);
+                }
+            }else {
+                if(SelectedTank->getColor()!=0){
+                    if(Jugador2.isPowerUpDobleTurnoActivo() ) {
+                        Jugador2.desactivarPowerUpDobleTurno();
+                    }else {
+                        ui->Turno->setText( QString("Turno jugador 1"));
+                        Jugador1.setTurnoActivo(true);
+                        Jugador2.desactivarPowerUpPresicionMovimiento();
+                        Jugador2.setTurnoActivo(false);
+                    }
+                }
+            }
+        }else if (action=="Shoot at:") {
+            std::vector<std::pair<int, int>> movimientos=objAStar.aStar(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40);
+            //std::vector<std::pair<int, int>> movimentos = mAleatorio.moverBala(grafo.getMatriz(),40,(*SelectedTank).getX(),(*SelectedTank).getY(),row,column);
+            movimientoBala(movimientos);
+            if(Jugador1.isTurnoActivo()&& SelectedTank->getColor()!=0) {
+                if(Jugador1.isPowerUpDobleTurnoActivo()) {
+                    Jugador1.desactivarPowerUpDobleTurno();
+                }else {
+                    ui->Turno->setText( QString("Turno jugador 2"));
+                    Jugador1.setTurnoActivo(false);
+                    Jugador1.desactivarPowerUpPresicionAtaque();
+                    Jugador1.desactivarPowerUpPoderAtaque();
+
+                    Jugador2.setTurnoActivo(true);
+                }
+            }else {
+                if(SelectedTank->getColor()!=0){
+                    if(Jugador2.isPowerUpDobleTurnoActivo() ) {
+                        Jugador2.desactivarPowerUpDobleTurno();
+                    }else {
+                        ui->Turno->setText( QString("Turno jugador 1"));
+                        Jugador1.setTurnoActivo(true);
+                        Jugador2.desactivarPowerUpPresicionAtaque();
+                        Jugador2.desactivarPowerUpPoderAtaque();
+                        Jugador2.setTurnoActivo(false);
+                    }
+                }
+            }
+
+
+        }
     }
 }
 
@@ -443,3 +529,120 @@ void Window::mouseMoveEvent(QMouseEvent *event) {
 }
 
 /** FIN DETECCION DE EVENTOS DE MOUSE TABLERO */
+
+// Metodo para generar power-ups en un hilo separado
+
+void Window::generarPowerUps(Jugador* jugador1, Jugador* jugador2) {
+    std::thread([this, jugador1, jugador2]() {
+        while (true) {
+            // Pausar 10 segundos entre la generación de power-ups
+            std::this_thread::sleep_for(std::chrono::seconds(10));
+
+            // Crear power-ups aleatorios para ambos jugadores
+            PowerUps powerUp1 = generarPowerUpAleatorio();
+            PowerUps powerUp2 = generarPowerUpAleatorio();
+
+            // Asignar power-ups a los jugadores
+            jugador1->agregarPowerUp(powerUp1);
+            jugador2->agregarPowerUp(powerUp2);
+
+            if (jugador1->hayPowerUps()) {
+                PowerUps primerPowerUpJugador1 = jugador1->returnTop();  // Obtener el primer power-up
+                actualizarPowerUpWidget(jugador1, primerPowerUpJugador1);  // Actualizar el widget en la interfaz
+            }
+
+            if (jugador2->hayPowerUps()) {
+                PowerUps primerPowerUpJugador2 = jugador2->returnTop();  // Obtener el primer power-up
+                actualizarPowerUpWidget(jugador2, primerPowerUpJugador2);  // Actualizar el widget en la interfaz
+            }
+
+            // Aquí puedes agregar lógica para notificar a los jugadores que recibieron un power-up
+            // o actualizar la interfaz gráfica, si es necesario.
+        }
+    }).detach();  // El hilo se ejecutará de forma independiente
+}
+// Metodo  para generar un power-up aleatorio
+PowerUps Window::generarPowerUpAleatorio() {
+    int randomNum = rand() % 4;  // Generar un número aleatorio entre 0 y 3
+    std::string nombrePowerUp;
+
+    switch (randomNum) {
+        case 0:
+            nombrePowerUp = "Doble Turno";
+        break;
+        case 1:
+            nombrePowerUp = "Precisión Movimiento";
+        break;
+        case 2:
+            nombrePowerUp = "Precisión Ataque";
+        break;
+        case 3:
+            nombrePowerUp = "Poder Ataque";
+        break;
+    }
+
+    return PowerUps(nombrePowerUp);
+}
+
+void Window::actualizarPowerUpWidget(Jugador* jugador, const PowerUps& powerUp) {
+    QString rutaImagen;
+
+    if (jugador->getColaPowerUps().empty()) {
+        QLabel* labelPowerUp = jugador->getImagen();  // Obtener el QLabel correspondiente al jugador
+
+        // Limpiar la imagen del QLabel
+        labelPowerUp->clear();
+    }
+    else {
+        // Asignar la ruta de la imagen según el nombre del power-up
+        if (powerUp.getNombre() == "Doble Turno") {
+            rutaImagen = "../Imagenes/DobleTurno.png";
+        } else if (powerUp.getNombre() == "Precisión Movimiento") {
+            rutaImagen = "../Imagenes/Movimiento.png";
+        } else if (powerUp.getNombre() == "Precisión Ataque") {
+            rutaImagen = "../Imagenes/Precision.png";
+        } else if (powerUp.getNombre() == "Poder Ataque") {
+            rutaImagen = "../Imagenes/Headshot.png";
+        }
+
+        // Suponiendo que tienes un QLabel asociado al jugador para mostrar el power-up
+        QLabel* ImgPowerUp = jugador->getImagen();  // Obtener el QLabel correspondiente al jugador
+
+        // Cambiar la imagen en el QLabel
+        QPixmap pixmap(rutaImagen);
+        ImgPowerUp->setPixmap(pixmap.scaled(ImgPowerUp->size(), Qt::KeepAspectRatio));
+    }
+}
+
+
+void Window::keyReleaseEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Shift) {
+        qDebug() << "Shift key released!";
+        if(Jugador1.isTurnoActivo()) {
+            if(Jugador1.isPowerUpDobleTurnoActivo()) {
+                Jugador1.desactivarPowerUpDobleTurno();
+            }else {
+                ui->Turno->setText( QString("Turno jugador 2"));
+                Jugador1.setTurnoActivo(false);
+                Jugador1.desactivarPowerUps();
+
+                Jugador2.setTurnoActivo(true);
+            }
+        }else {
+            if(Jugador2.isPowerUpDobleTurnoActivo() ) {
+                Jugador2.desactivarPowerUpDobleTurno();
+            }else {
+                ui->Turno->setText( QString("Turno jugador 1"));
+                Jugador1.setTurnoActivo(true);
+                Jugador2.desactivarPowerUps();
+                Jugador2.setTurnoActivo(false);
+            }
+        }
+        Jugador1.usarPowerUp();
+        actualizarPowerUpWidget(&Jugador1, Jugador1.returnTop());
+
+    }
+    else {
+        QWidget::keyReleaseEvent(event);  // Para pasar el evento a la clase base
+    }
+}

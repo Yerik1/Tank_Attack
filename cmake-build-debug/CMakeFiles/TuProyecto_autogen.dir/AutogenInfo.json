@@ -126,6 +126,12 @@
 			null
 		],
 		[
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/PowerUps.h",
+			"Mu",
+			"EWIEGA46WW/moc_PowerUps.cpp",
+			null
+		],
+		[
 			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Tanque.h",
 			"Mu",
 			"EWIEGA46WW/moc_Tanque.cpp",
@@ -245,6 +251,11 @@
 		],
 		[
 			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/MovimientoAleatorio.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/PowerUps.cpp",
 			"Mu",
 			null
 		],
