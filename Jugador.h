@@ -22,6 +22,7 @@ private:
     QLabel *Imagen;
     bool enMovimiento;
 
+
 public:
     // Constructor
     Jugador();
