@@ -82,7 +82,7 @@ public:
 
     int iniciarMovimiento(const std::vector<std::pair<int, int>> &movimientos);
 
-    int movimientoBala(const std::vector<std::pair<int, int>> &movimientos);
+    int movimientoBala(const std::vector<std::pair<int, int>> &movimientos, int id, int dmg);
 
     void marcarCeldaComoBlanca(int x, int y);
 
