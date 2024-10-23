@@ -19,6 +19,10 @@ public:
 
     void mostrarMatriz();
 
+    bool esConectado();
+
+    void resetObstaculos();
+
     std::vector<std::vector<double>> getMatriz() const;
 
     std::vector<std::vector<bool>> getObstaculos() const;

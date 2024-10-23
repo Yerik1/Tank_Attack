@@ -78,9 +78,15 @@ public:
 
     void generateRandomObstacles();
 
+    void limpiarTablero();
+
     int iniciarMovimiento(const std::vector<std::pair<int, int>> &movimientos);
 
     int movimientoBala(const std::vector<std::pair<int, int>> &movimientos);
+
+    void marcarCeldaComoBlanca(int x, int y);
+
+    void limpiarCeldasVisitadas();
 
 private:
     Ui::MainWindow *ui;
