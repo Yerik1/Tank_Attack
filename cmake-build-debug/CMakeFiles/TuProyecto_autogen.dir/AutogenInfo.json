@@ -1,69 +1,16 @@
 {
-	"BUILD_DIR" : "/home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen",
-	"CMAKE_BINARY_DIR" : "/home/yerik/Desktop/Tank_Attack/cmake-build-debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/yerik/Desktop/Tank_Attack/cmake-build-debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/yerik/Desktop/Tank_Attack",
+	"BUILD_DIR" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/TuProyecto_autogen",
+	"CMAKE_BINARY_DIR" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack",
 	"CMAKE_EXECUTABLE" : "/snap/clion/296/bin/cmake/linux/x64/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/yerik/Desktop/Tank_Attack/CMakeLists.txt",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeSystem.cmake.in",
-		"/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeUnixFindMake.cmake",
+		"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/CMakeLists.txt",
+		"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake",
 		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Platform/Linux-Initialize.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Platform/Linux-Determine-CXX.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/ADSP-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/ARMCC-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/ARMClang-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/AppleClang-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Borland-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Cray-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/CrayClang-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Embarcadero-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Fujitsu-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/GHS-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/HP-CXX-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/IAR-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Intel-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/MSVC-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/NVHPC-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/NVIDIA-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/OrangeC-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/PGI-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/PathScale-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/SCO-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/TI-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/TIClang-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Tasking-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Watcom-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/XL-CXX-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/GNU-FindBinUtils.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in",
-		"/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake",
+		"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake",
 		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake",
 		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake",
 		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake",
@@ -77,19 +24,6 @@
 		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Platform/Linux-GNU-CXX.cmake",
 		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Platform/Linux-GNU.cmake",
 		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake",
-		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in",
-		"/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
@@ -137,100 +71,100 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Charts/Qt5ChartsConfig.cmake",
 		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/GNUInstallDirs.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/yerik/Desktop/Tank_Attack",
+	"CMAKE_SOURCE_DIR" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack",
 	"CROSS_CONFIG" : false,
-	"DEP_FILE" : "/home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/deps",
+	"DEP_FILE" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/TuProyecto_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "TuProyecto_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/home/yerik/Desktop/Tank_Attack/AStar.h",
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/AStar.h",
 			"Mu",
 			"EWIEGA46WW/moc_AStar.cpp",
 			null
 		],
 		[
-			"/home/yerik/Desktop/Tank_Attack/BFS.h",
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/BFS.h",
 			"Mu",
 			"EWIEGA46WW/moc_BFS.cpp",
 			null
 		],
 		[
-			"/home/yerik/Desktop/Tank_Attack/Bala.h",
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Bala.h",
 			"Mu",
 			"EWIEGA46WW/moc_Bala.cpp",
 			null
 		],
 		[
-			"/home/yerik/Desktop/Tank_Attack/Dijkstra.h",
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Dijkstra.h",
 			"Mu",
 			"EWIEGA46WW/moc_Dijkstra.cpp",
 			null
 		],
 		[
-			"/home/yerik/Desktop/Tank_Attack/Game.h",
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Game.h",
 			"Mu",
 			"EWIEGA46WW/moc_Game.cpp",
 			null
 		],
 		[
-			"/home/yerik/Desktop/Tank_Attack/Grafo.h",
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Grafo.h",
 			"Mu",
 			"EWIEGA46WW/moc_Grafo.cpp",
 			null
 		],
 		[
-			"/home/yerik/Desktop/Tank_Attack/Jugador.h",
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Jugador.h",
 			"Mu",
 			"EWIEGA46WW/moc_Jugador.cpp",
 			null
 		],
 		[
-			"/home/yerik/Desktop/Tank_Attack/MovimientoAleatorio.h",
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/MovimientoAleatorio.h",
 			"Mu",
 			"EWIEGA46WW/moc_MovimientoAleatorio.cpp",
 			null
 		],
 		[
-			"/home/yerik/Desktop/Tank_Attack/PowerUps.h",
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/PowerUps.h",
 			"Mu",
 			"EWIEGA46WW/moc_PowerUps.cpp",
 			null
 		],
 		[
-			"/home/yerik/Desktop/Tank_Attack/Tanque.h",
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Tanque.h",
 			"Mu",
 			"EWIEGA46WW/moc_Tanque.cpp",
 			null
 		],
 		[
-			"/home/yerik/Desktop/Tank_Attack/Timer.h",
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Timer.h",
 			"Mu",
 			"EWIEGA46WW/moc_Timer.cpp",
 			null
 		],
 		[
-			"/home/yerik/Desktop/Tank_Attack/menu.h",
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/menu.h",
 			"Mu",
 			"EWIEGA46WW/moc_menu.cpp",
 			null
 		],
 		[
-			"/home/yerik/Desktop/Tank_Attack/ui_gameui.h",
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/ui_gameui.h",
 			"Mu",
 			"EWIEGA46WW/moc_ui_gameui.cpp",
 			null
 		],
 		[
-			"/home/yerik/Desktop/Tank_Attack/ui_menuui.h",
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/ui_menuui.h",
 			"Mu",
 			"EWIEGA46WW/moc_ui_menuui.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/TuProyecto_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/TuProyecto_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : [ "QT_CHARTS_LIB", "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -267,32 +201,84 @@
 		"-c",
 		"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/TuProyecto_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 4,
-	"PARSE_CACHE_FILE" : "/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen.dir/ParseCache.txt",
+	"PARALLEL" : 8,
+	"PARSE_CACHE_FILE" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 15,
-	"SETTINGS_FILE" : "/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/cmake-build-debug/CMakeFiles/TuProyecto_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/yerik/Desktop/Tank_Attack/AStar.cpp", "Mu", null ],
-		[ "/home/yerik/Desktop/Tank_Attack/BFS.cpp", "Mu", null ],
-		[ "/home/yerik/Desktop/Tank_Attack/Bala.cpp", "Mu", null ],
-		[ "/home/yerik/Desktop/Tank_Attack/Dijkstra.cpp", "Mu", null ],
-		[ "/home/yerik/Desktop/Tank_Attack/Game.cpp", "Mu", null ],
-		[ "/home/yerik/Desktop/Tank_Attack/Grafo.cpp", "Mu", null ],
-		[ "/home/yerik/Desktop/Tank_Attack/Jugador.cpp", "Mu", null ],
-		[ "/home/yerik/Desktop/Tank_Attack/MovimientoAleatorio.cpp", "Mu", null ],
-		[ "/home/yerik/Desktop/Tank_Attack/PowerUps.cpp", "Mu", null ],
-		[ "/home/yerik/Desktop/Tank_Attack/Tanque.cpp", "Mu", null ],
-		[ "/home/yerik/Desktop/Tank_Attack/Timer.cpp", "Mu", null ],
-		[ "/home/yerik/Desktop/Tank_Attack/main.cpp", "Mu", null ],
-		[ "/home/yerik/Desktop/Tank_Attack/menu.cpp", "Mu", null ]
+		[
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/AStar.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/BFS.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Bala.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Dijkstra.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Game.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Grafo.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Jugador.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/MovimientoAleatorio.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/PowerUps.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Tanque.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/Timer.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/main.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gabonm7/CLionProjects/proyecto 2/Tank_Attack/menu.cpp",
+			"Mu",
+			null
+		]
 	],
 	"USE_BETTER_GRAPH" : false,
 	"VERBOSITY" : 0

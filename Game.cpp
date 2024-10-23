@@ -247,8 +247,8 @@ int Window::iniciarMovimiento(const std::vector<std::pair<int, int> > &movimient
     }
     return 1;
 }
-int Window::movimientoBala(const std::vector<std::pair<int, int> > &movimientos) {
-    Bala* bala = new Bala(2, 1, 104+23*SelectedTank->getY(), 234+23*SelectedTank->getX(), ui->centralwidget);
+int Window::movimientoBala(const std::vector<std::pair<int, int> > &movimientos, int id, int dmg) {
+    Bala* bala = new Bala(id, dmg, 104+23*SelectedTank->getY(), 234+23*SelectedTank->getX(), ui->centralwidget);
 
     if (movimientos.empty()) {
         bala->hide();
@@ -278,36 +278,36 @@ int Window::movimientoBala(const std::vector<std::pair<int, int> > &movimientos)
 
                 --index;  // Retroceder al siguiente movimiento
                 if(index!=movimientos.size()-2) {
-                    if(Rojo1.getX()==x && Rojo1.getY()==y) {
-                        Rojo1.recieveDamage(1);
+                    if(Rojo1.getX()==x && Rojo1.getY()==y && Rojo1.getVida() >0 ) {
+                        Rojo1.recieveDamage(dmg);
                         index=-1;
                     }
-                    if(Rojo2.getX()==x && Rojo2.getY()==y) {
-                        Rojo2.recieveDamage(1);
+                    if(Rojo2.getX()==x && Rojo2.getY()==y && Rojo2.getVida() >0 ) {
+                        Rojo2.recieveDamage(dmg);
                         index=-1;
                     }
-                    if(Azul1.getX()==x && Azul1.getY()==y) {
-                        Azul1.recieveDamage(1);
+                    if(Azul1.getX()==x && Azul1.getY()==y && Azul1.getVida() >0 ) {
+                        Azul1.recieveDamage(dmg);
                         index=-1;
                     }
-                    if(Azul2.getX()==x && Azul2.getY()==y) {
-                        Azul2.recieveDamage(1);
+                    if(Azul2.getX()==x && Azul2.getY()==y && Azul2.getVida() >0 ) {
+                        Azul2.recieveDamage(dmg);
                         index=-1;
                     }
-                    if(Amarillo1.getX()==x && Amarillo1.getY()==y) {
-                        Amarillo1.recieveDamage(1);
+                    if(Amarillo1.getX()==x && Amarillo1.getY()==y && Amarillo1.getVida() >0 ) {
+                        Amarillo1.recieveDamage(dmg);
                         index=-1;
                     }
-                    if(Amarillo2.getX()==x && Amarillo2.getY()==y) {
-                        Amarillo2.recieveDamage(1);
+                    if(Amarillo2.getX()==x && Amarillo2.getY()==y && Amarillo2.getVida() >0 ) {
+                        Amarillo2.recieveDamage(dmg);
                         index=-1;
                     }
-                    if(Celeste1.getX()==x && Celeste1.getY()==y) {
-                        Celeste1.recieveDamage(1);
+                    if(Celeste1.getX()==x && Celeste1.getY()==y && Celeste1.getVida() >0 ) {
+                        Celeste1.recieveDamage(dmg);
                         index=-1;
                     }
-                    if(Celeste2.getX()==x && Celeste2.getY()==y) {
-                        Celeste2.recieveDamage(1);
+                    if(Celeste2.getX()==x && Celeste2.getY()==y && Celeste2.getVida() >0 ) {
+                        Celeste2.recieveDamage(dmg);
                         index=-1;
                     }
                 }
@@ -499,9 +499,46 @@ void Window::cellPressed(int row, int column, const QString& action) {
                 }
             }
         }else if (action=="Shoot at:") {
-            //std::vector<std::pair<int, int>> movimientos=objAStar.aStar(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40);
-            std::vector<std::pair<int, int>> movimientos = mAleatorio.moverBala(grafo.getMatriz(),40,(*SelectedTank).getX(),(*SelectedTank).getY(),row,column);
-            if(movimientoBala(movimientos)==1){
+            std::vector<std::pair<int, int>> movimientos;
+            int id;
+            int dmg;
+            if (Jugador1.isTurnoActivo()) {
+                if(Jugador1.isPowerUpPrecisionAtaqueActivo()) {
+                    id=2;
+                    dmg=1;
+                    movimientos=objAStar.aStar(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40);
+                    Jugador1.desactivarPowerUpPresicionAtaque();
+                }else {
+                    if(Jugador1.isPowerUpPoderAtaqueActivo() ) {
+                        id=3;
+                        dmg=4;
+                        Jugador1.desactivarPowerUpPoderAtaque();
+                    }else {
+                        id=1;
+                        dmg=1;
+                    }
+
+                    movimientos = mAleatorio.moverBala(grafo.getMatriz(),40,(*SelectedTank).getX(),(*SelectedTank).getY(),row,column);
+                }
+            }else {
+                if(Jugador2.isPowerUpPrecisionAtaqueActivo()) {
+                    id=2;
+                    movimientos=objAStar.aStar(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40);
+                    Jugador2.desactivarPowerUpPresicionAtaque();
+                }else {
+                    if(Jugador2.isPowerUpPoderAtaqueActivo() ) {
+                        id=3;
+                        dmg=4;
+                        Jugador2.desactivarPowerUpPoderAtaque();
+                    }else {
+                        id=1;
+                        dmg=1;
+                    }
+                    movimientos = mAleatorio.moverBala(grafo.getMatriz(),40,(*SelectedTank).getX(),(*SelectedTank).getY(),row,column);
+                }
+            }
+
+            if(movimientoBala(movimientos,id,dmg)==1){
                 if(Jugador1.isTurnoActivo()&& SelectedTank->getColor()!=0) {
                     if(Jugador1.isPowerUpDobleTurnoActivo()) {
                         Jugador1.desactivarPowerUpDobleTurno();
@@ -687,6 +724,8 @@ void Window::keyReleaseEvent(QKeyEvent *event) {
 
                 Jugador2.setTurnoActivo(true);
             }
+            Jugador1.usarPowerUp();
+            actualizarPowerUpWidget(&Jugador1, Jugador1.returnTop());
         }else {
             if(Jugador2.isPowerUpDobleTurnoActivo() ) {
                 Jugador2.desactivarPowerUpDobleTurno();
@@ -696,9 +735,10 @@ void Window::keyReleaseEvent(QKeyEvent *event) {
                 Jugador2.desactivarPowerUps();
                 Jugador2.setTurnoActivo(false);
             }
+            Jugador2.usarPowerUp();
+            actualizarPowerUpWidget(&Jugador2, Jugador2.returnTop());
         }
-        Jugador1.usarPowerUp();
-        actualizarPowerUpWidget(&Jugador1, Jugador1.returnTop());
+
 
     }
     else {
