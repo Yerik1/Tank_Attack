@@ -449,50 +449,52 @@ void Window::cellPressed(int row, int column, const QString& action) {
             lastSelectedColumn = column;
         }
         if(action=="Move to:") {
-            if((*SelectedTank).getColor()==1) {
-                if(iniciarMovimiento(objAStar.aStar(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
+            if (!(Rojo1.getX()==row && Rojo1.getY()==column || Rojo2.getX()==row && Rojo2.getY()==column || Azul1.getX()==row && Azul1.getY()==column || Azul2.getX()==row && Azul2.getY()==column ||Amarillo1.getX()==row && Amarillo1.getY()==column || Amarillo2.getX()==row && Amarillo2.getY()==column || Celeste1.getX()==row && Celeste1.getY()==column || Celeste2.getX()==row && Celeste2.getY()==column)) {
+                if((*SelectedTank).getColor()==1) {
+                    if(iniciarMovimiento(objAStar.aStar(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
+                        (*SelectedTank).setX(row);
+                        (*SelectedTank).setY(column);
+                    };
+                    //Utilzar BFS
+                    /**if(iniciarMovimiento(objBFS.bfs(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
+                        (*SelectedTank).setX(row);
+                        (*SelectedTank).setY(column);
+                    };*/
+                }else if((*SelectedTank).getColor()==2) {
+                    //Utilizar Linea Vista
+                    std::vector<std::pair<int, int>> movimientos = mAleatorio.moverTanque(grafo.getObstaculos(),(*SelectedTank).getX(),(*SelectedTank).getY(),row,column,1);
+                    iniciarMovimiento(movimientos);
+                    auto [row, column] = movimientos.front();
                     (*SelectedTank).setX(row);
                     (*SelectedTank).setY(column);
-                };
-                //Utilzar BFS
-                /**if(iniciarMovimiento(objBFS.bfs(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
-                    (*SelectedTank).setX(row);
-                    (*SelectedTank).setY(column);
-                };*/
-            }else if((*SelectedTank).getColor()==2) {
-                //Utilizar Linea Vista
-                std::vector<std::pair<int, int>> movimientos = mAleatorio.moverTanque(grafo.getObstaculos(),(*SelectedTank).getX(),(*SelectedTank).getY(),row,column,1);
-                iniciarMovimiento(movimientos);
-                auto [row, column] = movimientos.front();
-                (*SelectedTank).setX(row);
-                (*SelectedTank).setY(column);
 
 
-                //Utilizar Djikstra
-                /**if(iniciarMovimiento(objDijkstra.dijkstra(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
-                    (*SelectedTank).setX(row);
-                    (*SelectedTank).setY(column);
-                };*/
-            }
-            if(Jugador1.isTurnoActivo() && SelectedTank->getColor()!=0) {
-                if(Jugador1.isPowerUpDobleTurnoActivo()) {
-                    Jugador1.desactivarPowerUpDobleTurno();
-                }else {
-                    ui->Turno->setText( QString("Turno jugador 2"));
-                    Jugador1.setTurnoActivo(false);
-                    Jugador1.desactivarPowerUpPresicionMovimiento();
-
-                    Jugador2.setTurnoActivo(true);
+                    //Utilizar Djikstra
+                    /**if(iniciarMovimiento(objDijkstra.dijkstra(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
+                        (*SelectedTank).setX(row);
+                        (*SelectedTank).setY(column);
+                    };*/
                 }
-            }else {
-                if(SelectedTank->getColor()!=0){
-                    if(Jugador2.isPowerUpDobleTurnoActivo() ) {
-                        Jugador2.desactivarPowerUpDobleTurno();
+                if(Jugador1.isTurnoActivo() && SelectedTank->getColor()!=0) {
+                    if(Jugador1.isPowerUpDobleTurnoActivo()) {
+                        Jugador1.desactivarPowerUpDobleTurno();
                     }else {
-                        ui->Turno->setText( QString("Turno jugador 1"));
-                        Jugador1.setTurnoActivo(true);
-                        Jugador2.desactivarPowerUpPresicionMovimiento();
-                        Jugador2.setTurnoActivo(false);
+                        ui->Turno->setText( QString("Turno jugador 2"));
+                        Jugador1.setTurnoActivo(false);
+                        Jugador1.desactivarPowerUpPresicionMovimiento();
+
+                        Jugador2.setTurnoActivo(true);
+                    }
+                }else {
+                    if(SelectedTank->getColor()!=0){
+                        if(Jugador2.isPowerUpDobleTurnoActivo() ) {
+                            Jugador2.desactivarPowerUpDobleTurno();
+                        }else {
+                            ui->Turno->setText( QString("Turno jugador 1"));
+                            Jugador1.setTurnoActivo(true);
+                            Jugador2.desactivarPowerUpPresicionMovimiento();
+                            Jugador2.setTurnoActivo(false);
+                        }
                     }
                 }
             }
