@@ -9,16 +9,21 @@
 #include <QTimer>
 #include <QLabel>
 
+#include "Jugador.h"
+
 class Timer : public QObject {
     Q_OBJECT
 
 private:
     int secondsRemaining;   // Segundos restantes
+    Jugador* P1;
+    Jugador* P2;
+    bool* JuegoActivo;
     QTimer *timer;
     QLabel *label;          // Referencia al QLabel del contador
 
 public:
-    Timer(QLabel *label, QObject *parent = nullptr);
+    Timer(QLabel *label, QObject *parent,Jugador* P1, Jugador* P2, bool* JuegoActivo);
 
     // Métodos
     void start(int durationSeconds);  // Inicia el temporizador
