@@ -4,6 +4,8 @@
 
 #include "Grafo.h"
 
+#include <stack>
+
 Grafo::Grafo(int n, int m) : N(n), M(m) {
     // Inicializar matriz de adyacencia
     matriz.resize(N * M, std::vector<double>(N * M, 0));
@@ -144,6 +146,69 @@ void Grafo::mostrarMatriz() {
         }
         std::cout << std::endl;
     }
+}
+
+#include <queue>
+#include <vector>
+
+bool Grafo::esConectado() {
+    // Número total de celdas en el tablero
+    int totalCeldas = N * M;
+    std::vector<bool> visitado(totalCeldas, false);  // Control de celdas visitadas
+
+    // Buscar la primera celda libre (sin obstáculo) para iniciar la búsqueda
+    int inicio = -1;
+    for (int i = 0; i < N; ++i) {
+        for (int j = 0; j < M; ++j) {
+            if (!obstaculos[i][j]) {  // Encontrar una celda accesible
+                inicio = i * M + j;
+                break;
+            }
+        }
+        if (inicio != -1) break;
+    }
+
+    if (inicio == -1) return false;  // No hay celdas libres (caso borde)
+
+    // BFS desde la celda inicial
+    std::queue<int> cola;
+    cola.push(inicio);
+    visitado[inicio] = true;
+
+    while (!cola.empty()) {
+        int actual = cola.front();
+        cola.pop();
+
+        // Revisar todas las celdas conectadas desde 'actual'
+        for (int vecino = 0; vecino < totalCeldas; ++vecino) {
+            if (matriz[actual][vecino] >= 1 && !visitado[vecino]) {  // Hay conexión y no ha sido visitada
+                cola.push(vecino);
+                visitado[vecino] = true;
+            }
+        }
+    }
+
+    // Verificar si todas las celdas libres fueron visitadas
+    for (int i = 0; i < N; ++i) {
+        for (int j = 0; j < M; ++j) {
+            if (!obstaculos[i][j] && !visitado[i * M + j]) {
+                return false;  // Hay una celda accesible no conectada
+            }
+        }
+    }
+
+    return true;  // Todas las celdas libres están conectadas
+}
+
+
+void Grafo::resetObstaculos() {
+    for (int i = 1; i < N-1; ++i) {
+        for (int j = 1; j < M-1; ++j) {
+            obstaculos[i][j] = false;
+            actualizarMatriz(i,j);
+        }
+    }
+
 }
 
 std::vector<std::vector<double>> Grafo::getMatriz() const {

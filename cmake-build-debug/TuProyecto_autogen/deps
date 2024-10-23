@@ -1,47 +1,107 @@
 TuProyecto_autogen/timestamp: \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/AStar.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/AStar.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/BFS.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/BFS.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Bala.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Bala.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/CMakeLists.txt \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Dijkstra.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Dijkstra.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Game.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Game.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Grafo.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Grafo.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Jugador.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Jugador.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/MovimientoAleatorio.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/MovimientoAleatorio.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/PowerUps.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/PowerUps.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Tanque.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Tanque.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Timer.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/Timer.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/cmake-build-debug/TuProyecto_autogen/moc_predefs.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/main.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/menu.cpp \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/menu.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/ui_gameui.h \
-	/home/gabonm7/CLionProjects/proyecto\ 2/Tank_Attack/ui_menuui.h \
+	/home/yerik/Desktop/Tank_Attack/AStar.cpp \
+	/home/yerik/Desktop/Tank_Attack/AStar.h \
+	/home/yerik/Desktop/Tank_Attack/BFS.cpp \
+	/home/yerik/Desktop/Tank_Attack/BFS.h \
+	/home/yerik/Desktop/Tank_Attack/Bala.cpp \
+	/home/yerik/Desktop/Tank_Attack/Bala.h \
+	/home/yerik/Desktop/Tank_Attack/CMakeLists.txt \
+	/home/yerik/Desktop/Tank_Attack/Dijkstra.cpp \
+	/home/yerik/Desktop/Tank_Attack/Dijkstra.h \
+	/home/yerik/Desktop/Tank_Attack/Game.cpp \
+	/home/yerik/Desktop/Tank_Attack/Game.h \
+	/home/yerik/Desktop/Tank_Attack/Grafo.cpp \
+	/home/yerik/Desktop/Tank_Attack/Grafo.h \
+	/home/yerik/Desktop/Tank_Attack/Jugador.cpp \
+	/home/yerik/Desktop/Tank_Attack/Jugador.h \
+	/home/yerik/Desktop/Tank_Attack/MovimientoAleatorio.cpp \
+	/home/yerik/Desktop/Tank_Attack/MovimientoAleatorio.h \
+	/home/yerik/Desktop/Tank_Attack/PowerUps.cpp \
+	/home/yerik/Desktop/Tank_Attack/PowerUps.h \
+	/home/yerik/Desktop/Tank_Attack/Tanque.cpp \
+	/home/yerik/Desktop/Tank_Attack/Tanque.h \
+	/home/yerik/Desktop/Tank_Attack/Timer.cpp \
+	/home/yerik/Desktop/Tank_Attack/Timer.h \
+	/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake \
+	/home/yerik/Desktop/Tank_Attack/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake \
+	/home/yerik/Desktop/Tank_Attack/cmake-build-debug/TuProyecto_autogen/moc_predefs.h \
+	/home/yerik/Desktop/Tank_Attack/main.cpp \
+	/home/yerik/Desktop/Tank_Attack/menu.cpp \
+	/home/yerik/Desktop/Tank_Attack/menu.h \
+	/home/yerik/Desktop/Tank_Attack/ui_gameui.h \
+	/home/yerik/Desktop/Tank_Attack/ui_menuui.h \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeParseArguments.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeSystem.cmake.in \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeUnixFindMake.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/ADSP-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Borland-DetermineCompiler.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Cray-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/GHS-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/GNU-FindBinUtils.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/IAR-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Intel-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/MSVC-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/PGI-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/PathScale-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/SCO-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/TI-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/TIClang-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Tasking-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Watcom-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/GNUInstallDirs.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake \
+	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Platform/Linux-Determine-CXX.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Platform/Linux-GNU-CXX.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Platform/Linux-GNU.cmake \
 	/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/Platform/Linux-Initialize.cmake \
