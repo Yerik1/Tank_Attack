@@ -68,6 +68,8 @@ public:
 
     void actualizarPowerUpWidget(Jugador *jugador, const PowerUps &powerUp);
 
+    void keyReleaseEvent(QKeyEvent *event) override;
+
     void setupEventFilter();
 
     bool eventFilter(QObject *obj, QEvent *event);

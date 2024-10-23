@@ -20,6 +20,7 @@ private:
     bool powerUpPoderAtaque;    // PowerUp de poder de ataque activo
     bool turnoActivo;           // Indica si es el turno del jugador
     QLabel *Imagen;
+    bool enMovimiento;
 
 public:
     // Constructor
@@ -33,6 +34,8 @@ public:
     bool isPowerUpPoderAtaqueActivo() const;
     bool isTurnoActivo() const;
     QLabel *getImagen() const;
+    std::queue<PowerUps> getColaPowerUps() const;
+    bool getEnMovimiento() const;
 
     // Setters
     void setTurnoActivo(bool activo);
@@ -42,7 +45,15 @@ public:
     void activarPowerUpPrecisionAtaque();
     void activarPowerUpPoderAtaque();
     void desactivarPowerUps();
+
+    void desactivarPowerUpPresicionMovimiento();
+
+    void desactivarPowerUpPresicionAtaque();
+
+    void desactivarPowerUpPoderAtaque();
+
     void setImagen(QLabel *imagen);
+    void setEnMovimiento (bool movimiento);
 
     // Métodos para gestionar tanques
     void agregarTanque(Tanque* tanque);

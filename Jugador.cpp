@@ -7,14 +7,24 @@
 // Constructor
 Jugador::Jugador()
     : numeroTanques(0), powerUpDobleTurno(false), powerUpPrecisionMov(false),
-      powerUpPrecisionAtaque(false), powerUpPoderAtaque(false), turnoActivo(false) {}
+      powerUpPrecisionAtaque(false), powerUpPoderAtaque(false), turnoActivo(false), enMovimiento(false) {}
 
 // Getters
 int Jugador::getNumeroTanques() const {
     return numeroTanques;
 }
 
+bool Jugador::getEnMovimiento() const {
+    return enMovimiento;
+}
+
+
 QLabel *Jugador::getImagen() const { return Imagen; }
+
+std::queue<PowerUps> Jugador::getColaPowerUps() const {
+    return colaPowerUps;
+}
+
 
 bool Jugador::isPowerUpDobleTurnoActivo() const {
     return powerUpDobleTurno;
@@ -39,6 +49,9 @@ bool Jugador::isTurnoActivo() const {
 // Setters
 void Jugador::setTurnoActivo(bool activo) {
     turnoActivo = activo;
+}
+void Jugador::setEnMovimiento(bool activo) {
+    enMovimiento = activo;
 }
 
 void Jugador::setImagen(QLabel *imagen) {this->Imagen = imagen; }
@@ -68,6 +81,15 @@ void Jugador::desactivarPowerUps() {
     powerUpDobleTurno = false;
     powerUpPrecisionMov = false;
     powerUpPrecisionAtaque = false;
+    powerUpPoderAtaque = false;
+}
+void Jugador::desactivarPowerUpPresicionMovimiento() {
+    powerUpPrecisionMov = false;
+}
+void Jugador::desactivarPowerUpPresicionAtaque() {
+    powerUpPrecisionAtaque = false;
+}
+void Jugador::desactivarPowerUpPoderAtaque() {
     powerUpPoderAtaque = false;
 }
 
@@ -133,6 +155,12 @@ bool Jugador::hayPowerUps() const {
 }
 
 PowerUps Jugador::returnTop() {
-    return colaPowerUps.front();
+    if(colaPowerUps.empty()) {
+        PowerUps powerUpActual = PowerUps();
+        return powerUpActual;
+    }
+    else {
+        return colaPowerUps.front();
+    }
 }
 
