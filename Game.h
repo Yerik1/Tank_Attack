@@ -24,6 +24,7 @@
 #include <chrono>
 #include <cstdlib>
 #include <thread>
+#include "Timer.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -52,6 +53,7 @@ public:
     Jugador Jugador1 = Jugador();
     Jugador Jugador2 = Jugador();
     bool JuegoActivo=true;
+
 
 
 

@@ -6,7 +6,7 @@
 
 // Constructor
 Jugador::Jugador()
-    : numeroTanques(0), powerUpDobleTurno(false), powerUpPrecisionMov(false),
+    : numeroTanques(), powerUpDobleTurno(false), powerUpPrecisionMov(false),
       powerUpPrecisionAtaque(false), powerUpPoderAtaque(false), turnoActivo(false), enMovimiento(false) {}
 
 // Getters

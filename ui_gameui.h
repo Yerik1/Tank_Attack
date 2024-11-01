@@ -14,7 +14,7 @@
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QWidget>
-#include "Timer.h"
+
 
 QT_BEGIN_NAMESPACE
 
@@ -58,7 +58,6 @@ public:
     QWidget *TCeleste2;
     QStatusBar *statusbar;
 
-    Timer *timer;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -356,10 +355,7 @@ public:
         statusbar->setContextMenuPolicy(Qt::DefaultContextMenu);
         MainWindow->setStatusBar(statusbar);
 
-        timer = new Timer(Contador);
 
-        // Iniciar el temporizador con 5 minutos (300 segundos)
-        timer->start(300);
 
 
 

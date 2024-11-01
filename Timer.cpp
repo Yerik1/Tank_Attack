@@ -3,9 +3,13 @@
 //
 
 #include "Timer.h"
+#include "QDebug"
 
-Timer::Timer(QLabel *label, QObject *parent) : QObject(parent), label(label) {
+Timer::Timer(QLabel *label, QObject *parent, Jugador* P1, Jugador* P2, bool* JuegoActivo) : QObject(parent), label(label) {
     timer = new QTimer(this);
+    this->P1 = P1;
+    this->P2 = P2;
+    this->JuegoActivo = JuegoActivo;
     connect(timer, &QTimer::timeout, this, &Timer::updateTime);
 }
 
@@ -27,6 +31,15 @@ void Timer::updateTime() {
         label->setText(QString::number(minutes) + ":" + QString::number(seconds).rightJustified(2, '0'));
     } else {
         timer->stop();
+        *JuegoActivo = false;
+        if(P1->getNumeroTanques()>P2->getNumeroTanques()) {
+            qDebug()<<"Jugador 1 Gano";
+        }else if(P2->getNumeroTanques()>P1->getNumeroTanques()) {
+            qDebug()<<"Jugador 2 Gano";
+        }else {
+            qDebug()<<"Empate";
+
+        }
         emit timeUp();
     }
 }
