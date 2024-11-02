@@ -18,7 +18,7 @@ class MovimientoAleatorio {
 public:
     MovimientoAleatorio();  // Constructor para inicializar la semilla aleatoria
     std::vector<std::pair<int, int>> moverTanque(
-        const std::vector<std::vector<bool>>& matriz,
+        const std::vector<std::vector<double>>& matriz,
         int srcX, int srcY, int destX, int destY, int radio);
 
     std::vector<std::pair<int, int>> moverBala(const std::vector<std::vector<double>> &matriz, int ancho, int srcX, int srcY,
@@ -26,9 +26,9 @@ public:
                                                int destY);
 
 private:
-    std::vector<std::pair<int, int>> lineaVista(const std::vector<std::vector<bool>>& matriz,
+    std::vector<std::pair<int, int>> lineaVista(const std::vector<std::vector<double>>& matriz,
                     int srcX, int srcY, int destX, int destY);
-    std::pair<int, int> generarPosicionAleatoria(int srcX, int srcY, int radio, const std::vector<std::vector<bool>>& matriz);
+    std::pair<int, int> generarPosicionAleatoria(int srcX, int srcY, int radio, const std::vector<std::vector<double>>& matriz);
 };
 
 

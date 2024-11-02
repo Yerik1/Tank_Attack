@@ -513,11 +513,13 @@ void Window::cellPressed(int row, int column, const QString& action) {
 
                     if (decision == 0) {
                         //Utilizar Linea Vista
-                        std::vector<std::pair<int, int>> movimientos = mAleatorio.moverTanque(grafo.getObstaculos(),(*SelectedTank).getX(),(*SelectedTank).getY(),row,column,1);
-                        iniciarMovimiento(movimientos);
-                        auto [row, column] = movimientos.front();
-                        (*SelectedTank).setX(row);
-                        (*SelectedTank).setY(column);
+                        std::vector<std::pair<int, int>> movimientos = mAleatorio.moverTanque(grafo.getMatriz(),(*SelectedTank).getX(),(*SelectedTank).getY(),row,column,1);
+                        if(iniciarMovimiento(movimientos)==1) {
+                            auto [row, column] = movimientos.front();
+                            (*SelectedTank).setX(row);
+                            (*SelectedTank).setY(column);
+                        }
+
                     } else {
                         // Utilizar BFS
                         if (iniciarMovimiento(objBFS.bfs(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40)) == 1) {
@@ -546,11 +548,13 @@ void Window::cellPressed(int row, int column, const QString& action) {
 
                     if (decision == 0) {
                         //Utilizar Linea Vista
-                        std::vector<std::pair<int, int>> movimientos = mAleatorio.moverTanque(grafo.getObstaculos(),(*SelectedTank).getX(),(*SelectedTank).getY(),row,column,1);
-                        iniciarMovimiento(movimientos);
-                        auto [row, column] = movimientos.front();
-                        (*SelectedTank).setX(row);
-                        (*SelectedTank).setY(column);
+                        std::vector<std::pair<int, int>> movimientos = mAleatorio.moverTanque(grafo.getMatriz(),(*SelectedTank).getX(),(*SelectedTank).getY(),row,column,1);
+                        if(iniciarMovimiento(movimientos)==1) {
+                            auto [row, column] = movimientos.front();
+                            (*SelectedTank).setX(row);
+                            (*SelectedTank).setY(column);
+                        }
+
                     } else {
                         //Utilizar Djikstra
                         if(iniciarMovimiento(objDijkstra.dijkstra(grafo.getMatriz(), (*SelectedTank).getX() * 40 + (*SelectedTank).getY(), row * 40 + column, 40))==1) {
