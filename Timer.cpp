@@ -5,7 +5,7 @@
 #include "Timer.h"
 #include "QDebug"
 
-Timer::Timer(QLabel *label, QObject *parent, Jugador* P1, Jugador* P2, bool* JuegoActivo) : QObject(parent), label(label) {
+Timer::Timer(QLabel *label, QLabel *WinText, QObject *parent, Jugador* P1, Jugador* P2, bool* JuegoActivo) : QObject(parent), label(label), WinText(WinText){
     timer = new QTimer(this);
     this->P1 = P1;
     this->P2 = P2;
@@ -24,7 +24,7 @@ void Timer::stop() {
 }
 
 void Timer::updateTime() {
-    if (secondsRemaining > 0) {
+    if (secondsRemaining > 0 && *JuegoActivo) {
         --secondsRemaining;
         int minutes = secondsRemaining / 60;
         int seconds = secondsRemaining % 60;
@@ -34,10 +34,13 @@ void Timer::updateTime() {
         *JuegoActivo = false;
         if(P1->getNumeroTanques()>P2->getNumeroTanques()) {
             qDebug()<<"Jugador 1 Gano";
+            WinText->setText("Ganador Jugador 1");
         }else if(P2->getNumeroTanques()>P1->getNumeroTanques()) {
             qDebug()<<"Jugador 2 Gano";
+            WinText->setText("Ganador Jugador 2");
         }else {
             qDebug()<<"Empate";
+            WinText->setText("Empate");
 
         }
         emit timeUp();

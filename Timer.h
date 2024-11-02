@@ -21,9 +21,10 @@ private:
     bool* JuegoActivo;
     QTimer *timer;
     QLabel *label;          // Referencia al QLabel del contador
+    QLabel *WinText;
 
 public:
-    Timer(QLabel *label, QObject *parent,Jugador* P1, Jugador* P2, bool* JuegoActivo);
+    Timer(QLabel *label, QLabel *WinText, QObject *parent,Jugador* P1, Jugador* P2, bool* JuegoActivo);
 
     // Métodos
     void start(int durationSeconds);  // Inicia el temporizador
