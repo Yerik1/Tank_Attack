@@ -47,10 +47,10 @@ public:
         font.setWeight(75);
         LblTitle->setFont(font);
         LblTitle->setAlignment(Qt::AlignCenter);
-        BtnRules = new QPushButton(centralwidget);
+        /**BtnRules = new QPushButton(centralwidget);
         BtnRules->setObjectName(QString::fromUtf8("BtnRules"));
         BtnRules->setGeometry(QRect(320, 340, 171, 71));
-        BtnRules->setStyleSheet(QString::fromUtf8("background-color : rgb(26, 95, 180)"));
+        BtnRules->setStyleSheet(QString::fromUtf8("background-color : rgb(26, 95, 180)"));**/
         BtnStart = new QPushButton(centralwidget);
         BtnStart->setObjectName(QString::fromUtf8("BtnStart"));
         BtnStart->setGeometry(QRect(320, 230, 171, 71));
@@ -73,7 +73,7 @@ public:
     {
         MenuInicial->setWindowTitle(QCoreApplication::translate("MenuInicial", "MainWindow", nullptr));
         LblTitle->setText(QCoreApplication::translate("MenuInicial", "TANK ATTACK!!!", nullptr));
-        BtnRules->setText(QCoreApplication::translate("MenuInicial", "Reglas y Controles", nullptr));
+        //BtnRules->setText(QCoreApplication::translate("MenuInicial", "Reglas y Controles", nullptr));
         BtnStart->setText(QCoreApplication::translate("MenuInicial", "Comenzar Partida", nullptr));
     } // retranslateUi
 

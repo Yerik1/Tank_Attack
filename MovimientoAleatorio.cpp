@@ -174,7 +174,10 @@ std::vector<std::pair<int, int>> MovimientoAleatorio::moverBala(
 
     while (rebotes <= 3) {
         // Agregamos la posición actual al camino
-        camino.push_back({srcX, srcY});
+        if(srcX!=0 && srcY!=0) {
+            camino.push_back({srcX, srcY});
+        }
+
         int nextX=srcX;
         int nextY=srcY;
 

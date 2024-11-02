@@ -279,7 +279,7 @@ public:
         Contador->setAlignment(Qt::AlignCenter);
         Turno = new QLabel(centralwidget);
         Turno->setObjectName(QString::fromUtf8("Turno"));
-        Turno->setGeometry(QRect(410, 160, 291, 61));
+        Turno->setGeometry(QRect(395, 160, 321, 61));
         Turno->setFont(font);
         Turno->setLayoutDirection(Qt::LeftToRight);
         Turno->setTextFormat(Qt::PlainText);

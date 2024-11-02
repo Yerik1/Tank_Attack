@@ -90,7 +90,7 @@ Window::Window(QWidget *parent) :
     grafo.mostrarMatriz();
     Jugador1.setTurnoActivo(true);
     ui->Turno->setText( QString("Turno jugador 1"));
-    Timer* timer = new Timer(ui->Contador,ui->centralwidget,&Jugador1,&Jugador2,&JuegoActivo);
+    Timer* timer = new Timer(ui->Contador,ui->Turno,ui->centralwidget,&Jugador1,&Jugador2,&JuegoActivo);
 
     // Iniciar el temporizador con 5 minutos (300 segundos)
     timer->start(300);
@@ -356,9 +356,11 @@ int Window::movimientoBala(const std::vector<std::pair<int, int> > &movimientos,
                     if(Jugador1.getNumeroTanques()==0) {
                         JuegoActivo=false;
                         qDebug()<<"Perdio Jugador 1";
+                        ui->Turno->setText(QString::fromStdString("Ganador Jugador 2"));
                     }else if(Jugador2.getNumeroTanques()==0) {
                         JuegoActivo=false;
                         qDebug()<<"Perdio Jugador 2";
+                        ui->Turno->setText(QString::fromStdString("Ganador Jugador 1"));
                     }
                 }
             }
@@ -721,7 +723,7 @@ void Window::mouseMoveEvent(QMouseEvent *event) {
 
 void Window::generarPowerUps(Jugador* jugador1, Jugador* jugador2) {
     std::thread([this, jugador1, jugador2]() {
-        while (true) {
+        while (JuegoActivo) {
             // Pausar 10 segundos entre la generación de power-ups
             std::this_thread::sleep_for(std::chrono::seconds(10));
 
@@ -805,30 +807,33 @@ void Window::actualizarPowerUpWidget(Jugador* jugador, const PowerUps& powerUp) 
 void Window::keyReleaseEvent(QKeyEvent *event) {
     if (event->key() == Qt::Key_Shift) {
         qDebug() << "Shift key released!";
-        if(Jugador1.isTurnoActivo()) {
-            if(Jugador1.isPowerUpDobleTurnoActivo()) {
-                Jugador1.desactivarPowerUpDobleTurno();
-            }else {
-                ui->Turno->setText( QString("Turno jugador 2"));
-                Jugador1.setTurnoActivo(false);
-                Jugador1.desactivarPowerUps();
+        if(JuegoActivo) {
+            if(Jugador1.isTurnoActivo()) {
+                if(Jugador1.isPowerUpDobleTurnoActivo()) {
+                    Jugador1.desactivarPowerUpDobleTurno();
+                }else {
+                    ui->Turno->setText( QString("Turno jugador 2"));
+                    Jugador1.setTurnoActivo(false);
+                    Jugador1.desactivarPowerUps();
 
-                Jugador2.setTurnoActivo(true);
-            }
-            Jugador1.usarPowerUp();
-            actualizarPowerUpWidget(&Jugador1, Jugador1.returnTop());
-        }else {
-            if(Jugador2.isPowerUpDobleTurnoActivo() ) {
-                Jugador2.desactivarPowerUpDobleTurno();
+                    Jugador2.setTurnoActivo(true);
+                }
+                Jugador1.usarPowerUp();
+                actualizarPowerUpWidget(&Jugador1, Jugador1.returnTop());
             }else {
-                ui->Turno->setText( QString("Turno jugador 1"));
-                Jugador1.setTurnoActivo(true);
-                Jugador2.desactivarPowerUps();
-                Jugador2.setTurnoActivo(false);
+                if(Jugador2.isPowerUpDobleTurnoActivo() ) {
+                    Jugador2.desactivarPowerUpDobleTurno();
+                }else {
+                    ui->Turno->setText( QString("Turno jugador 1"));
+                    Jugador1.setTurnoActivo(true);
+                    Jugador2.desactivarPowerUps();
+                    Jugador2.setTurnoActivo(false);
+                }
+                Jugador2.usarPowerUp();
+                actualizarPowerUpWidget(&Jugador2, Jugador2.returnTop());
             }
-            Jugador2.usarPowerUp();
-            actualizarPowerUpWidget(&Jugador2, Jugador2.returnTop());
         }
+
 
 
     }
